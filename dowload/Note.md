@@ -1,12 +1,6 @@
 
-
-## 0\. Đồ chơi và Công cụ
-
-### I. IDE (Integrated Development Environment)
-
-Intellij Ultimate
-
-### II. JDK (Java Development Kit)
+# CÀI ĐẶT CÔNG CỤ VÀ MÔI TRƯỜNG LẬP TRÌNH
+## I. JDK (Java Development Kit)
 
 Từ phiên bản 21 trở lên, tốt nhất là 24.
 
@@ -36,9 +30,9 @@ Từ phiên bản 21 trở lên, tốt nhất là 24.
 
 -----
 
-## 1\. Thiết lập Biến môi trường (Environment Variables)
+### 1\. Thiết lập Biến môi trường (Environment Variables)
 
-### Biến (Variable) là gì?
+#### Biến (Variable) là gì?
 
   * **Trong Toán học:** `x = 10`. Biến là tên gọi cho một giá trị.
   * **Trong Lập trình:** `int yob = 2004;` hoặc `double total = 45000.0;`.
@@ -53,16 +47,16 @@ Từ phiên bản 21 trở lên, tốt nhất là 24.
 
 -----
 
-### Các loại biến môi trường trong Hệ điều hành (OS)
+#### Các loại biến môi trường trong Hệ điều hành (OS)
 
 Có hai loại biến môi trường chính:
 
-1.  **Biến có sẵn của hệ điều hành:**
+  **Biến có sẵn của hệ điều hành:**
 
       * Đây là các biến được tạo ra khi cài đặt hệ điều hành để các ứng dụng hệ thống sử dụng.
       * Ví dụ điển hình là biến **`Path`**. Khi bạn gõ một lệnh trong `CMD` hay `PowerShell`, hệ điều hành sẽ tự động tìm trong các đường dẫn được liệt kê trong biến `Path` để xem có tệp thực thi nào khớp với lệnh đó không. Nếu có thì chạy, nếu không thì báo lỗi.
 
-2.  **Biến do người dùng tạo ra:**
+  **Biến do người dùng tạo ra:**
 
       * Khi các ứng dụng cần dùng chung một thông tin quan trọng nào đó, ta có thể tạo một biến môi trường để lưu thông tin đó.
 
@@ -77,7 +71,7 @@ Có hai loại biến môi trường chính:
 
       * Sau đó, thay vì thêm đường dẫn trực tiếp vào biến `Path`, ta sử dụng `%JAVA_HOME%\bin`. Bằng cách này, khi muốn thay đổi phiên bản JDK, bạn chỉ cần cập nhật lại giá trị của biến `JAVA_HOME`.
 
-> ### Chốt hạ: Cài đặt biến môi trường cho công cụ lập trình
+> #### Chốt hạ: Cài đặt biến môi trường cho công cụ lập trình
 >
 >   * **Biến `..._HOME`**: Trỏ đến thư mục gốc nơi cài đặt công cụ.
 >   * **Biến `Path`**: Trỏ đến thư mục `bin` của công cụ để có thể chạy lệnh từ bất cứ đâu.
@@ -94,7 +88,7 @@ Có hai loại biến môi trường chính:
 
 -----
 
-## 2\. Cài đặt IDE (IntelliJ)
+## II. Cài đặt IDE (IntelliJ)
 
   * Trong quá trình cài đặt, sẽ có tùy chọn hỏi bạn có muốn cập nhật thư mục `bin` của IntelliJ vào biến môi trường `Path` hay không.
   * Nếu chọn, bạn có thể mở IntelliJ trực tiếp từ dòng lệnh.

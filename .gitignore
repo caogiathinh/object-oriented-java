@@ -1,14 +1,40 @@
-# Created by https://www.toptal.com/developers/gitignore/api/netbeans
-# Edit at https://www.toptal.com/developers/gitignore?templates=netbeans
+# Ignore NetBeans project files and build outputs
 
-### NetBeans ###
-**/nbproject/private/
-**/nbproject/Makefile-*.mk
-**/nbproject/Package-*.bash
-build/
+# NetBeans specific folders and files
 nbbuild/
 dist/
 nbdist/
+build/
+**/nbproject/private/
+**/nbproject/Makefile-*.mk
+**/nbproject/Package-*.bash
 .nb-gradle/
+*.bak
 
-# End of https://www.toptal.com/developers/gitignore/api/netbeans
+# Ignore class and jar files
+*.class
+*.jar
+*.war
+*.ear
+
+# Ignore generated XML files and logs
+*.xml
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE config files
+*.iml
+.idea/
+.vscode/
+
+# Allow source code and important config files
+!.gitignore
+!src/
+!README.md
+!pom.xml  # Nếu dùng Maven
+!build.gradle  # Nếu dùng Gradle
+
+# End of file

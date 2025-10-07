@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package hellojava;
 
 /**
@@ -13,8 +9,15 @@ public class HelloJava {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    //entry point, cửa chính, nơi cuộc chơi bắt đầu, CPU vào đây chạy lệnh
+    public static void main(String[] args) {
+        //sout + "tab"
+        System.out.println("Xin chào Java. \nWelcome to Java World");
+        System.out.println("5 + 5 = " + 5 + 5);
+        System.out.println("5 + 5 = " + (5 + 5));
+
+        //~~~ 100%, printf("Xin chao Java ... \n");
+        //F11, bên này F6 dịch sau đó chạy app xem kết quả
+    }
 }

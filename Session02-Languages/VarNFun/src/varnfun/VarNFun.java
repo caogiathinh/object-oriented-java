@@ -1,5 +1,8 @@
 
 package varnfun; 
+
+import java.util.Scanner;
+//~ #include <stdio.h>
 /**
  *
  * @author gia.thinh
@@ -7,13 +10,40 @@ package varnfun;
 public class VarNFun {
     public static void main(String[] args) {
         //gióng lề code chuẩn chỉ
-        System.out.println("Practice with variable and function in Java");  
-        printIntegerList();
+        
+        //biến chưa có value thì java sẽ báo lỗi, biết giá trị nào đâu mà sử dụng - chú ý
+        
+        int n = getAPositiveInteger(); 
+        
+        System.out.println("Your number: " + n);
+        
+        printIntegerList(n); //truyền tham trị, pass by value 
+                             //value từ n của hàm main() sẽ được đưa qua ngả
+                             //phễu máy xay, n của main() lấy giá trị n của hàm() 
+                             
+                             //OOP pass by reference - truyền tham chiếu
+                             //                      - con trỏ, địa chỉ
+        
+        //printIntegerList(400); //hard code đầu vào code cứng cố định value
+                               //không linh hoạt mềm mại
+                               //linh hoạt: bạn muốn in đến mấy ? hỏi và nhập
         //playWithBooleans();
         //playWithCharacters();
         //playWithDoubles();
         //playWithIntegers();
         //playWithVariables();
+    }
+    
+    public static int getAPositiveInteger() {
+        
+        int n; 
+        //nhập từ bàn phím, xài kĩ thuật OOP, chấm và bung lụa
+        Scanner banPhimCuaTui = new Scanner(System.in);
+        
+        System.out.print("Input a positive integer: ");
+        n = banPhimCuaTui.nextInt(); //đầu vào lấy từ bàn phím
+        
+        return n;  //getAPositionInteger() = n 
     }
     
     //tui muốn in n số tự nhiên tính từ 1
@@ -24,7 +54,14 @@ public class VarNFun {
     //POLYMORPHISM -> ĐA HÌNH
     //giống như: 5 anh em trên 1 chiếc xe wave
     public static void printIntegerList(int n) {
-        
+        //chỉ có thằng ngáo mới scanf(n) here n có value khi xài 
+        //body of function, nghiền, trộn, xử lí với đầu vào giả định sẽ đưa qua tên gọi 
+        //giải quyết trên công thức
+        System.out.println("The list of " + n + " first integer");
+        for (int i = 1; i <= n; i++){
+            System.out.print(i + " ");
+        }
+        System.out.printf("\n");
     }
     
     //in ra các số tự nhiên từ 1 đến 100 
@@ -100,9 +137,7 @@ public class VarNFun {
         //tùy loại dữ liệu và thông tin nó chứa bên trong - data type - hình thức data
         //số, chữ, hình ảnh,...
         //biến là cách đặt tên cho 1 đại lượng, 1 giá trị - đơn, phức
-        int age = 20; 
-        int a = 10, b; 
-        b = 100; 
+        int age = 20;  
         //tốn 12 byte trong RAM để lưu trữ thông tin on off trong RAM 
         // ctrl + space: gợi ý khi tên dài - mồi theo kiểu từ điển
         System.out.println("age: " + age); //~ printf("age: %d\n", age); 

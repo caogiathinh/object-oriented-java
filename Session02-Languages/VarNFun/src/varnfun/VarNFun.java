@@ -16,6 +16,17 @@ public class VarNFun {
         //playWithVariables();
     }
     
+    //tui muốn in n số tự nhiên tính từ 1
+    //hiện tượng 1 class bất kì chứa nhiều hàm trùng tên nhưng khác phần đầu vào 
+    //mà phải khác trên data type chứ không phải khác trên tên biến
+    //được gọi là OVERLOAD/OVERLOADING 
+    //vs. OVERRIDE 
+    //POLYMORPHISM -> ĐA HÌNH
+    //giống như: 5 anh em trên 1 chiếc xe wave
+    public static void printIntegerList(int n) {
+        
+    }
+    
     //in ra các số tự nhiên từ 1 đến 100 
     public static void printIntegerList() {
         System.out.println("The list of 100 first integer");

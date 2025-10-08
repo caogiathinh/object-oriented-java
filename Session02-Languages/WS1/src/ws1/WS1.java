@@ -7,6 +7,7 @@ import java.util.Scanner;
  *
  * @author gia.thinh
  */
+
 public class WS1 {
 
     public static void main(String[] args) {
@@ -46,6 +47,7 @@ public class WS1 {
     }
     
     public static void printPrimeList() {
+        System.out.println("The list of primes from 1...1000");
         for(int i = 1; i <= 1000; i++) {
             if(isPrime(i) == true) {
                 System.out.print(i + " ");

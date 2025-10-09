@@ -39,4 +39,4 @@ public class DogManagement {
 }
 //ENCAPSULATION: TÍNH ĐÓNG GÓI THÔNG TIN VÀ HÀNH ĐỘNG
 //HÀM VÀ BIẾN ĐI KÈM VỚI NHAU ĐẠI DIỆN, MÔ TẢ CHO 1 OBJECT/THỰC THỂ 
-//
+

@@ -21,28 +21,24 @@ public class Dog {
         this.yob = iYob;   
         this.weight = iWeight; 
     }
-    //phễu còn gọn là constructor, hàm khởi tạo, hàm đúc, hàm tạo dựng
-    //ra object vì thông qua nó vật liệu được chảy vào trong Khuôn
-    //vật liệu khô ra được object, cmnd của ai, hồ sơ được tạo ra
-    
-    //CONSTRUCTOR, PHỄU LÀ HÀM CỰC KÌ ĐẶC BIỆT. VÌ DÙNG NÓ TẠO RA OBJECT 
-    //CỨ MỖI LẦN XÀI NÓ, TỨC LÀ PHẢI ĐƯA VẬT LIỆU VÀO, TỨC LÀ CÓ 1 OBJECT MỚI
-    //PHỄU LÀ HÀM ĐẶC BIỆT KHÔNG CÓ GIÁ TRỊ TRẢ VỀ, KHÔNG CÓ VOID LUÔN, TRẢ VỀ
-    //NGUYÊN CÁI OBJECT - bức tượng đang đúc.
+    //phễu còn gọi là constructor, hàm khởi tạo, hàm đúc, hàm tạo dựng 
+    //ra object vì thông qua nó như cái phễu vật liệu được chảy vào trong 
+    //vật liệu thô ra object/bức tượng 
+    //constructor, PHỄU là hàm cực kì đặc biệt, vì nó dùng để tạo ra object 
+    //cứ mỗi lần sai nó phải đưa nguyên liệu vào, tức là có 1 object mới
+    //phễu là HÀM ĐẶC BIỆT KHÔNG CÓ GIÁ TRỊ TRẢ VỀ, KHÔNG VOID LUÔN, TRẢ VỀ NGUYÊN BỨC TƯỢNG ĐANG ĐÚC
     //tên 100% giống tên class
     
-    //viết các hàm xử lí data, ví dụ như giao tiếp hỏi năm sinh
-    //vì ba má đã fill yob = 2001; 
-    //object thì gọi là hành động, behaviour, xử lí tính toán trên 
-    //các biến đã được đổ value từ lúc đúc ra
+    //viết các hàm xử lí data, ví dụ giao tiếp với nhau hỏi năm sinh
+    //object thì sẽ gọi là hành động behaivour, xử lí tính toán trên các 
+    //biến đã được đổ value từ lúc đúc ra 
     
-    //hành vi trên data (propertises)
-    //hàm gọi n lần tương đương các hành động mà object nào đó lặp đi lặp lại. 
-    //hành động của obj gọi n lần trên obj đó.
+    //hàm gọi n lần tương đương các hành động mà các object nào đó lặp đi lặp lại
+    //hành động của object được gọi n lần trên object đó, 
     public void bark() {
-        //System.out.println("Gogogogo... my name is: " + name);
-        //System.out.println("Gogogogo... my yob is: " + yob);
-        //System.out.println("Gogogogo... my weight is: " + weight);
+//      System.out.println("Gogogogo...... my name is " + name);
+//      System.out.println("Gogogogo...... my yob is " + yob);
+//      System.out.println("Gogogogo...... my weight is " + weight);
         
         System.out.printf("|%-10s|%4d|%4.1f|\n", name, yob, weight);
     }

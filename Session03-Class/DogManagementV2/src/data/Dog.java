@@ -41,6 +41,10 @@ public class Dog {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+    
+    public void bark() {
+        System.out.printf("|%-10s|%4d|%4.1f|\n", name, yob, weight);
+    }
 }
   
 

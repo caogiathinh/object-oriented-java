@@ -22,10 +22,10 @@ public class WS2 {
 //        Listen.show();
 //        Atomic.show();
         Account thinh = new Account(1, "Thinh", "abc", "09x", 60.0);
-        Account t = new Account(2, "Thinh", "abc", "091x", 100.0);
-        Account h = new Account(3, "Thinh", "abc", "092x", 200.0);
-        Account i = new Account(4, "Thinh", "abc", "093x", 80.0);
-        Account n = new Account(5, "Thinh", "abc", "094x", 90.0);
+        Account t = new Account(2, "An", "abc", "091x", 100.0);
+        Account h = new Account(3, "Binh", "abc", "092x", 200.0);
+        Account i = new Account(4, "Cuong", "abc", "093x", 80.0);
+        Account n = new Account(5, "Dung", "abc", "094x", 90.0);
         thinh.showInfo();
         t.showInfo();
         h.showInfo();
@@ -44,7 +44,7 @@ public class WS2 {
         i.showInfo();
         n.showInfo();
         
-        System.out.println("t withdraw");
+        System.out.println("An withdraw");
         if(t.withdraw(50))
             System.out.println("Successful, now t balance is: " + t.getBalance());
         else

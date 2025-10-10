@@ -73,9 +73,6 @@ public class Dog {
     }
     //viết code thế này gọi là hard-code không hay, fix-valua, năm sau phải sửa code thì tuổi mới đúng
     //chuẩn: lấy giờ hệ thống Windows - yob; 
-    
-    
-    
 }
   
 

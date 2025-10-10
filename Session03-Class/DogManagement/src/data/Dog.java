@@ -17,9 +17,9 @@ public class Dog {
     //có Khuôn thì phải có phễu/miệng để hứng vật liệu đi vào
     //phễu dùng để nhận vật liệu đúc ra, tạo ra, construct cái object
     public Dog(String iName, int iYob, double iWeight) {
-        this.name = iName; 
-        this.yob = iYob;   
-        this.weight = iWeight; 
+        name = iName; 
+        yob = iYob;   
+        weight = iWeight; 
     }
     //phễu còn gọi là constructor, hàm khởi tạo, hàm đúc, hàm tạo dựng 
     //ra object vì thông qua nó như cái phễu vật liệu được chảy vào trong 
@@ -49,7 +49,12 @@ public class Dog {
         weight = newWeight; 
     }
     
+    //vì mặc định info sẽ là giấu, khi mình giao tiếp mình mới bật nó ra
+    //chia sẻ thông tin khi dc hỏi, đó chính là method hành động get() 
+    public int getYob() {
+        return yob; 
+    }
     
 }
-
+  
 //code bên ngoài giống như cái khuôn bị lủng

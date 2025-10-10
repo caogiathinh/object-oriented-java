@@ -15,6 +15,8 @@ public class DogManagement {
         
         int   yob =             2001;
         Dog chiHu =         new Dog("CHI HU HU", 2021, 0.5);
+     //Ca Si ChiPu {name: NTC; yob: 1993; hits: Anh ơi}
+                            //JSON Javascript
         // biến/tên tắt         object
         //có object thì object sẽ biết làm gì đó, cờ hó biết sủa
         chiHu.bark();
@@ -32,6 +34,10 @@ public class DogManagement {
         chiHu.setNewWeight(5.0);
         chiHu.bark();
         
+        int chYob = chiHu.getYob();
+        System.out.println("CH YOB: " + chYob);
+        
+        System.out.println("ND YOB: " + ngaoDa.getYob());
     }  
     //new xin 1 vùng ram mới chứa info của 1 bạn Dog sẽ dc đúc, dc đổ data. 
     //có 2 vùng name dành cho 2 object 
@@ -40,3 +46,4 @@ public class DogManagement {
 //ENCAPSULATION: TÍNH ĐÓNG GÓI THÔNG TIN VÀ HÀNH ĐỘNG
 //HÀM VÀ BIẾN ĐI KÈM VỚI NHAU ĐẠI DIỆN, MÔ TẢ CHO 1 OBJECT/THỰC THỂ 
 
+ 

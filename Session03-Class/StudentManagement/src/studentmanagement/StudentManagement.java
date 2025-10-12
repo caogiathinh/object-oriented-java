@@ -10,8 +10,8 @@ import java.util.Scanner;
  */
 public class StudentManagement {
     public static void main(String[] args) {
-       //saveAsStudent();
-       inputAStudent();
+       saveAsStudent();
+       //inputAStudent();
     }
     
     //nhập từ bàn phím cần Scanner object bàn phím. OOP cái gì cũng Object, Class
@@ -45,8 +45,34 @@ public class StudentManagement {
     
     //hard-code
     public static void saveAsStudent() {
-        Student an = new Student("SE666789", "AN NGUYỄN", 2001, 8.9);
+        Student an = new Student("SE666789", "AN NGUYỄN", 1999, 8.9);
+        Student binh = new Student("SE662204", "BÌNH LÊ", 2004, 0.4);
+        
         an.showProfile();
+        binh.showProfile();
+        
+        //chấm xổ gì, access modifier Specifier
+        System.out.println("An name (directly): " + an.name); //y chang cầu thủ dáng tên sau lưng
+        System.out.println("An name (directly): " + an.getName()); 
+
+        System.out.println("Binh name (directly): " + binh.name);      
+
+        
+        //vì sờ được trực tiếp cái name/biến/intance variable, ta có thể get() và set()
+        an.name = "KHÔNG HỌC BÀI";
+        
+        System.out.println("An name again directly: " + an.name); //y chang cầu thủ dáng tên sau lưng
+        System.out.println("Binh name again directly: " + binh.name);   
+        
+
+        an.showProfile();
+        
+        //sayHi() mà sayHi đang là static
+        
+                
     }
     
 }
+
+//STATIC ĂN THEO THẰNG CUỐI CÙNG
+

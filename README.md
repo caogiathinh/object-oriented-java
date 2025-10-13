@@ -17,6 +17,7 @@ Each session is carefully crafted to build upon previous concepts while introduc
 1. **Session01-Hello**: Your first steps into Java programming
 2. **Session02-Languages**: Exploring Java's fundamental language features
 3. **Session03-Class**: Deep dive into object-oriented design
+4. **Session04-Essential**: Understanding and implementing try-catch for robust error handling
 
 ## ⚡ Quick Start
 

@@ -68,8 +68,9 @@ public class StudentManagement {
         an.showProfile();
         
         //sayHi() mà sayHi đang là static
-        
-                
+        System.out.println("Using static ");
+        an.sayHi();
+        binh.sayHi();   
     }
     
 }

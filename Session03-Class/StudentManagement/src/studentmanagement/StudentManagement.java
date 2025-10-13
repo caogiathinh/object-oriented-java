@@ -52,25 +52,33 @@ public class StudentManagement {
         binh.showProfile();
         
         //chấm xổ gì, access modifier Specifier
-        System.out.println("An name (directly): " + an.name); //y chang cầu thủ dáng tên sau lưng
+        System.out.println("An name (directly): " + Student.name); //y chang cầu thủ dáng tên sau lưng
         System.out.println("An name (directly): " + an.getName()); 
 
-        System.out.println("Binh name (directly): " + binh.name);      
+        System.out.println("Binh name (directly): " + Student.name);      
 
         
         //vì sờ được trực tiếp cái name/biến/intance variable, ta có thể get() và set()
-        an.name = "KHÔNG HỌC BÀI";
+        //an.name = "KHÔNG HỌC BÀI";
+        Student.name = "CÀY RANK HƠN CÀY CODE";
         
         System.out.println("An name again directly: " + an.name); //y chang cầu thủ dáng tên sau lưng
         System.out.println("Binh name again directly: " + binh.name);   
         
+        System.out.println("Student name again directly: " + Student.name);   
 
         an.showProfile();
         
         //sayHi() mà sayHi đang là static
         System.out.println("Using static ");
-        an.sayHi();
-        binh.sayHi();   
+        an.sayHi(); //không tư hữu theo kiểu của riêng mình cho static
+        binh.sayHi();
+        Student.sayHi();//tên static vì là đồ chung multiple objects
+        
+        //2 loại dấu chấm, chấm trực tiếp qua tên class tức là chạm sờ STATIC
+        //chấm qua con đường new tức là bạn đang hàm ý chơi với non-static
+        //                                   đồ của riêng từng Object
+        
     }
     
 }

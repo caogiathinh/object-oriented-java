@@ -33,7 +33,13 @@ public class StudentProfile {
         name = sc.nextLine().toUpperCase();
 
         System.out.print("Input yob: ");
-        yob = sc.nextInt(); //convert data từ bàn phím - từ chuỗi thành số
+//        yob = sc.nextInt(); //convert data từ bàn phím - từ chuỗi thành số
+//        //để lại rác trong buffer, tệ nhất là enter, rác dấu cách + enter
+//        //xóa bộ đệm trước nhập chuỗi 
+//        sc.nextLine(); 
+        //yob = Integer
+        yob = Integer.parseInt(sc.nextLine());
+        //nextLine() hốt sạch buffer, loại bỏ enter, còn chuỗi số -> số
         
         System.out.print("Input address: ");
         address = sc.nextLine().toUpperCase();       
@@ -42,6 +48,8 @@ public class StudentProfile {
         System.out.println("Name: " + name);
         System.out.println("Yob: " + yob);
         System.out.println("Address: " + address);
+        
+        
         
     }
 }

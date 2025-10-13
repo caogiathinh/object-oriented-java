@@ -37,13 +37,30 @@ public class StudentManagement {
         
         Student x = new Student(id, name, yob, gpa);
         x.showProfile();
-            
+        //x.setId //nguy hiểm.    
     }
     
     public static void saveAStudent() {
-        Student an = new Student("SE666789", "AN NGUYEN", 2001, 8.9);
-        an.showProfile();
+        Student an = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+        Student binh = new Student("SE662204", "BINH LE", 2001, 0.4);
         
+        an.showProfile();
+        binh.showProfile();
+        
+        //chấm xổ gì, Access Modifier/Access Specifier
+        System.out.println("An name (dicrectly): " + an.name); //y chang cầu thủ dán tên sau lưng
+        System.out.println("An name (dicrectly): " + an.getName());
+        
+        System.out.println("Binh name (dicrectly): " + binh.name);
+
+        //vì sờ được trực tiếp cái name/biến/instance/variable, ta có thể get() và set() 
+        an.name = "KHONG HOC BAI";
+        
+        System.out.println("Binh name (dicrectly): " + binh.name);        
+        System.out.println("An name (dicrectly): " + an.name);
+        
+        an.showProfile();
+      
     }
 }
 

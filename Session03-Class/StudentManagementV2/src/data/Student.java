@@ -6,8 +6,8 @@ package data;
  */
 public class Student {
     private String id;
-    private String name;
-    private int yob;
+    public String name;
+    public int yob;
     private double gpa;
     
     public Student(String id, String name, int yob, double gpa) {

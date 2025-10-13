@@ -9,7 +9,10 @@ import java.util.Scanner;
  *
  * @author gia.thinh
  */
+
 public class StudentManagement {
+    //hiểu được static sẽ hiểu tại sao các hàm khác phải có thêm static 
+    //nằm cùng chỗ với main thì mới gọi được.
     public static void main(String[] args) {
        saveAStudent();
     }
@@ -51,16 +54,34 @@ public class StudentManagement {
         System.out.println("An name (dicrectly): " + an.name); //y chang cầu thủ dán tên sau lưng
         System.out.println("An name (dicrectly): " + an.getName());
         
+
         System.out.println("Binh name (dicrectly): " + binh.name);
 
         //vì sờ được trực tiếp cái name/biến/instance/variable, ta có thể get() và set() 
-        an.name = "KHONG HOC BAI";
-        
+        //an.name = "KHONG HOC BAI";
+        Student.name = "CAY RANK HON CAY CODE";
+
         System.out.println("Binh name (dicrectly): " + binh.name);        
         System.out.println("An name (dicrectly): " + an.name);
-        
+                 
+        System.out.println("Student name (dicrectly): " + Student.name);
+
         an.showProfile();
-      
+            
+        //sayHi() mà sayHi() đang là static 
+        System.out.println("Using static");
+        an.sayHi(); //đồ static không tư hữu theo kiểu của riêng mình
+        
+        binh.sayHi(); 
+        
+        Student.sayHi(); //tên Class chấm static vì đồ chung cho multiple object
+       
+        //có 2 loại dấu chấm
+        //chấm trực tiếp qua tên Class tức là sờ chạm STATIC
+        //chấm qua con đường new tức là bạn đang hàm ý chơi với NON-STATIC
+        //                                  đồ của riêng từng object
+        //tọa sơn quan hổ đấu. 
     }
 }
+
 

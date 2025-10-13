@@ -81,6 +81,7 @@ public class StudentManagement {
         //chấm qua con đường new tức là bạn đang hàm ý chơi với NON-STATIC
         //                                  đồ của riêng từng object
         //tọa sơn quan hổ đấu. 
+        //static: class level, non-static: instance/object level. 
     }
 }
 

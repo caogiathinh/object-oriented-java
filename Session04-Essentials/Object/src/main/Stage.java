@@ -25,6 +25,8 @@ public class Stage {
         Student x = s1; //2 con trỏ trỏ cùng vùng new 
        
         s1 = new Student("SE666788", "BINH  LE", 1998, 8.8);
+        
+        System.out.println("s1 now is BINH");
         s1.showProfile();
         
         System.out.println("An after S1 reject");

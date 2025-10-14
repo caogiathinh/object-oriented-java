@@ -61,7 +61,7 @@ public class Student {
     public void showProfile() {
         System.out.printf("|%8s|%-25s|%4d|%4.1f|\n", id, name, yob, gpa);
         
-        System.out.println("yob: " + yob);
+        //System.out.println("yob: " + yob);
         //NON-STATIC CHƠI VỚI NON - DĨ NHIÊN CÙNG OBJ, VÀ STATIC LUÔN, ĐỒ RIÊNG THÀNH CỦA CHUNG
     }
      

@@ -20,8 +20,13 @@ public class MyToysV2 {
     //System: hầu hết static 
     public static final double PI = 3.1415;
     //HẰNG SỐ
-
     
+    //đẩy Scanner ra ngoài xài chung cho các hàm static
+    private static Scanner sc = new Scanner(System.in); 
+    //private dùng nội bộ bên trong 
+    
+
+    //                                      tb nhập, errorMsg, lower, upper
     public static int getAInteger(String inputMsg) {
         int n; 
         Scanner sc = new Scanner(System.in);

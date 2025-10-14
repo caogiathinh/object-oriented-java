@@ -1,19 +1,16 @@
 package data;
-
-
-
 /**
  *
  * @author gia.thinh
  */
 public class Student {
-    private static String id; //nằm ở vùng nhớ riêng, mà object nào cũng xài ké, chung
-    public static String name; //vùng nhớ xài chung cho các object cùng nhóm/Class 
+    private String id; //nằm ở vùng nhớ riêng, mà object nào cũng xài ké, chung
+    private String name; //vùng nhớ xài chung cho các object cùng nhóm/Class 
                                //dữ liệu đổ vào hay chỉnh sửa ăn theo thằng cuối cùng
     //CHỐT:  KHÔNG DÙNG STATIC CHO NHỮNG THỨ/ĐĐ/ HÀM CỦA RIÊNG TỪNG OBJECT
     //tui có mã số, bạn có mã số,  bạn kia có mã số, nhưng đều là riêng của mỗi đứa
     //chung đặc điểm, khác value, vậy phải có biến clone riêng (non-static)
-    public int yob; //non static
+    private int yob; //non static
     private double gpa;
 
     public Student(String id, String name, int yob, double gpa) {
@@ -71,12 +68,4 @@ public class Student {
     public int getAge() {
         return 2021 - yob; 
     }     
-    
-    public static void sayHi() {
-        System.out.println("Hi everyone, my name is " + name);
-        //System.out.println("By the way, my yob is: " + yob); 
-        //Static chỉ chơi với static vì cùng khu vực, không chơi với non
-        //         có quá trời yob được clone biết lấy ai bỏ ai
-        
-    }
 }

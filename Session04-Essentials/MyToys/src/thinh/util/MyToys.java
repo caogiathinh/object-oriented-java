@@ -26,6 +26,25 @@ public class MyToys {
     public static final double PI = 3.1415;
     //final ~ const bên C, biến k cho thay đổi value, trừ lần đầu tiên khai báo
     //HẰNG SỐ 
+    
+    //Double.parseDouble()
+    //                                      inputMsg, errorMsg, lower, upper
+    public static int getAnInteger(String inputMsg) {
+        int n;
+        Scanner sc = new Scanner(System.in); 
+        
+        do {
+            try {
+                System.out.print(inputMsg);
+                //n = sc.nextInt(); để lại rác 
+                n = Integer.parseInt(sc.nextLine()); 
+                //if chửi ngoài biên
+                return n;
+            } catch (Exception e) {
+                System.out.println("Do ku know how to input an integer (1..7)?");
+            }
+        } while(true); 
+    }
    
     //trong quá trình làm app, việc nhập số là lặp lại nhiều lần
     //nhập 2 của HCN, 3 cạnh TG, nhập sự lựa chọn menu 1...5, điểm tb, điểm thi các môn 

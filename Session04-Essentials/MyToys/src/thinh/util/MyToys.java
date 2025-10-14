@@ -24,15 +24,19 @@ public class MyToys {
     //String: vừa non-static, vừa có static
     //System: hầu hết static
     public static final double PI = 3.1415;
+    public static final double VAT = 0.1; 
     //final ~ const bên C, biến k cho thay đổi value, trừ lần đầu tiên khai báo
     //HẰNG SỐ 
+    
+    //đẩy Scanner ra ngoài xài chung cho các hàm static 
+    private static Scanner sc = new Scanner(System.in);
+    //private cho nhu cầu dùng nội bộ bên trong
+    
     
     //Double.parseDouble()
     //                                      inputMsg, errorMsg, lower, upper
     public static int getAnInteger(String inputMsg) {
         int n;
-        Scanner sc = new Scanner(System.in); 
-        
         do {
             try {
                 System.out.print(inputMsg);

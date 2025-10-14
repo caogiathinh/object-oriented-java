@@ -19,6 +19,26 @@ public class MyToysV2 {
     //String: vừa non-stati, vừa có static 
     //System: hầu hết static 
     public static final double PI = 3.1415;
+    //HẰNG SỐ
+
+    
+    public static int getAInteger(String inputMsg) {
+        int n; 
+        Scanner sc = new Scanner(System.in);
+
+        do {
+            try {
+                System.out.print(inputMsg);
+                //n = sc.nextLine() để lại rác
+                n = Integer.parseInt(sc.nextLine());
+                //if chửi nếu ngoài range, ngoài biên: 1..6
+                return n;
+
+            } catch (Exception e) {
+                System.out.println("Do ku know to input an integer?");
+            }
+        } while (true);
+    }
 
     //quá trình làm app, việc nhập số lặp lại nhiều lần
     //nhập 2 của 1 hcn, 3 cạnh của tg, nhập sự lựa chọn menu 1..5, điểm trung bình, điểm thi các môn 
@@ -34,10 +54,10 @@ public class MyToysV2 {
             try {
                 System.out.print("Input an integer: ");
                 //n = sc.nextLine() để lại rác
-                n = Integer.parseInt(sc.nextLine()); 
+                n = Integer.parseInt(sc.nextLine());
                 //if chửi nếu ngoài range, ngoài biên: 1..6
                 return n;
-                
+
             } catch (Exception e) {
                 System.out.println("Do ku know to input an integer?");
             }

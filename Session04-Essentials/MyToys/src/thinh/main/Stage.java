@@ -15,7 +15,6 @@ public class Stage {
         int choice;
         choice = MyToys.getAnInteger("Input an integer (1..7): ");
         System.out.println("Your choice: " + choice);
+        
     }
-    
-    
 }

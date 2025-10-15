@@ -9,17 +9,87 @@ import data.Student;
 public class Stage {
 
     public static void main(String[] args) {
-        checkObjectV2();
+        checkObjectV6();
+    }
+
+    public static void checkObjectV6() {
+
+        //câu chuyện của sinh ra rồi chết non 
+        //câu chuyện vô danh tên gọi 
+        Student s1 = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+        Student x = s1;
+
+        
+    }
+
+    public static void checkObjectV5() {
+
+        //câu chuyện 2 chàng 1 nàng
+        Student s1 = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+        Student x = s1;
+
+        s1.showProfile();
+        x.showProfile(); //backup tọa độ new AN ở trên, trên 1 con trỏ trên cùng
+        //chứng minh 2 chàng trỏ đúng 1 nàng
+        //chàng 1 tát, chàng 2 thấy
+        s1.setName("MINH CHOI U TIM HEN");
+        //trong vùng new AN NGUYEN đã bị thay đổi thành MÌNH CHƠI .. 
+        System.out.println("After TAT");
+        //hông thèm hỏi s1, hỏi luôn x xem sao
+        x.showProfile();
+
+        //nhiều tên cùng tham chiếu một đối tượng - 1 object
+        //tí tèo -> (Mình...)
+        //hoàng, gl, xàm, đa cấp, -> (Tui)
+        //cùng 1 tên ám chỉ nhiều object khác
+        //sếp = ST
+        //sếp = gã trả lương
+        //THAY ĐỔI VALUE CỦA BIẾN
+        //MỘT OBJECT CÓ NHIỀU NGƯỜI NGƯỚC NHÌN, THAM CHIẾU
+    }
+
+    public static void checkObjectV4() {
+        Student s1 = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+
+        Student x = s1; //mày là biến lưu tọa độ vùng new, cho tọa độ đi
+        //nếu như tao new như mày, ra vùng clone mới
+
+        //int a = 10;
+        //int b = a; //cho tao value của mày, tao muốn lấy value của mày
+        //trước khi s1 trỏ tọa độ mớ, backup tọa độ cũ
+        //giữ được An
+        s1 = new Student("SE666788", "LOC PHAT", 1998, 8.8);
+        s1.showProfile();
+        x.showProfile(); //AN trở lại, backup tọa độ lưu vào 1 biến khác cùng kiểu.  
+
     }
 
     public static void checkObjectV3() {
         Student s1 = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
-        s1 = new Student("SE666788", "LOC PHAT", 1998, 8.8);
 
+        s1 = new Student("SE666788", "LOC PHAT", 1998, 8.8);
+        //con diều đứt dây
+        //vì sợi dây nối với diều mới LP
+
+        //s1 li dị vùng clone AN, chuyển sang kết nối với LP 
+        //ống nhòm dờm sang chỗ mới, con trỏ lưu tọa độ mới, biến thay đổi value
+        //lưu value gần nhất 
+        //int a = 10; a = 100; hỏi a là mấy: 100    
+        //s1 là biến object
+        //tui cần lắm luôn tọa độ vùng new, vùng Clone Student
         s1.showProfile();
-        s2.showProfile();
-        //một nhát new một clone
-        
+        //mất tọa độ vùng clone AN
+        //vùng RAM không có ai trỏ tới, thì định kì khi chạy app, JVM (phần chạy song song)
+        //Window kiểm soát app bạn. clear vùng CLONE không có con trỏ
+        //CÔNG TY MÔI TRƯỜNG ĐÔ THỊ - JVM có đoạn code, module giám sát HEAP, xem có đứa nào mồ coi kh?
+        //giết ngay và luôn ~~ free (con trỏ bên C chơi malloc())
+        //anh giám sát này gọi là Garbage Collector, người gom rác
+        System.gc(); //gom rác vùng HEAP
+
+        //ngoài đời có gán lại biến con trỏ, tên tắt cho thứ phức tạp
+        //sếp = (ông, gã chấm lương cho mình, qđ mình tăng lương hay không)
+        //tí = mày, tao ba má gọi ở nhà
+        //tí = NGÔ THANH VÂN & câu chuyện trạng Tí.
     }
 
     public static void checkObjectV2() {

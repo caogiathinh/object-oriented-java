@@ -9,17 +9,54 @@ import data.Student;
 public class Stage {
 
     public static void main(String[] args) {
-        checkObjectV6();
+        //checkObjectV8();
+        Student Ahihi = checkObjectV8(); //ahihi lưu tọa độ của AN trong hàm thảy ra ngoài
+        Ahihi.showProfile();
+    }
+
+    //hàm trả về 1 object hả thầy, ko 
+    //đọc chuẩn, hàm trả về 1 tọa độ của object nào đó, vì trả được tọa độ nghĩa là 
+    //sờ dc object, có tọa độ chấm là tới object
+    
+    //             Student x;
+    public static Student checkObjectV8() { // ~ Student x = sẽ là 1 vùng new
+
+        Student x; 
+        x = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+        return x; //x lưu tọa độ vùng clone AN, hướng 6< 
+                  //thảy tọa độ đó cho tên hàm, tên hàm là 6M, hướng 6M
+
+    }
+
+    public static void checkObjectV7() {
+
+        Student x; //khai báo con trỏ nhưng chưa trỏ ai 
+        //tao với mày nói về thằng x kia đi 
+        x = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
+        //à nó đây nè
+        //x = new ()
+
     }
 
     public static void checkObjectV6() {
 
         //câu chuyện của sinh ra rồi chết non 
         //câu chuyện vô danh tên gọi 
+        //object ko thèm, kh có tên gọi, f
         Student s1 = new Student("SE666789", "AN NGUYEN", 1999, 8.9);
-        Student x = s1;
+        //          đã tương đương tọa độ rồi, thảy tọa độ đó đi đâu hoy
+        //          thảy cho biến object nào đó giữ giùm tọa độ 
+        //biến đó mà chấm nghĩa là tọa độ chấm, NGHĨA LÀ NEW CHẤM LUÔN 
+        //vì biến có tọa độ từ new. CHỐT HẠ: NEW NẮM TẠO ĐỘ
+        //chấm là vào trong tọa độ xem có cái gì, trong object có gì ?? 
 
-        
+        new Student("SE666789", "AN NGUYEN", 1999, 8.9).showProfile();
+        //ko thèm đặt tên cho object để giao tiếp, để object tự giao tiếp
+        //object vô danh, anonymous object, object was created without a name, a reference
+        //XUẤT HIỆN XONG, GÁY XONG, GRABAGE COLLECTOR PHÁT HIỆN KHÔNG CÓ CON TRỎ 
+        //CLEAR
+        //MÚN RE-USE LẠI VÙNG NEW TỐI THIẾU ÍT NHẤT 1 TÊN GOI, 1 BIẾN OBJECT
+        //ĐỂ CÒN CHẤM TIẾP 
     }
 
     public static void checkObjectV5() {

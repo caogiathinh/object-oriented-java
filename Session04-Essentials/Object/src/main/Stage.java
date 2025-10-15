@@ -13,7 +13,6 @@ public class Stage {
         Student Ahihi = checkObjectV8(); //ahihi lưu tọa độ của AN trong hàm thảy ra ngoài
         Ahihi.showProfile();
     }
-
     //hàm trả về 1 object hả thầy, ko 
     //đọc chuẩn, hàm trả về 1 tọa độ của object nào đó, vì trả được tọa độ nghĩa là 
     //sờ dc object, có tọa độ chấm là tới object

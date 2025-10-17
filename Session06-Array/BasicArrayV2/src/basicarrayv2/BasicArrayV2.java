@@ -7,9 +7,8 @@ package basicarrayv2;
 public class BasicArrayV2 {
 
     public static void main(String[] args) {
-
+        // TODO code application logic here
         playWithPrimitiveArrayV2();
-
     }
 
     public static void playWithPrimitiveArrayV2() {

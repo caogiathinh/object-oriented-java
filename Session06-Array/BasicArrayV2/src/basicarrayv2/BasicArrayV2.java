@@ -21,6 +21,20 @@ public class BasicArrayV2 {
         Student arr[] = new Student[2];
         arr[0] = new Student("SE123456", "AN NGUYEN", 2001, 9.0);
         arr[1] = new Student("SE123457", "BINH LE", 2000, 5.0);
+        
+        System.out.println("Before sorting by gpa the student list: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].showProfile();
+        }
+        //tuyệt đối không dùng toán tử > < >= <= cho các biến object, vì đi so sánh
+        //tọa độ, địa chi là vô nghĩa
+        //chấm bên trong địa chỉ, chấm bên trong tọa độ vào trong object
+        //vào trong value phức tạp, lấy value khác ra xem và so sánh 
+        //sv1 so sánh sv2 là vớ vẫn, s1. điểm so sánh sinh viên thì còn hợp lí
+//        if (arr[0] > arr[1]) {
+//            
+//        }
+        //swap con trỏ
 
         if (arr[0].getGpa() > arr[1].getGpa()) {
             Student t = arr[0];

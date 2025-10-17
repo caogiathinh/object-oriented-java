@@ -2,7 +2,7 @@
 - Chơi với Object (ôn lại cách tạo khuôn, new object)
 - Chơi với Array Object 
 	- Phân biệt new ngoặc vuông (array) hay new ngoặc tròn (new mới đối tượng) 
-	- Các đối tượng trong array không trỏ đến vùng new (chưa có thông tin) thì biến đó sẽ tham chiếu tới cuối RAM (vùng null) -> nếu . tới sẽ bị Null Pointer Exception.
+	- Các đối tượng trong array không trỏ đến vùng new (chưa có thông tin) thì biến đó sẽ tham chiếu tới đầu RAM (địa chỉ là 0, giá trị là 0) -> nếu . tới sẽ bị Null Pointer Exception.
 	- Câu chuyện length, cần có count để tránh null pointer khi duyệt hết mảng khi chưa new hết giá trị. 
 ## Code 
 ```
@@ -57,3 +57,4 @@ public static void playWithStudentArray() {
         x.showProfile();
     }
 ```
+

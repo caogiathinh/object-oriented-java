@@ -8,9 +8,86 @@ public class BasicArrayV2 {
 
     public static void main(String[] args) {
         // TODO code application logic here
-        playWithStudentArray();
+        //sortPrimitiveArray();
+        sortObjectArrayV2();
+        //playWithObjectArray();
+        //playWithStudentArray();
         //playWithStudentObject();
         //playWithPrimitiveArrayV3();
+
+    }
+
+    public static void sortObjectArrayV2() {
+        Student arr[] = new Student[2];
+        arr[0] = new Student("SE123456", "AN NGUYEN", 2001, 9.0);
+        arr[1] = new Student("SE123457", "BINH LE", 2000, 5.0);
+
+        if (arr[0].getGpa() > arr[1].getGpa()) {
+            Student t = arr[0];
+            arr[0] = arr[1];
+            arr[1] = t;
+        }
+
+        System.out.println("After sorting by gpa the student list: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].showProfile();
+        }
+    }
+
+    public static void sortPrimitiveArray() {
+        int a = 9;
+        int b = 5;
+        //tui muốn tăng dần về value 5   9
+        System.out.println("a: " + a + " | b: " + b);
+
+        //chỉ đổi, sắp xếp khi bị lộn xộn  
+        //NẾU ĐỨNG TRƯỚC MÀ LỚN HƠN, RÕ RÀNG PHẢI ĐỔI VALUE
+        //if (a > b) thì mới swap
+        if (a > b) {
+            int tmp = a;
+            a = b; //tao cần value nhỏ, vì tao ngồi đầu tiên, nên mang nhỏ 
+            //backk up a trước khi chơi với cái nhỏ
+            b = tmp; //vẫn còn 9 backup
+        }
+        System.out.println("After sorting a: " + a + " | b: " + b);
+    }
+
+    public static void sortObjectArray() {
+        Student arr[] = new Student[2];
+        arr[0] = new Student("SE123456", "AN NGUYEN", 2001, 9.0);
+        arr[1] = new Student("SE123457", "BINH LE", 2000, 5.0);
+        //[0] đừng trở thằng to nữa, sẽ bị in trước thì không giảm dần
+        //[0] nên trỏ điểm nhỏ thì hay hơn
+        Student x = arr[0]; //tmp trỏ tới 9
+        arr[0] = arr[1];  //đầu bảng trỏ 5 thay vì 9 
+        arr[1] = x; //chỗ ngồi kế đấu bảng xin trỏ lại 9
+        //NEW BÌNH ĐANG ĐƯỢC 2 CON TRỎ CÙNG TRỎ
+        System.out.println("After sorting by gpa the student list: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].showProfile();
+        }
+
+        //phần tử đầu của mảng thay vì trỏ vùng new 9, nay nó trỏ new 5
+        //sắp xếp mảng object, vùng new nguyên 
+        //đổi cách trỏ [i] trong mảng 
+        //[thằng đầu mảng] trỏ new nhỏ 5.0
+        //[thằng cuối mảng] trỏ new nhỏ 9.0
+    }
+
+    public static void playWithObjectArray() {
+        Student arr[] = new Student[20];
+        arr[0] = new Student("SE123456", "AN NGUYEN", 2001, 9.0);
+        arr[1] = new Student("SE123457", "BINH LE", 2000, 5.0);
+
+        System.out.println("The student list: ");
+        for (Student x : arr) {
+            x.showProfile(); //x = arr[0], x = arr[1]; //2 chàng x và arr[0] cùng trỏ new AN
+            //        x    arr[1]              BINH
+        }
+
+        //sắp xếp mảng tăng dần theo điểm trung bình
+        //lí thuyết, bạn [0] sẽ phải có điểm 5
+        //               [1] sẽ phải có điểm 9 
     }
 
     public static void playWithStudentArray() {
@@ -47,15 +124,12 @@ public class BasicArrayV2 {
             list[i].showProfile();
             //tao chỉ là 1 biến sinh viên thôi mà
         }
-        
+
         //s1 = null; //tao trỏ xuống đáy ram, null hen, làm biếng new, 
-        
         //s1.showProfile(); //không có để show, NullPointerException
-                
         //NGUYÊN TẮC KHI CHƠI VỚI MẢNG: BIẾN COUNT ĐỂ CHO BIẾT
         //MẢNG ĐÃ GÁN VALUE TỚI ĐÂU, FOR TỚI ĐÓ, KHÔNG FOR ĐẾN LENGTH
         //BỊ DEFAULT VỚI PRIMITIVE, BỊ NULL VỚI MẢNG OBJECT
-         
     }
 
     public static void playWithStudentObject() {

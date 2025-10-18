@@ -36,6 +36,12 @@ public class BasicArrayV2 {
 //        }
         //swap con trỏ
 
+        
+        ///SẮP XẾP MẢNG OBJECT - mảng của các biến object mà trỏ vào object
+        //chẳng qua thay đổi vị trí trỏ, thay đổi value, tọa độ vùng object
+        //mà đang dc lưu trong các biến con trỏ. 
+        //đổi cách trỏ của từng biến mảng. Chơi biến trung gian .
+        
         if (arr[0].getGpa() > arr[1].getGpa()) {
             Student t = arr[0];
             arr[0] = arr[1];

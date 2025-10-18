@@ -14,14 +14,14 @@ public class BasicArrayV2 {
         //playWithStudentArray();
         //playWithStudentObject();
         //playWithPrimitiveArrayV3();
-
+        
     }
 
     public static void sortObjectArrayV2() {
         Student arr[] = new Student[2];
         arr[0] = new Student("SE123456", "AN NGUYEN", 2001, 9.0);
         arr[1] = new Student("SE123457", "BINH LE", 2000, 5.0);
-        
+
         System.out.println("Before sorting by gpa the student list: ");
         for (int i = 0; i < arr.length; i++) {
             arr[i].showProfile();
@@ -30,27 +30,21 @@ public class BasicArrayV2 {
         //tọa độ, địa chi là vô nghĩa
         //chấm bên trong địa chỉ, chấm bên trong tọa độ vào trong object
         //vào trong value phức tạp, lấy value khác ra xem và so sánh 
-        //sv1 so sánh sv2 là vớ vẫn, s1. điểm so sánh sinh viên thì còn hợp lí
-//        if (arr[0] > arr[1]) {
-//            
-//        }
-        //swap con trỏ
-
-        
-        ///SẮP XẾP MẢNG OBJECT - mảng của các biến object mà trỏ vào object
-        //chẳng qua thay đổi vị trí trỏ, thay đổi value, tọa độ vùng object
-        //mà đang dc lưu trong các biến con trỏ. 
-        //đổi cách trỏ của từng biến mảng. Chơi biến trung gian .
-        
+        //sv1 so sánh sv2 là vớ vẫn, so sánh sv1 và sv2 thông qua điểm thì hợp lí hơn.
         if (arr[0].getGpa() > arr[1].getGpa()) {
             Student t = arr[0];
             arr[0] = arr[1];
             arr[1] = t;
         }
 
+        ///SẮP XẾP MẢNG OBJECT - mảng của các biến object mà trỏ vào object
+        //chẳng qua thay đổi vị trí trỏ, thay đổi value, tọa độ vùng object
+        //mà đang dc lưu trong các biến con trỏ. 
+        //đổi cách trỏ của từng biến mảng. Chơi biến trung gian .
+
         System.out.println("After sorting by gpa the student list: ");
-        for (int i = 0; i < arr.length; i++) {
-            arr[i].showProfile();
+        for (Student x : arr) {
+            x.showProfile();
         }
     }
 

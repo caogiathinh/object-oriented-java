@@ -2,6 +2,7 @@
 package main;
 
 
+import data.Shelf;
 import java.util.Scanner;
 import data.Student;
 
@@ -11,7 +12,15 @@ import data.Student;
  */
 public class Stage {
     public static void main(String[] args) {
-        inputStudentList();
+            
+        //NGON MENU VÒNG LẶP CHỌN 1 THÊM HỒ SƠ, 2 IN DANH SÁCH
+        Shelf tuSE = new Shelf("PINK", "SE"); 
+        
+        tuSE.inputAStudent();
+        tuSE.inputAStudent();
+        
+        tuSE.printStudentList();
+        //inputStudentList();
     }
     
     public static void inputStudentList() {
@@ -20,12 +29,13 @@ public class Stage {
         int yob, count;
         double gpa;
         
-        System.out.println("How mayny students do you want to input? ");
+        System.out.print("How mayny students do you want to input? ");
         count = Integer.parseInt(sc.nextLine()); //MyToys.getAnInteger(???)
         
         Student[] arr = new Student[count];
        
         for (int i = 0; i < count; i++) {
+            System.out.println("Input student #" + (i + 1) + "/" + count);
             System.out.print("Input id: ");
             id = sc.nextLine(); 
             

@@ -1,6 +1,7 @@
 
 package main;
 
+import data.Shelf;
 import data.Student;
 import java.util.Scanner; 
 /**
@@ -14,7 +15,14 @@ public class Stage {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        inputStudentList();
+        //MENU VÒNG LẶP CHỌN 1 THÊM HỒ SƠ, 2. IN DANH SÁCH        
+        //inputStudentList();
+        Shelf tuSE = new Shelf("RED", "SE");
+        
+        tuSE.inputStudentList();
+        tuSE.inputStudentList();
+        
+        tuSE.printStudentList();  
     }
     
     public static void inputStudentList() {

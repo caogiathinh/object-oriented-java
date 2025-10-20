@@ -28,7 +28,9 @@ public class Stage {
                 case 2:
                     tuSE.printStudentList();
                     break;
-
+                case 3:
+                    tuSE.searchAStudent();
+                    break;
                 case 6:
                     System.out.println("Bye bye, see you next time");
                     break;
@@ -37,7 +39,6 @@ public class Stage {
                     break;
             }
         } while (choice != 6); //còn đúng còn làm
-
     }
 
     public static void printMenu() {

@@ -97,4 +97,22 @@ public class Shelf {
             arr[i].showProfile();
         }
     }
+    
+    public void searchAStudent() {
+        //đưa đi vào từ bàn phím, tìm sv theo id
+        //for từ đầu đến cuối mảng, lôi từng sinh viên so sánh mã số sv
+        //với id gõ vào, = nhau thì done, tìm sv ở vị trí thứ i
+        String id;
+        System.out.print("Input student id that you want to search: ");
+        id = sc.nextLine();
+        for (int i = 0; i < count; i++) {
+            if (arr[i].getId().equalsIgnoreCase(id) == true) {
+                System.out.println("Student found!! Here she/he is");
+                arr[i].showProfile();
+                return; //thoát hàm luôn, vì mã số sv duy nhất, thầy rồi không còn ai để for.
+            }
+        }
+        
+        System.out.println("Student not found!!!");
+    }
 }

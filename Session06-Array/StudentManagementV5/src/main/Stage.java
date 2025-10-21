@@ -4,6 +4,8 @@
  */
 package main;
 
+import data.Shelf;
+
 /**
  *
  * @author gia.thinh
@@ -14,7 +16,11 @@ public class Stage {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Shelf tuSE = new Shelf("PINK", "SE"); 
+        
+        tuSE.addAStudent();
+        
+        tuSE.printStudentList();
     }
     
 }

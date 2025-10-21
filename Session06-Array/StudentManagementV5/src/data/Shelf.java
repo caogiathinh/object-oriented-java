@@ -27,7 +27,8 @@ public class Shelf {
         String id, name;
         int yob;
         double gpa;
-
+        
+        System.out.println("Input profile student: #" + (count + 1) + "/" + ds.length);
         System.out.print("Input id: ");
         id = sc.nextLine(); 
         
@@ -49,5 +50,22 @@ public class Shelf {
         for (int i = 0; i < count; i++) {
             ds[i].showProfile();
         }
+    }
+    
+    public void searchStudent() {
+        //đưa id vào từ bàn phím, tìm sv theo id
+        //for từ đầu đến count của mảng, lôi từng sinh viên ra hỏi. 
+        //so sánh id  gõ vào = nhau thì báo tìm thấy không thì báo ko tìm thấy
+        String id; 
+        System.out.println("Input student id that you want to search: ");
+        id = sc.nextLine(); 
+        for (int i = 0; i < count; i++) {
+            if (ds[i].getId().equalsIgnoreCase(id) == true) {
+                System.out.println("Student found!!! Here she/he is");
+                ds[i].showProfile();
+                return; //thoát hàm luôn vì chỉ có 1 mã số sinh viên
+            }
+        }
+        System.out.println("Student not found!!!!");
     }
 }

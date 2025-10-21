@@ -56,6 +56,7 @@ public class Student {
 
     public void showProfile() {
         System.out.printf("|%-20s|%-25s|%4d|%4.1f|", id, name, yob, gpa);
+        System.out.println();
     }
     
 }

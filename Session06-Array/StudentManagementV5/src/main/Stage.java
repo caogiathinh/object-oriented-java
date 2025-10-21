@@ -29,6 +29,9 @@ public class Stage {
                 case 2:
                     tuSE.printStudentList();
                     break;
+                case 3: 
+                    tuSE.searchStudent();
+                    break;
                 case 6:
                     System.out.println("Bye bye, see you next time");
                     break;
@@ -39,6 +42,7 @@ public class Stage {
     }
 
     public static void printMenu() {
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
         System.out.println("Welcome to SIS");
         System.out.println("Choose the following function play with");
         System.out.println("1. Add a new student profile");
@@ -47,5 +51,7 @@ public class Stage {
         System.out.println("4. Update a student profile");
         System.out.println("5. Remove a student profile");
         System.out.println("6. Quit");
+        System.out.println("++++++++++++++++++++++++++++++++++++++++++++++");
+
     }
 }

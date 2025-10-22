@@ -35,17 +35,31 @@ public class Craftsman {
 //        r1.paint();
         rectArr[1] = new Rectangle("MA", "PINK", 3.0, 4.0);
         rectArr[2] = new Rectangle("ANH HAI", "BLUE", 3.0, 3.0);
-        
+
         System.out.println("The list of rectangles");
 //        for (Rectangle x : rectArr) {
 //            x.paint();
 //        } //coi chừng null pointer exception
-            //chỉ for đến chỗ đã trỏ đã gán của mảng. count trong bài cái tủ đó. 
-        for (int i = 0; i < rectArr.length; i++) {
+        //chỉ for đến chỗ đã trỏ đã gán của mảng. count trong bài cái tủ đó. 
+        System.out.println("Before sorting");
+        for (int i = 0; i < 3; i++) {
             rectArr[i].paint();
         }
- 
 
+        //sort tăng dần theo diện tích, sort tăng dần theo gpa
+        for (int i = 0; i < 3 - 1; i++) {
+            for (int j = i + 1; j < 3; j++) {
+                if (rectArr[i].getArea() > rectArr[j].getArea()) {
+                    Rectangle tmp = rectArr[i];
+                    rectArr[i] = rectArr[j];
+                    rectArr[j] = tmp;
+                }
+            }
+        }
+        System.out.println("After sorting");
+        for (int i = 0; i < 3; i++) {
+            rectArr[i].paint();
+        }
     }
 
     public static void cutShape() {

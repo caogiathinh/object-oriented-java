@@ -45,7 +45,13 @@ public class Square {
         return "Square{" + "owner=" + owner + ", color=" + color + ", edge=" + edge + '}';
     }
     
+    public double getArea() {
+        //return edge * edge;      
+        return Math.pow(this.edge, 2);
+    } 
+    //re-use ở các chỗ khác
+    
     public void paint() {
-        System.out.printf("|SQUARE   |%-15s|%-10s|%4.1f|    |\n", owner, color, edge);
+        System.out.printf("|SQUARE   |%-15s|%-10s|%4.1f|    |%7.2f|\n", owner, color, edge, getArea());
     }   
 }

@@ -5,7 +5,8 @@ package data;
  * @author gia.thinh
  */
 public class Disk {
-
+    public static final double PI = 3.1415;
+    
     private String owner;
     private String color;
     private String smile; //nụ cười
@@ -54,9 +55,15 @@ public class Disk {
     public String toString() {
         return "Disk{" + "owner=" + owner + ", color=" + color + ", smile=" + smile + ", radius=" + radius + '}';
     }
+    
+    public double getArea() {     
+        //return 3.14 * radius * radius;
+        //return Math.PI * Math.pow(radius, 2);
+        return Disk.PI * Math.pow(radius, 2); //this. hông nên coi static là tư hữu, của riêng ai, kể cả tui 
+    } 
 
     public void paint() {
-        System.out.printf("|DISK     |%-15s|%-10s|%4s|%4.1f|\n", owner, color, smile, radius);
+        System.out.printf("|DISK     |%-15s|%-10s|%4s|%4.1f|%7.2f|\n", owner, color, smile, radius, getArea());
     }
 
 }

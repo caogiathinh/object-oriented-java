@@ -35,6 +35,14 @@ public class Craftsman {
 //        r1.paint();
         rectArr[1] = new Rectangle("MA", "PINK", 3.0, 4.0);
         rectArr[2] = new Rectangle("ANH HAI", "BLUE", 3.0, 3.0);
+        
+        //hình vuông sắp xếp luôn, đưa vào mảng luôn
+        rectArr[3] = new Square("G.A.HAI", "BLUE", 5.0);
+        //không cùng kiểu, không cùng hệ không cùng data type, éo chung mảng, không sort được
+        //Lí thuyết muốn sort được cho vuông và chữ nhật thì 2 thằng này phải cùng mảng của 1 thứ.
+        //nào đó, phải là 1 cái mảng gì gì đó. 
+        //sort trên cái gì đó
+        //nay: 2 khuôn độc lập, 2 mảng đọc lập
 
         System.out.println("The list of rectangles");
 //        for (Rectangle x : rectArr) {

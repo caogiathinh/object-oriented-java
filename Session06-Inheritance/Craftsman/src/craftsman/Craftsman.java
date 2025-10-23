@@ -37,7 +37,7 @@ public class Craftsman {
         rectArr[2] = new Rectangle("ANH HAI", "BLUE", 3.0, 3.0);
         
         //hình vuông sắp xếp luôn, đưa vào mảng luôn
-        rectArr[3] = new Square("G.A.HAI", "BLUE", 5.0);
+        //rectArr[3] = new Square("G.A.HAI", "BLUE", 5.0);
         //không cùng kiểu, không cùng hệ không cùng data type, éo chung mảng, không sort được
         //Lí thuyết muốn sort được cho vuông và chữ nhật thì 2 thằng này phải cùng mảng của 1 thứ.
         //nào đó, phải là 1 cái mảng gì gì đó. 
@@ -80,5 +80,4 @@ public class Craftsman {
         Disk d1 = new Disk("BE NA", "RAINBOW", "<3", 2.0);
         d1.paint();
     }
-
 }

@@ -18,7 +18,12 @@ public class Craftsman {
     
     public static void playWithChildClass() {
         Square s1 = new Square("TIA", "PINK", 5.0);
-        s1.paint();
+        s1.paint(); //không muốn núp bóng ba, muốn có bản sắc, tui là HV SQUARE kìa, mày thể hiện
+                    //không phải Ba
+        //vi diệu 1
+        
+        //vi diệu 2
+        
     }
     
     public static void sortShapes() {

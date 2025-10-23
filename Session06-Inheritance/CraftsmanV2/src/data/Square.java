@@ -42,4 +42,15 @@ public class Square extends Rectangle {
     //VỀ LÍ ĐÃ XONG KHUÔN VUÔNG, VÌ DATA NHƯ TRUYỀN THỐNG, DÙNG LẠI HẾT CỦA CN
     //KO CẦN VIẾT LẠI CODE, KHÔNG COPY PASTE
     //KHÔNG CHỈNH SỬA DÂY CHUYỀN QUÁ NHIỀU, TẤT NHIÊN ĐANG DÙNG SP, SERIES
+    
+    //hiện tượng hàm con trùng 100% với tên hàm cha
+    @Override //dính khái niệm gọi là tính đa hình, đa xạ, đa kế thừa
+    //đa nhân cách, đa sắc thái, 5 sắc thái, biến hình, TRANSFORMER 
+    //POLYMOPHISM
+    //HIỆN TƯỢNG CON QUA MẶT CHA, THỂ HIỆN BẢN SẮC CỦA CON, CHA NGỒI IM ĐẾ CON
+    //LÀM CHO, ĐỂ CON LÊN TIẾNG, CHA ĐỂ ĐÓ CON, VỜ NHƯ KO THẤY CHA
+    public void paint() {
+        System.out.printf("|SQUARE   |%-15s|%-10s|  -  |%4.1f|%7.2f|\n", 
+                                owner, color, width, getArea());
+    }
 }

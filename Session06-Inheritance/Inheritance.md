@@ -224,15 +224,11 @@ public class Square {
         System.out.printf("|SQUARE   |%-15s|%-10s|%4.1f|    |%7.2f|\n", owner, color, edge, getArea());
     }   
 }
-
+```
 ### Class Disk
 ```
 package data;
 
-/**
- *
- * @author gia.thinh
- */
 public class Disk {
     public static final double PI = 3.1415;
     

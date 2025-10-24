@@ -16,7 +16,11 @@ public class Craftsman {
         playWithChildClass();
     }
     
-    
+    public static void playWithChildClass() {
+        Square s1 = new Square("TIA", "PINK", 5.0);
+        s1.paint(); //khong muốn núp bóng ba nuẫ, muốn có bản sắc
+    }
+            
     
     public static void sortShapes() {
         Rectangle r1 = new Rectangle("TIA", "PINK", 1.0, 2.0);

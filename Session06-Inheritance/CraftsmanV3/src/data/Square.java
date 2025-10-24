@@ -27,10 +27,15 @@ package data;
 
 //3. Cần phễu để đúc phiên bản mới, vật liệu đưa vào, gửi lên Cha, đổ lên 
 //     Cha, vì có mọi thứ từ Cha, phiên bản gốc
+// tôn trọng bản sắc Con, Con HV, o, c, edge only edge
+//code tự sinh ra nó sẽ căn theo phễu của Cha, 4 tham số, để đổ được 4 tham số 
+//                               phễu con phải 4, mất bản sắc
 public class Square extends Rectangle{
 
-    public Square(String owner, String color, double width, double length) {
-        super(owner, color, width, length);
+    
+    
+    public Square(String owner, String color, double edge) {
+        super(owner, color, edge, edge);
     }  //~~~~ new Rectangle(owner, color, width, length); 
        //     new hv chính là new hcn 
        //     new hv chính là new phiên bản hcn
@@ -40,7 +45,9 @@ public class Square extends Rectangle{
 //   private String color; 
 //   private double edge; 
     
-    
+    //VÌ LÝ ĐỔ XONG KHUÔN DÙNG LẠI, VÌ ĐỔ DATA NHƯ TRUYỀN THỐNG, DÙNG LẠI HẾT CỦA CHỮ NHẤT
+    //KHÔNG CẦN VIẾT LẠI CODE KHONG COPY/PASTE
+    //KHÔNG CHỈNH SỬA DÂY CHUYỀN SẢN XUẤT QUÁ NHIỀU, TÁT NHIÊN ĐANG CÙNG DÒNG SP, SERIES
 }
     
     

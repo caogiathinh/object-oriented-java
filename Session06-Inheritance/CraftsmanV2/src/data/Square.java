@@ -5,10 +5,7 @@ package data;
  *
  * @author gia.thinh
  */
-//hình vuông là phiên bản của hcn, độ lại, độ lại 2 cạnh kề bằng nhau
-//không mất đi bản sắc hình chữ nhật 4 gốc vuông
-//hình vuông là sự mở rộng, nâng cấp, đặc biệt hóa, phiên bản mới có sự điều chỉnh
-//thay đổi nhỏ từ hcn 
+
 //cách chế tạo cái khuôn mới từ khuôn cũ, kế thừa lại, đứng trên vai .. 
 //không phải là COPY/PASTE
 //phiên bản cũ là mình làm các Khuôn từ đầu, không kế thừa, sp chỏi nhau 
@@ -50,7 +47,7 @@ public class Square extends Rectangle {
     //HIỆN TƯỢNG CON QUA MẶT CHA, THỂ HIỆN BẢN SẮC CỦA CON, CHA NGỒI IM ĐẾ CON
     //LÀM CHO, ĐỂ CON LÊN TIẾNG, CHA ĐỂ ĐÓ CON, VỜ NHƯ KO THẤY CHA
     public void paint() {
-        System.out.printf("|SQUARE   |%-15s|%-10s|  -  |%4.1f|%7.2f|\n", 
+        System.out.printf("|SQUARE   |%-15s|%-10s|  - |%4.1f|%7.2f|\n", 
                                 owner, color, width, getArea());
     }
 }

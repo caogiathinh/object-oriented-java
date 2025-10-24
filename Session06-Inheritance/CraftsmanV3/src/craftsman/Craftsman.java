@@ -21,7 +21,7 @@ public class Craftsman {
         s1.paint(); //khong muốn núp bóng ba nuẫ, muốn có bản sắc
     }
             
-    
+    //sắp xếp các hình bằng kế thừa
     public static void sortShapes() {
         Rectangle r1 = new Rectangle("TIA", "PINK", 1.0, 2.0);
 

@@ -36,7 +36,7 @@ public class Square extends Rectangle {
 //   private String owner;
 //   private String color; 
 //   private double edge; 
-
+    @Override
     public void paint() {
         System.out.printf("|SQUARE  |%-15s|%-10s|%4.1f|%4.1f|%7.2f|\n", owner, color, width, length, getArea());
     }

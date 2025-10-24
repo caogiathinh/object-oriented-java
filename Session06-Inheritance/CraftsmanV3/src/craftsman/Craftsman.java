@@ -13,5 +13,4 @@ public class Craftsman {
     public static void main(String[] args) {
         
     }
-    
 }

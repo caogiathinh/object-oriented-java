@@ -17,7 +17,7 @@ public class Craftsman {
     }
     
     public static void playWithChildClass() {
-        Square s1 = new Square("TIA", "PINK", 5.0);
+        Square s1 = new Square("TIA", "PINK", 6.0);
         s1.paint(); //khong muốn núp bóng ba nuẫ, muốn có bản sắc
     }
             

@@ -36,9 +36,13 @@ public class Square extends Rectangle {
 //   private String owner;
 //   private String color; 
 //   private double edge; 
-    @Override
+    @Override //dính đến khái niệm đa hình, tính đa hình, đa xạ, đa kế thừa
+              //đa nhân cách, 50 sắc thái, biến hình, TRANSFOMER
+              //POLYMOPHISM
+              //HIỆN TƯỢNG CON QUA MẶT CHA, THỂ HIỆN BẢN SẮC CỦA RIÊNG CON, CHA NGỒI IM CON 
+              //LÀM CHO, ĐÊ CON LÊN TIẾNG, VỜ NHƯ KHÔNG THẤY CHA
     public void paint() {
-        System.out.printf("|SQUARE  |%-15s|%-10s|%4.1f|%4.1f|%7.2f|\n", owner, color, width, length, getArea());
+        System.out.printf("|SQUARE  |%-15s|%-10s|%4.1f|  - |%7.2f|\n", owner, color, width, getArea());
     }
     //VÌ LÝ ĐỔ XONG KHUÔN DÙNG LẠI, VÌ ĐỔ DATA NHƯ TRUYỀN THỐNG, DÙNG LẠI HẾT CỦA CHỮ NHẤT
     //KHÔNG CẦN VIẾT LẠI CODE KHONG COPY/PASTE

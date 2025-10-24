@@ -6,9 +6,9 @@ package data;
  * @author gia.thinh
  */
 public class Rectangle {
-    private String owner;
-    private String color; 
-    private double width;
+    protected String owner;
+    protected String color; 
+    protected double width;
     private double length;
     //private double area; //đặc điểm/đặc tính dc tính từ các đặc tính khác
                          //khác, từ w * l- > đặc tính dẫn xuất - derived field

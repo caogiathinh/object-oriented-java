@@ -51,6 +51,8 @@ public class Workshop2 {
     }
 
     public static void playWithTriangles() {
+        
+        //t1 là tên tất của một hình tam, nó đây  ~~~~ new Triangle
         Triangle t1 = new Triangle("PINK", 3, 4, 5);
         t1.paint(); //của cha chính chủ
         
@@ -59,9 +61,11 @@ public class Workshop2 {
         
         //câu chú ý, khai Cha new Con -> kế thừa
         Triangle rt2 = new RightTriangle("RAINBOW", 6, 8);
-        //     TG            là một hình tgv
-        //
-        
-                
+        //      TG một           là hình tgv 
+        //đang xem tgv như là 1 tg, gọi nó theo tên tắt của TG
+        //rt2 chấm xổ ra Cha, xưng dưới danh nghĩa của Cha, ta là con đại gia .. 
+        rt2.paint();   //xài Cha, nhưng lúc CHẠY THÌ ƯU TIÊN GỌI CON, DO NEW CON 
+                       //HÙ CHA NHƯNG CHẠY CON
+                       //PAINT() CHA ĐỂ ĐÓ CON LO CHO, CHA BỊ QUA MẶT. 
     }
 }

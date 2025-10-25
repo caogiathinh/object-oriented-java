@@ -23,7 +23,7 @@ public class ParentChild {
         //KHAI CHA NEW CHA, xổ ra gì ? xổ cái gì đó của Cha.
         
         
-        Child c1 = new Child("NHA PHO", "100ETH");
+        Child c1 = new Child("NHA PHO", "100ETH", "DU THUYEN");
         c1.showProfile(); //nếu không làm đồ riêng, đó là xài lại của Cha
         //mà sài của Cha thì phải nguyên tắc của Cha
         //nếu muốn qua mặt hãy tự làm đi @Override
@@ -36,8 +36,8 @@ public class ParentChild {
         //cú chót, KHAI CHA NEW CON, ĐỌC THEO KIỂU KẾ THỪA
         //MÀY BIẾT TAO LÀ AI KO, BA TAO K VỪA ĐÂU, DANH NGHĨA DÒNG HỌ
         //KHẨU KHÍ DÒNG HỌ, CHA, CHỨ KHÔNG PHẢI MÌNH
-        Parent c2 = new Child("CAN HO CAO CAP", "DOGECOIN"); 
-        c2.sayHi(); 
+        Parent c2 = new Child("CAN HO CAO CAP", "DOGECOIN", "MOTOR"); 
+        // c2.sayHi(); 
         //CHỈ XỔ RA NHỮNG GÌ CỦA CHA, KHỒNG XỔ CỦA RIÊNG CON 
         //riêng Con có 2 thứ: Override và khác biệt hoàn toàn 
         //nếu con có trùng với Cha tên hàm, vẫn gọi cha nhưng chạy Con
@@ -52,6 +52,17 @@ public class ParentChild {
         //kỹ thuật chạm vào đồ riêng tư của con
         //Ba biết trong Sài Gòn Con làm gì, vậy làm sao ba có thể biết?? 
         //DÙNG KĨ THUẬT DRIFT CON TRỎ. 
+        
+        //kéo dãn con trỏ Cha -> xuống đáy new Child() 
+        //cần con trỏ tạm để lấy được đáy new Child()
+        Child x = (Child)c2;  //cần trỏ vùng new Child() 
+        //c2 vẫn là parent nhả sợ dây thung
+        //kỹ thuật ép kiểu.
+        x.sayHi();
+        //CÁCH LẦY LỘI HƠN, XUẤT PHÁT TỪ CÁCH 1 NHƯNG HONG XÀI CON TRỎ TẠM 
+        //(Child)c2. //do dấu chấm quá mạng, chấm sát ai thì cư xử theo type đó
+        //ÉP XONG RỒI MỚI CHẤM
+        ((Child)c2).sayHi();
         
     }
 }

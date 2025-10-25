@@ -24,7 +24,7 @@ public class Child extends Parent {
     //lí thuyết, Con có đến 3 thứ: a1, a2, a3, phễu phải đổ cả 3, kế thừa Cha giữ 2
     //new Con chính là new Cha
 
-    public Child(String assetThree, String assetOne, String assetTwo) {
+    public Child(String assetOne, String assetTwo, String assetThree) {
         super(assetOne, assetTwo);
         this.assetThree = assetThree;
         //phải có Cha thì mới có không gian cho con mở rộng 
@@ -51,7 +51,7 @@ public class Child extends Parent {
     
     @Override //con có hàm trùng tên với Cha + vượt mặt Cha (lúc chạy ưu tiên hơn)
     public void showProfile() {
-        System.out.println("CHILD > asset1: " + assetOne + "; asset2: " + assetTwo);
+        System.out.println("CHILD > asset1: " + assetOne + "; asset2: " + assetTwo + " ; asset 3: " + assetThree);
     }
     
     //hàm mới hành động mới của con khác cha hoàn toàn 
@@ -59,12 +59,13 @@ public class Child extends Parent {
     //tập thể thao mạo hiểm
     public void sayHi() {
         System.out.println("Hey, I am a rich kid");
+        System.out.println("By the way, my 3rd asset is " + assetThree);
     } 
 }
 //CON CÓ QUYỀN KHÁC TRÊN ĐẶC ĐIỂM HÀNH VI CỦA CHA (NGOÀI KẾ THỪA OVERRIDE)
 //DẤU CHÁM THÌ SAO?
 //KHAI CHA NEW CON CHỈ XỔ CỦA CHA, KHÔNG CHỊU XỔ PHẦN KHÁC BIỆT, DÙNG DANH NGHĨA
 //NGƯỜI LỚN, PHẢI HÀNH XỬ NHƯ NGƯỜI LỚN
-//muốn xổ tắt kỹ thuật tổ lái con trỏ
+//muốn xổ tất kỹ thuật tổ lái con trỏ
         
 

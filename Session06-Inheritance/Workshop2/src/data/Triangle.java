@@ -54,9 +54,23 @@ public class Triangle {
     public String toString() {
         return "Triangle{" + "color=" + color + ", firstSide=" + firstSide + ", secondSide=" + secondSide + ", thirdSide=" + thirdSide + '}';
     }
+    //có một bộ thư viện, đồ chơi, class khác đưa vào dùng kèm, giống xài Scanner
+    //giúp không cần làm thao tác ở trên, tự nó làm giùm, mình chỉ cần viết mấy câu code ngắn
+    //mà có hết đám trên này, thư viện mang tên lombok 
+    
+    
+    //nếu em đổ a b c không thỏa 1 tham giác, tổng 2 cạnh bất kì lớn hơn cạnh còn lại 
+    //thì phải làm sao??
+    //có 2 cách phổ biến
+    //cà chớn đưa default 3 4 9 -> default 3 4 5
+    //ném ra ngoại lệ, chủ động giết app, vì tam giác cà chớn không xử lí. 
+    
+    public double getPerimeter() {
+        return this.firstSide + this.secondSide + this.thirdSide; 
+    }
     
     public double getArea() {
-        double p = (this.firstSide + this.secondSide + this.thirdSide) / 2;
+        double p = getPerimeter() / 2;
         return Math.sqrt(p * (p - this.firstSide) * (p - this.secondSide) * (p - this.thirdSide));
     }
     

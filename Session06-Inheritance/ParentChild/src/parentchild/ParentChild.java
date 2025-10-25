@@ -48,5 +48,10 @@ public class ParentChild {
         
         //List<Student> list = new ArrayList(); 
         //cha                       con
+        
+        //kỹ thuật chạm vào đồ riêng tư của con
+        //Ba biết trong Sài Gòn Con làm gì, vậy làm sao ba có thể biết?? 
+        //DÙNG KĨ THUẬT DRIFT CON TRỎ. 
+        
     }
 }

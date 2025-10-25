@@ -76,9 +76,14 @@ public abstract class Shape {
     //HÀM TRỪU TƯỢNG, VẤN ĐỀ TRỪU TƯỢNG, THỨ VÔ HÌNH VÀ VẪN HỮU HÌNH
     //ĐỂ VÀO CHO ĐỦ BỘ HOÀN THIỆN 1 THỨ GÌ ĐÓ, LÃNH ĐẠO TINH THẦN, KO QUYỀN LỰC CỤ THỂ.
     //MA, QUỶ VÔ HÌNH, MÌNH VẪN SỢ, KHÁI NIỆM THÔI, ABSTRACT
-    public abstract double getArea(); 
+    public abstract double getArea();  //chỉ nói thoi mà không có code
     public abstract double getPerimeter(); 
     //tao chỉ nói rằng HH có thứ này, còn mỗi đưa V T CN.. tự lo đi
+    
+    //CHA LÀ NHÂN TỬ CHUNG CỦA CÁC CON
+    //ABSTRACT: KHÁI NIỆM, NÓI THOI, CHƯA CẦN CỤ THỂ. 
+    //ABSTRACT CLASS: LÀ PHÂN LOẠI TRONG CUỘC SÔNG TỰ NHIÊN
+    //                ĐỂ DỄ DÀNG NÓI VỀ CÁC OBJECT, XẢY RA CỰC NHIỀU TRONG CUỘC SỐNG
     
 //    public double getArea() {
 //        //tính thế nào ??, éo có kích thước vì dị biệt ở từng Con 
@@ -104,6 +109,5 @@ public abstract class Shape {
     
     //HÌNH CỤ THỂ V TR TG HBH CHẮC CHẮN LÀ TÍNH ĐƯỢC, CŨNG LÀ ĐĐ CỦA TỪNG HÌNH  
     //mỗi loại hình sẽ dị biệt trong tính toán nói chung là có S và P
-    //
     
 }

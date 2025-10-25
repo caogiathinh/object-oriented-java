@@ -84,7 +84,9 @@ public abstract class Shape {
     //ABSTRACT: KHÁI NIỆM, NÓI THOI, CHƯA CẦN CỤ THỂ. 
     //ABSTRACT CLASS: LÀ PHÂN LOẠI TRONG CUỘC SÔNG TỰ NHIÊN
     //                ĐỂ DỄ DÀNG NÓI VỀ CÁC OBJECT, XẢY RA CỰC NHIỀU TRONG CUỘC SỐNG
-
+    
+//    public double getArea() {
+//        //tính thế nào ??, éo có kích thước vì dị biệt ở từng Con 
 //        //return 50; //không chơi default vô nghĩa
 //        //cạnh đâu để sửa lại S, công thức đâu mà tính
 //        
@@ -94,6 +96,10 @@ public abstract class Shape {
 //        //đại diện cho 1 nhóm/series các đồ vật khác đều có S, P 
 //        //để đây như là ý nghĩa tinh thần, đảm bảo để mô tả 1 thứ nào đó. 
 //        //HH có S, P
+//    }
+    
+//    public double getPerimeter() {
+//        
 //    }
     
     //diện tích chu vi không được xem là đặc tính mà phải xem là hành vi

@@ -13,9 +13,9 @@ public class Workshop2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //playWithTriangles();
+        playWithTriangles();
 
-        sortTriangle();
+        //sortTriangle();
     }
 
     public static void sortTriangle() {
@@ -64,8 +64,14 @@ public class Workshop2 {
         //      TG một           là hình tgv 
         //đang xem tgv như là 1 tg, gọi nó theo tên tắt của TG
         //rt2 chấm xổ ra Cha, xưng dưới danh nghĩa của Cha, ta là con đại gia .. 
-        rt2.paint();   //xài Cha, nhưng lúc CHẠY THÌ ƯU TIÊN GỌI CON, DO NEW CON 
+        rt2.paint();  //xài Cha, nhưng lúc CHẠY THÌ ƯU TIÊN GỌI CON, DO NEW CON 
                        //HÙ CHA NHƯNG CHẠY CON
                        //PAINT() CHA ĐỂ ĐÓ CON LO CHO, CHA BỊ QUA MẶT. 
     }
 }
+//CON SÀI TẤT CẢ NHỮNG GÌ MÀ CHA CÓ, CHA THÊM CON CÓ THÊM, CHA BỚT CON BỚT
+//KẾ THỪA/DI TRUYỀN CHO CON - INHERITE
+
+//BIẾN DỊ, CON KHÁC, THÊM MỚI MÀ CHA KO CÓ, KHÔNG PHẢI OVERRIDE (XIN PHÉP CHA CHO
+//CON THEO KIỂU GIỐNG CHA, TÊN HÀM GIỐNG, ĐỂ CON PHÁT NGÔN THAY) 
+//CON SÁNG TẠO MỚI, LAN ĐỘT BIẾN.

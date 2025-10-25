@@ -1,5 +1,6 @@
 package workshop2;
 
+import data.RightTriangle;
 import data.Triangle;
 
 /**
@@ -20,9 +21,9 @@ public class Workshop2 {
     public static void sortTriangle() {
         Triangle arr[] = new Triangle[6];
 
-        arr[0] = new Triangle("PINK", 3, 4, 5);
-        arr[1] = new Triangle("PINK", 6, 8, 10);
-        arr[2] = new Triangle("PINK", 5, 12, 13);
+        arr[0] = new RightTriangle("PINK", 3, 4);
+        arr[1] = new RightTriangle("PINK", 6, 8);
+        arr[2] = new RightTriangle("PINK", 5, 12);
 
         arr[3] = new Triangle("RED", 5, 6, 7);
         arr[4] = new Triangle("RED", 7, 10, 15);
@@ -51,6 +52,16 @@ public class Workshop2 {
 
     public static void playWithTriangles() {
         Triangle t1 = new Triangle("PINK", 3, 4, 5);
-        t1.paint();
+        t1.paint(); //của cha chính chủ
+        
+        RightTriangle rt1 = new RightTriangle("PINK", 3, 4);
+        rt1.paint(); //của con chính chủ 
+        
+        //câu chú ý, khai Cha new Con -> kế thừa
+        Triangle rt2 = new RightTriangle("RAINBOW", 6, 8);
+        //     TG            là một hình tgv
+        //
+        
+                
     }
 }

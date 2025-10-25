@@ -37,6 +37,16 @@ public class ParentChild {
         //MÀY BIẾT TAO LÀ AI KO, BA TAO K VỪA ĐÂU, DANH NGHĨA DÒNG HỌ
         //KHẨU KHÍ DÒNG HỌ, CHA, CHỨ KHÔNG PHẢI MÌNH
         Parent c2 = new Child("CAN HO CAO CAP", "DOGECOIN"); 
+        c2.sayHi(); 
+        //CHỈ XỔ RA NHỮNG GÌ CỦA CHA, KHỒNG XỔ CỦA RIÊNG CON 
+        //riêng Con có 2 thứ: Override và khác biệt hoàn toàn 
+        //nếu con có trùng với Cha tên hàm, vẫn gọi cha nhưng chạy Con
         
+        //đang dùng danh nghĩa Cha, thì cư xử như Cha, Cha éo có hàm sayHi() lấy
+        //gi mà xổ, trong RAM vẫn có sayHi(), vì new Child() có sayHi()
+        //clone Khuôn Child như nhau, quan trọng con trỏ
+        
+        //List<Student> list = new ArrayList(); 
+        //cha                       con
     }
 }

@@ -12,7 +12,7 @@ public abstract class Shape {
     
     protected String owner;
     protected String color; 
-    protected String borderColor;
+    protected String borderColor; 
     //cạnh thì sao??
     //protected double a, b, c, radius; //còn nữa thì sao, có nên không ?? 
     //khong được đưa các cạnh vào đây vì:
@@ -65,9 +65,6 @@ public abstract class Shape {
     }
     
     //1 Khuôn vẫn theo nguyên tắc chung vẫn chế tạo theo nguyên tắc chung 
-    public void paint() {
-        
-    }
     
     //XÓA KHÔNG CHO VÌ CẦN KHÁI NIỆM NÀY ĐỂ DIÊN TẢ RÕ Ý NGHĨA HH
     //ĐỂ KHÔNG ĐƯỢC VIẾT CODE, VÌ KHÔNG CỤ THỂ KÍCH THƯỚC
@@ -78,6 +75,11 @@ public abstract class Shape {
     //MA, QUỶ VÔ HÌNH, MÌNH VẪN SỢ, KHÁI NIỆM THÔI, ABSTRACT
     public abstract double getArea();  //chỉ nói thoi mà không có code
     public abstract double getPerimeter(); 
+    
+    //vẽ và in thông tin cũng là chung chung vì mỗi hình mỗi khác
+    public abstract void paint();  //thiếu S, P để in ấn. 
+    
+    
     //tao chỉ nói rằng HH có thứ này, còn mỗi đưa V T CN.. tự lo đi
     
     //CHA LÀ NHÂN TỬ CHUNG CỦA CÁC CON
@@ -111,3 +113,16 @@ public abstract class Shape {
     //mỗi loại hình sẽ dị biệt trong tính toán nói chung là có S và P
     
 }
+
+
+//ABSTRACT LÀ KHÁI NIỆM LÀ Ý TƯỞNG VỀ 1 THỨ GÌ ĐÓ
+//VỚI HÌNH HỌC THÌ gets() getp() là 2 khái niệm luôn phải có, S, P là khái niệm
+//cần có khi mô tả về hình học 
+
+//tivi phải nói về dò kênh kết nối 
+//điện thoại: phải nói về kết nối, nhận cuộc gọi, gửi sms, .. 
+
+//những mô tả này là cụ thể, nhưng cũng có thể chỉ là ý tưởng, nói thoi
+//chung chung
+//chung chung gọi là ABSTRACT
+//cụ thể gọi là      CỎNCRETE

@@ -72,7 +72,10 @@ public abstract class Shape {
     //KHÔNG CỤ THỂ, NÓI NHƯNG CHƯA LÀM
     //HÀM TRỪU TƯỢNG, VẤN ĐỀ TRỪU TƯỢNG, THỨ VÔ HÌNH MÀ VẪN HỮU HÌNH.
     //ĐỂ VÀO CHO HOÀN THIỆN 1 THỨ GÌ ĐÓ, LÃNH DẠO TINH THẦN KHÔNG CÓ QUYỀN LỰC
-    //
+    
+    //ABSTRACT: KHÁI NIỆM NÓI THÔI CHƯA CẦN CỤ THỂ
+    //ABSTRACT CLASS: LÀ SỰ PHÂN LOẠI TRONG CUỘC SỐNG ĐỂ DỄ DÀNG NÓI VỀ CÁC ĐỐI TƯỢNG.
+    
     public abstract double getArea();
     public abstract double getPerimeter();
 //    public double getArea() {

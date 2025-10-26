@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package data;
 
 /**
@@ -64,10 +61,6 @@ public abstract class Shape {
     }
     
     //khuôn vẫn chế tạo theo nguyên tắc chung
-    public void paint() {
-        
-    }
-    
     //VẪN TỒN TẠI NHƯNG KHÔNG NẮM ĐƯỢC, TỒN TẠI VỚI NGHĨA MÔ TẢ THÔI. 
     //KHÔNG CỤ THỂ, NÓI NHƯNG CHƯA LÀM
     //HÀM TRỪU TƯỢNG, VẤN ĐỀ TRỪU TƯỢNG, THỨ VÔ HÌNH MÀ VẪN HỮU HÌNH.
@@ -78,6 +71,9 @@ public abstract class Shape {
     
     public abstract double getArea();
     public abstract double getPerimeter();
+    
+    //việc vẽ và in ra thông tin cũng là chung chung vì mỗi hình mỗi khác
+    public abstract void paint();
 //    public double getArea() {
 //        //tính thế nào?? éo có kích thước vì dị biệt ở từng Con 
 //                        //không có kích thước sao tính
@@ -103,3 +99,16 @@ public abstract class Shape {
     //HÌNH CỤ THỂ V, TR, HBH CHẮC CHẮN LÀ TÍNH ĐC, CŨNG LÀ ĐẶC ĐIỂM CỦA TỪNG HÌNH
     //mỗi con sẽ dị biệt trong tính toán, nhưng nói chung có S, P thừa kế từ Shape
 }
+
+//ABSTRACT LÀ KHÁI NIỆM, Ý TƯỞNG 1 THỨ GÌ ĐÓ
+//VỚI HÌNH HỌC THÌ getS(). getP() là 2 khái niệm phải có 
+//cần có khi mô tả về hình học
+
+//tivi phải nói về dò kênh, kết nối  
+
+//điện thoại nói về bắt sống, nhận cuộc gọi, gửi sms, ... 
+//nhưng mô tả này có thể là cụ thể, nhưng cũng có thể là ý tưởng, 
+//chung chung 
+//chung chung gọi là ABSTRACT
+//còn cụ thể là      CONCRETE
+

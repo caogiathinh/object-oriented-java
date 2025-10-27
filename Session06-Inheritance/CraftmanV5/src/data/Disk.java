@@ -7,12 +7,12 @@ package data;
 public class Disk extends Shape {
 
     public static final double PI = 3.1415;
-    
+
     private String smile;
     private double radius;
     //owner, color, border lấy từ Cha, Cha giữ giùm, những điểm chung của anh em
 
-    public Disk(String smile, double radius, String owner, String color, String borderColor) {
+    public Disk(String owner, String color, String borderColor, String smile, double radius) {
         super(owner, color, borderColor);
         this.smile = smile;
         this.radius = radius;
@@ -33,20 +33,20 @@ public class Disk extends Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
-    
+
     @Override
     public double getArea() {
         return Disk.PI * radius * radius;
     }
 
     @Override
-    public double getPerimeter() {
-        return 2 * PI * radius;
+    public double getPerimeter() { 
+        return 2 * Disk.PI * radius;
     }
 
     @Override
     public void paint() {
-        System.out.printf("|DISK          |%-10s|%-10s|%-10s|%3s|%4.1f|%7.2f|\n",
-                owner, color, borderColor, smile, radius, getArea());
+        System.out.printf("|DISK      |%-10s|%-10s|%-10s|%4s|%4.1f|%7.2f|\n", 
+                              owner, color, borderColor, smile, radius, getArea());
     }
 }

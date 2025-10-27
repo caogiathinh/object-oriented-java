@@ -75,4 +75,5 @@ public class Rectangle extends Shape {
         System.out.printf("|RECTABLE  |%-10s|%-10s|%-10s|%4.1f|%4.1f|%7.2f|\n", 
                                 owner, color, borderColor, width, length, getArea());
     }
+    
 }

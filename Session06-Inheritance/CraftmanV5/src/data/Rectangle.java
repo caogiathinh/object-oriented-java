@@ -62,20 +62,17 @@ public class Rectangle extends Shape {
     
     @Override
     public double getArea() {
-        return width * length;
+        return this.width * this.length; 
     }
 
     @Override
     public double getPerimeter() {
-         return (width + length) * 2;
+        return (this.width + this.length) * 2;
     }
 
     @Override
     public void paint() {
-        System.out.printf("|||||||", 
-                                owner, color, borderColor, width, length);
-                        
+        System.out.printf("|RECTABLE  |%-10s|%-10s|%-10s|%4.1f|%4.1f|%7.2f|\n", 
+                                owner, color, borderColor, width, length, getArea());
     }
-    
-    
 }

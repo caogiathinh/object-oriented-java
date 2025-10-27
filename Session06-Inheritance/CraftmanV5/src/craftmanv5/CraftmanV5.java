@@ -83,7 +83,36 @@ public class CraftmanV5 {
         //KĨ THUẬT VIẾT CODE TỪ 1 HÀM CÓ N CÁCH THỂ HIỆN CHẠY KHÁC NHAU
         //KĨ THUẠT NÀY GỌI LÀ TÍNH ĐA XẠ, ĐA HÌNH POLYMOPIHSM
         
-       
-       
+       //HAY HƠN NỮA NÈ, CHÚNG MÀY VÀO MẢNG DÙM TA ĐỂ TAO SORT
+//       Shape box[] = new Shape[9]; //9 biến Shape
+//       box[0] = r1; 
+//       box[1] = r2; 
+//       box[2] = s1;
+//       // ...
+
+        //Shape box [] = new Shape[]{new Disk(), new Rectangle(), new Square()}
+                
+        Shape box[] = new Shape[] {r1, r2, s1, s2, s3, d1, d2, t1, t2};
+        System.out.println("The list of shapes before sort");
+        for (Shape x : box) {
+            x.paint();
+        }
+        //đa hình siêu đẹp. 1 hàm paint n cách chạy
+        //1 ra nhiều cách thực thi, đa hình đa xạ, POLIMOPHISM
+        //cha chỉ nói paint đám con nhà vô
+        for (int i = 0; i < 9; i++) {
+            for (int j = i + 1; j < 9 - 1; j++) {
+                if (box[i].getArea() > box[j].getArea()) {
+                    Shape tmp = box[i]; 
+                    box[i] = box[j]; 
+                    box[j] = tmp;
+                }
+            }
+        }
+        
+        System.out.println("The list of Shape after sort");
+        for (int i = 0; i < 9; i++) {
+            box[i].paint();
+        }
     }
 }

@@ -16,7 +16,8 @@ public class CraftmanV5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        playWithShapes();
+        //playWithShapes();
+        sortShapes();
     }
 
     public static void playWithShapes() {
@@ -67,5 +68,22 @@ public class CraftmanV5 {
         d2.paint();  //hàm của cha, chạy của con 
         t1.paint();  //hàm của con, chạy của con
         t2.paint();  //hàm của cha, chạy của con
+        
+        //sắp xếp thôi 
+        
+        //PAINT() Ở ĐÂY CỰC HAY
+        //CHỈ CÓ 1 HÀM TÊN LÀ PAINT() NHƯNG CÓ ĐA DẠNG CÁCH VIẾT CODE, 
+        //LÚC CHẠY CŨNG ĐA DẠNG LUÔN, LÚC T, V, CN, TG, ... 
+        //cùng hàm Cha, Ông nội tùy cách khai báo nhưng đám Con Biết hết
+        //Override
+        //từ 1 hàm paint() ánh xạ chiếu ra N cách viết code/implement khác nhau
+        //thực thi (chạy theo N cách khác nhau)
+        //từ 1 mà biến hóa ra nhiều, từ 1 có đa hình dạng, đa ánh xạ cách làm cách chạy
+        //từ 1 biến hình transformer, đa nhân cách 50 sắc thái, từ 1 ra nhiều.
+        //KĨ THUẬT VIẾT CODE TỪ 1 HÀM CÓ N CÁCH THỂ HIỆN CHẠY KHÁC NHAU
+        //KĨ THUẠT NÀY GỌI LÀ TÍNH ĐA XẠ, ĐA HÌNH POLYMOPIHSM
+        
+       
+       
     }
 }

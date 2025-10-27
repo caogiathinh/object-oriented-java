@@ -30,8 +30,8 @@ package data;
 //dòng họ vô sinh- không thể new được 1 OBJECT TỪ CHA, CON luôn vì cả 2 không đủ code do khuôn không hoàn hảo
 
 public class Rectangle extends Shape {
-    private double width;
-    private double length; 
+    protected double width;
+    protected double length; 
 
     public Rectangle(String owner, String color, String borderColor, double width, double length) {
         super(owner, color, borderColor);
@@ -75,5 +75,4 @@ public class Rectangle extends Shape {
         System.out.printf("|RECTABLE  |%-10s|%-10s|%-10s|%4.1f|%4.1f|%7.2f|\n", 
                                 owner, color, borderColor, width, length, getArea());
     }
-    
 }

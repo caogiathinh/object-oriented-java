@@ -40,13 +40,13 @@ public class Disk extends Shape {
     }
 
     @Override
-    public double getPerimeter() { 
+    public double getPerimeter() {
         return 2 * Disk.PI * radius;
     }
 
     @Override
     public void paint() {
-        System.out.printf("|DISK      |%-10s|%-10s|%-10s|%4s|%4.1f|%7.2f|\n", 
-                              owner, color, borderColor, smile, radius, getArea());
+        System.out.printf("|DISK      |%-10s|%-10s|%-10s|%4s|%4.1f|%7.2f|\n",
+                owner, color, borderColor, smile, radius, getArea());
     }
 }

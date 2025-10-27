@@ -48,17 +48,19 @@ public class Rectangle extends Shape {
     
     @Override
     public double getArea() {
-        return 0;
+        return width * length;
     }
 
     @Override
     public double getPerimeter() {
-         return 0;
+         return (width + length) * 2;
     }
 
     @Override
     public void paint() {
-        
+        System.out.println("", 
+                                owner, color, borderColor, w);
+                        
     }
     
     

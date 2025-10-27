@@ -15,6 +15,11 @@ package data;
 //một class chứa hàm abstract ko có code, thì class đó phải là ABSTRACT
 //vì nói toàn nói điều chung chung, dù trong nó vài hàm có code
 
+
+//Con thừa kế Abstract class, mày có 2 lựa chọn, không hơn
+//--hoặc mày abstract , nếu mày không chịu viết code cho Cha, thừa kế Abstract
+//          vậy mày là khái niệm luôn còn gì nữa
+//hoặc mày phải viết code cho hàm Abtract của Cha, vì mày đủ info để làm 
 public class Rectangle extends Shape {
     private double width;
     private double length; 
@@ -58,8 +63,8 @@ public class Rectangle extends Shape {
 
     @Override
     public void paint() {
-        System.out.println("", 
-                                owner, color, borderColor, w);
+        System.out.printf("|||||||", 
+                                owner, color, borderColor, width, length);
                         
     }
     

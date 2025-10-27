@@ -20,6 +20,15 @@ package data;
 //--hoặc mày abstract , nếu mày không chịu viết code cho Cha, thừa kế Abstract
 //          vậy mày là khái niệm luôn còn gì nữa
 //hoặc mày phải viết code cho hàm Abtract của Cha, vì mày đủ info để làm 
+//mày là cụ thể rồi, mọi thứ trong mày là rõ ràng
+//CON VIẾT CODE CHO HÀM CHA, CHA NÓI CON LÀM, IMPLEMENT ABSTRACT METHODS
+//   implement the body of Parent's abstract methods
+//Cha đã nói ý tưởng, Con hiện thực thôi 
+//          làm biến, mày giống như cha Abstract, đời cháu tính ... 
+// Nếu không chịu làm tiếp, mãi mãi là nói không làm ... -> hệ quả gì ?? nói sau
+
+//dòng họ vô sinh- không thể new được 1 OBJECT TỪ CHA, CON luôn vì cả 2 không đủ code do khuôn không hoàn hảo
+
 public class Rectangle extends Shape {
     private double width;
     private double length; 

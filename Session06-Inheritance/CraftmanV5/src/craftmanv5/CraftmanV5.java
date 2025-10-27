@@ -102,11 +102,9 @@ public class CraftmanV5 {
         //cha chỉ nói paint đám con nhà vô
         for (int i = 0; i < 9; i++) {
             for (int j = i + 1; j < 9 - 1; j++) {
-                if (box[i].getArea() > box[j].getArea()) {
-                    Shape tmp = box[i]; 
-                    box[i] = box[j]; 
-                    box[j] = tmp;
-                }
+                Shape tmp = box[i]; 
+                box[i] = box[j]; 
+                box[j] = tmp;
             }
         }
         

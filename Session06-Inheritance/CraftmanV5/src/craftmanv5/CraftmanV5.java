@@ -3,6 +3,7 @@ package craftmanv5;
 import data.Disk;
 import data.Rectangle;
 import data.Shape;
+import data.Square;
 
 /**
  *
@@ -20,6 +21,7 @@ public class CraftmanV5 {
     public static void playWithShapes() {
         Rectangle r1 = new Rectangle("TIA", "PINK", "MEGENTA", 5, 6); 
         Shape r2 = new Rectangle("ITA", "MEGENTA", "PINK", 6, 5);
+        ((Rectangle)r2).getLength();
         
         Disk d1 = new Disk("MA", "PINK", "MEGENTA", "<3", 6);
         Shape d2 = new Disk("MA", "MEGENTA", "PINK", ":x", 6);
@@ -33,5 +35,22 @@ public class CraftmanV5 {
                     //NEW CHA THÌ SAO THƯA THẦY, BÀN VỤ NÀY SAU, KHÓ !!!
                     //DO CODE CHA KHÔNG HOÀN HẢO, KHÔNG ĐẦY ĐỦ
         //.PAINT() CHÍNH LÀ POLYMOPHISM, ĐA XẠ ĐA HÌNH ĐÃ XUẤT HIỆN
+        
+        //
+    }
+    
+    public static void sortShapes() {
+        Rectangle r1 = new Rectangle("TIA", "PINK", "MEGENTA", 5, 6); 
+        Shape r2 = new Rectangle("ITA", "MEGENTA", "PINK", 6, 5);
+        
+        Square s1 = new Square("MA", "PINK", "MEGENTA", 7);
+        Rectangle s2= new Square("MA", "PINK", "MEGENTA", 8);
+        Shape s3 = new Square("MA", "PINK", "MEGENTA", 9);
+        //Hà Kiều Anh nhận là công chúa!!! 
+        
+        Disk d1 = new Disk("MA", "PINK", "MEGENTA", "<3", 6);
+        Shape d2 = new Disk("MA", "MEGENTA", "PINK", ":x", 6);
+        
+        
     }
 }

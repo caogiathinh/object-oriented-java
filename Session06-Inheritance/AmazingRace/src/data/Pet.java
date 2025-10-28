@@ -54,6 +54,9 @@ public abstract class Pet {
     //-> ngầm hiểu là xử lí khác nhau
     //vậy chạy() là 1 ý tưởng chung chung mà Pet cần có
     //chay là 1 hành động đi kèm Pet, cụ thế thế nào là tùy từng đứa
-    //ABSTRACT METHOD
-    public abstract void run(); 
+    //ABSTRACT METHOD. CÁI GÌ MÀ KHÔNG CỤ THỂ KHI ĐỀ CẶP VỀ NÓ -> SURE ABSTRACT
+    public abstract double run(); 
+    
+    //mỗi đứa gáy sủa thành tích theo kiểu khác nhau. 
+    public abstract void showRecord();  //~~~ print() showProfile(); 
 }

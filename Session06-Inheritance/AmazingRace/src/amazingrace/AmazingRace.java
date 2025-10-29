@@ -6,6 +6,7 @@ package amazingrace;
 
 import data.Cat;
 import data.Dog;
+import data.Hamster;
 import data.Pet;
 
 /**
@@ -32,6 +33,11 @@ public class AmazingRace {
         Dog ngaoDa = new Dog("NGAO DA", 2021, 50.0); 
         Pet beTo = new Dog("BE TO", 2012, 5.0);
         
+        Hamster hamster1 = new Hamster("Hamster1", 2021, 3.0); 
+        Pet hamster2 = new Hamster("Hamster2", 2021, 4.0); 
+
+        hamster1.showRecord();
+        hamster2.showRecord();
         ngaoDa.showRecord();
         beTo.showRecord();
         

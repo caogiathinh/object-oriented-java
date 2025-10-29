@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package data;
 
 /**
@@ -38,8 +35,8 @@ public class Disk extends Shape {
 
     @Override
     public void paint() {
-        System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|%7.2f|\n", 
-                            "DISK", owner, color, borderColor, radius, getArea());
+        System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|%4s|%7.2f|\n", 
+                            "DISK", owner, color, borderColor, radius, " ", getArea());
     }
     
     

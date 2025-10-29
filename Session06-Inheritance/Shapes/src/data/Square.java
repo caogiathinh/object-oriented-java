@@ -15,7 +15,7 @@ public class Square extends Rectangle {
     //ta muốn in theo cách của mình, cho nên viết lại hàm paint();
     @Override
     public void paint() {
-        System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|%7.2f|\n", 
-                            "SQUARE", owner, color, borderColor, width, getArea());
+        System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|%4s|%7.2f|\n", 
+                            "SQUARE", owner, color, borderColor, width, " ", getArea());
     }
 }

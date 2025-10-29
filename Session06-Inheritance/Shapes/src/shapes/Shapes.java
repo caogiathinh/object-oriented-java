@@ -47,13 +47,30 @@ public class Shapes {
         System.out.println("The list of shapes");
         for (Shape x : arr) {
             x.paint(); //tính đa hình 
-        } //GỌI PAINT() CỦA CHA, NHƯNG 3 CON TỰ ĐỘNG QUA MẶT
-        //CHÚT LO LẮNG: PAINT() CỦA CHA ÉO CÓ CODE, ABSTRACT
-        //ĐỪNG LO, VÌ LÁT HỒI MẤY CON TỰ LO, DO MÌNH NEW CON KHÔNG HÀ.
-        //NEW CON CON ĐẪ VIẾT CODE RỒI, CHA NGỒI IM CON LO CHO
-        //CON SẼ GIẢI QUYẾT HOÀN TOÀN CHO CHA.
-        //TỪ HÀM CHA GỌI, CON HƯỞNG ỨNG, N CON HƯỞNG ỨNG
-        //TỪ 1 ÁNH XẠ RA NHIỀU CÁCH THỨC, TÍNH ĐA XẠ, ĐA HÌNH, POLYMOPHISM
+        }   //GỌI PAINT() CỦA CHA, NHƯNG 3 CON TỰ ĐỘNG QUA MẶT
+            //CHÚT LO LẮNG: PAINT() CỦA CHA ÉO CÓ CODE, ABSTRACT
+            //ĐỪNG LO, VÌ LÁT HỒI MẤY CON TỰ LO, DO MÌNH NEW CON KHÔNG HÀ.
+            //NEW CON CON ĐẪ VIẾT CODE RỒI, CHA NGỒI IM CON LO CHO
+            //CON SẼ GIẢI QUYẾT HOÀN TOÀN CHO CHA.
+            //TỪ HÀM CHA GỌI, CON HƯỞNG ỨNG, N CON HƯỞNG ỨNG
+            //TỪ 1 ÁNH XẠ RA NHIỀU CÁCH THỨC, TÍNH ĐA XẠ, ĐA HÌNH, POLYMOPHISM
+        //sắp xếp tăng dần theo diện tích
+        for (int i = 0; i < 7 - 1; i++) {
+            for (int j = i + 1; j < 7; j++) {
+                if (arr[i].getArea() > arr[j].getArea()) { //bản chất là swap địa chỉ, tọa độ vùng new
+                    Shape tmp = arr[i];  //đa hình lấy hàm getArea() của Cha
+                    arr[i] = arr[j];     //abstract, đừng lo, Con sẽ l
+                    arr[j] = tmp;        //vì [i] luôn trỏ 1 hình cụ thể
+                                         //getArea() là cụ thể Con
+                }
+            }
+        }
         
+        System.out.println("The list of shapes sorting ascending by area");
+        for (Shape x : arr) {
+            x.paint();
+        }
     }
+    
+    
 }

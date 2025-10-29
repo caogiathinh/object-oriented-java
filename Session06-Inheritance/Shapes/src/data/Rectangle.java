@@ -47,8 +47,8 @@ public class Rectangle extends Shape {
 
     @Override
     public void paint() {
-        System.out.printf("|RECTANGLE  |%-10s|%-10s|%-10s|%4.1f|%4.1f|%7.2f|\n", 
-                            owner, color, borderColor, width, length, getArea());
+        System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|%4.1f|%7.2f|\n", 
+                            "RECTANGLE", owner, color, borderColor, width, length, getArea());
     }
     
     

@@ -14,6 +14,7 @@ public class Shapes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        sortShapes();
     }
     
     public static void sortShapes() {
@@ -25,6 +26,34 @@ public class Shapes {
         Rectangle s2 = new Square("MA", "PINK", "MEGENTA", 8.0);
         Shape s3 = new Square("MA", "PINK", "MEGENTA", 9.0);
         
+        Disk d1 = new Disk("BE NA", "RAINBOW", "RAINBOW", 2.0);
+        Disk d2 = new Disk("GHE BE NA", "RAINBOW", "RAINBOW", 1.0);
+
+//        Shape[] arr = new Shape[7];
+//        //arr[0] = new 1 hình cụ thể nào đó , new Rectangle(...), new Disk(... )
+//        //cần lắm luôn [i] lưu tọa độ vùng new()
+//        //[i] tham chiếu vùng new, trỏ vùng new, lưu địa chỉ vùng new()
+//        //vùng new () nằm đâu đó trong heap kệ nó
+//        arr[0] = r1;
+//        arr[1] = r2;
+//        arr[2] = d2; 
+//        Shape arr[] = new Shape[] {các tọa độ vùng new đưa vô}; 
+        Shape arr[] = new Shape[] {r1, r2, s1, s2, s3, d1, d2}; 
+        
+//        Shape arr1[]= new Shape[] {
+//                                    new Disk("BE NA", "RAINBOW", "RAINBOW", 2.0),
+//                                    new Disk("GHE BE NA", "RAINBOW", "RAINBOW", 1.0)           
+//                                    }
+        System.out.println("The list of shapes");
+        for (Shape x : arr) {
+            x.paint(); //tính đa hình 
+        } //GỌI PAINT() CỦA CHA, NHƯNG 3 CON TỰ ĐỘNG QUA MẶT
+        //CHÚT LO LẮNG: PAINT() CỦA CHA ÉO CÓ CODE, ABSTRACT
+        //ĐỪNG LO, VÌ LÁT HỒI MẤY CON TỰ LO, DO MÌNH NEW CON KHÔNG HÀ.
+        //NEW CON CON ĐẪ VIẾT CODE RỒI, CHA NGỒI IM CON LO CHO
+        //CON SẼ GIẢI QUYẾT HOÀN TOÀN CHO CHA.
+        //TỪ HÀM CHA GỌI, CON HƯỞNG ỨNG, N CON HƯỞNG ỨNG
+        //TỪ 1 ÁNH XẠ RA NHIỀU CÁCH THỨC, TÍNH ĐA XẠ, ĐA HÌNH, POLYMOPHISM
         
     }
 }

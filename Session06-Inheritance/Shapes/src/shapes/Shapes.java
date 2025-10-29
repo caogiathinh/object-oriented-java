@@ -68,7 +68,7 @@ public class Shapes {
         
         System.out.println("The list of shapes sorting ascending by area");
         for (Shape x : arr) {
-            x.paint();
+            x.paint(); //tính đa hình
         }
     }
     

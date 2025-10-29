@@ -38,5 +38,9 @@ public class AmazingRace {
         //run() đa hình ròi các con ơi
         //if [i].run() > [j].run, MỖI LÀN run() thằng i, j 
         //là khác nhau
+        //BÀI KIA LÀ DIỆN TÍCH ĐIỂM TB CỐ ĐỊNH LÚC SORT, 2 FOR KHÔNG ĐÔI S
+        //BÀI NÀY CỨ GỌI TOM, TÊN CỐ ĐỊNH, NĂM SINH CỐ ĐỊNH 
+        //RUN ÉO CỐ ĐỊNH
+        
     }
 }

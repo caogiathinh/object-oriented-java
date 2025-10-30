@@ -21,6 +21,8 @@ public class Cat extends Pet {
     @Override
     public double run() {
         return new Random().nextDouble() * MAX_SPEED; 
+        //anonymous object hong thèm đặt tên, xài vùng new một lần bỏ luôn 
+        //Garbage Collector: gôm rác, System.gc();
     }
 
     @Override

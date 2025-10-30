@@ -28,7 +28,12 @@ public class AmazingRaceV3 {
                                 new Hamster("JERRY", 1950, 0.5), 
                                 y
                                };
-        
+        //đa hình quay trở lại
+        //vì mảng PET nên MỌI VIỆC CHẤM LÀ CỦA CHA, CỦA PET, CHA TOÀN LÀ ABSTRACT
+        //HOÀN TOÀN KHÔNG ĐÁNG LO, VÌ CON ĐÃ IMPLEMENT
+        //CHA QUẤT ROI CHẠY ĐI CHÚNG MAFYM THẾ LÀ 3 ĐỨA CON CHẠY.
+        //TỐC ĐỘ CỦA RIÊNG CHÚNG ĐA HÌNH XUẤT HIỆN, OVERRIDE QUA MẶT CHA XH
+        System.out.println("The record table");
         for (Pet x : racer) {
             x.showRecord();
         }

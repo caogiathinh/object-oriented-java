@@ -44,3 +44,4 @@ public class NoName extends Shape {
 //TRẢ RA DIỆN TÍCH VÀ CHU VI HARDCODE, ĐÚNG NGHĨA LÀ 1 HÌNH DUY NHẤT
 //CHẾ KHUÔN LÀ DÀNH CHO NHÂN BẢN
 
+

@@ -14,7 +14,8 @@ public class Shapes {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        sortShapes();
+        //sortShapes();
+        playWithAnonymousClass();
     }
     
     //kỹ thuật tạo object mà không cần khuôn cụ thể, 
@@ -27,7 +28,37 @@ public class Shapes {
     //DÙ LÀ HÌNH KIỂU GÌ, CÔNG THỨC LUÔN LÀ: NEW CHA/SUPER CHA + @OVERRIDE
     
     public static void playWithAnonymousClass() {
-        
+        //Shape vangLai = new NoName(...) //bên trong phải fullcode cho Cha
+        //Shape x       = new HCN(......)? //bên trong phải có code hình chữ nhật 
+        //CẮT NGẪU NHIÊN LÀM SAO BIẾT BAO NHIU CẠNH MÀ ĐƯA VÀO 
+        //CHỈ ĐƯA ĐƯỢC MÀU, TẶNG AI, TÔ MÀU, TỰ ĐO S, P LÀ ỔN ÉO CÓ CÔNG THỨC
+        //NẾU MUỐN RÕ RÀNG THÌ CẮT V, TR, CN, TG, HBH, ... 
+        Shape vangLai = new Shape("CHINH MINH", "GREEN", "BLUE") {
+            @Override
+            public double getArea() {
+                return 50; //vì hình cụ thể, ko theo hình dạng nào, ta tự do  
+            }
+            
+            @Override
+            public double getPerimeter() {
+                return 40; 
+        }
+            
+            @Override
+            public void paint() {
+                //khai báo là Con Shape vẫn kế thừa như bt
+                System.out.printf("|%-10s|%-10s|%-10s|%-10s|%4.1f|\n",
+                                   "NGAU NHIEN", owner, color, borderColor, getArea());
+            }
+        }; //VIP
+        //mày là 1 hình thoải mái vào mảng Sort nếu muốn
+        //mày vẫn là Shape, kiểu Shape, có đủ code cho hàm Cha
+        //kĩ thuật mượn gió bẻ măng, mượn Cha tạo Con, mượn Shape new Con
+        //NEW ABSTRACT CLASS SẼ BUNG RỘNG MÀN HÌNH GÕ CODE OVERRIDE
+        //THỎA CÔNG THỨC CON - NEW CHA + @OVERRIDE
+        //CHỈ XÀI CÁCH NÀY NẾU CHỈ CÀN LÀM 1 OBJECT ON THE GO, MÀ LÀM BIẾNG
+        //LÀM KHUÔN CON RIÊNG LẺ, THEO CÔNG THỨC NHÂN BẢN
+        vangLai.paint();
     }
     
     public static void sortShapes() {

@@ -54,7 +54,7 @@ public class AmazingRaceV3 {
                     racer[i] = racer[j];
                     racer[j] = tmp;
                 }
-            }
+            }  
         }
     }
 }

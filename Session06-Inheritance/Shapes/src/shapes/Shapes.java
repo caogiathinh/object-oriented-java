@@ -17,6 +17,19 @@ public class Shapes {
         sortShapes();
     }
     
+    //kỹ thuật tạo object mà không cần khuôn cụ thể, 
+    //dành cho những object vô định hình, khong có công thức để tính toán và
+    //nhân bản, ko có khuôn cố định, cắt ngẫu nhiên, nhưng vẫn là hình, KO BIẾT NHÓM CON NÀO 
+    //NHƯNG VẪN CHẮC CHẮN LÀ HÌNH: CÓ MÀU, CÓ CẠNH, BỀ MẶT
+    //ÉO CÓ CÔNG THỨC TÍNH CHUNG, NHÂN BẢN LẠI ĐƯỢC NHANH CHÓNG
+    //HCN CẮT NHANH CHÓNG, HÌNH ELIPSE NHANH 
+    //HÌNH CẮT KHÚC, MỖI HÌNH DUY NHẤT, KHÔNG NHANH ĐƯỢC, KHÔNG CÓ KHUÔN 
+    //DÙ LÀ HÌNH KIỂU GÌ, CÔNG THỨC LUÔN LÀ: NEW CHA/SUPER CHA + @OVERRIDE
+    
+    public static void playWithAnonymousClass() {
+        
+    }
+    
     public static void sortShapes() {
         //sort cần mảng, mảng chỉ chơi cùng kiểu
         Rectangle r1 = new Rectangle("TIA", "PINK", "MEGENTA", 5.0, 6.0);

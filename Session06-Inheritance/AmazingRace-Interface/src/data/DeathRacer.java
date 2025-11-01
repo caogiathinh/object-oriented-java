@@ -36,5 +36,4 @@ public interface DeathRacer {
 
     public double runToDead(); //ko cần từ abstract
     public void showHowToDead();
-    
 }

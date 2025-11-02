@@ -19,6 +19,9 @@ public class AmazingRaceInterface {
     }
 
     public static void runToDead() {
+        
+        //có quyền có ai đó chạy ngang nhảy vô
+        //mĩ nhân ngư của châu tinh trì nhảy vào
         Dog d1 = new Dog("NGAO DA", 2021, 50.0);
         //chấm full hàm Con đủ code hàm Cha, hàm CLB; 
 

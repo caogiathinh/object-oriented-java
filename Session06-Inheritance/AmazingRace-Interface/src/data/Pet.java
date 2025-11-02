@@ -10,12 +10,12 @@ package data;
 public abstract class Pet {
     protected String name;
     protected int yob;
-    protected double gpa;
+    protected double weight;
 
-    public Pet(String name, int yob, double gpa) {
+    public Pet(String name, int yob, double weight) {
         this.name = name;
         this.yob = yob;
-        this.gpa = gpa;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -34,17 +34,17 @@ public abstract class Pet {
         this.yob = yob;
     }
 
-    public double getGpa() {
-        return gpa;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setGpa(double gpa) {
-        this.gpa = gpa;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
     @Override
     public String toString() {
-        return "Pet{" + "name=" + name + ", yob=" + yob + ", gpa=" + gpa + '}';
+        return "Pet{" + "name=" + name + ", yob=" + yob + ", weight=" + weight + '}';
     }
     
     public abstract double run();

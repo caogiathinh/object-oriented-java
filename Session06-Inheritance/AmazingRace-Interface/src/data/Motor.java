@@ -80,6 +80,7 @@ public class Motor implements DeathRacer {
     }
 
     //INTERFACE - IMPLEMENTS
+    //------------------------------
     @Override
     public double runToDead() {
         //CHẠY TỐC ĐỘ CAO
@@ -92,4 +93,6 @@ public class Motor implements DeathRacer {
         System.out.printf("|%-20s|%-15s|%-8s|%-11s|%5.1f|\n",
                 "MOTOR-RACER", model, volume, vin, runToDead());
     }
+    
+    //-----------------------------
 }

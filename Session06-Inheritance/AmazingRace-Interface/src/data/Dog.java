@@ -19,6 +19,8 @@ public class Dog extends Pet implements DeathRacer {
         super(name, yob, gpa);
     }
 
+    //IMPLEMENT ABSTRACT METHOD
+    //----------------------------
     @Override
     public double run() {
         return new Random().nextDouble() * MAX_SPEED;
@@ -34,6 +36,12 @@ public class Dog extends Pet implements DeathRacer {
     //NGOAN NGOÃN Ở NHÀ GIÃN CÁCH
     //VÀO SG, CHẤC CHẮN THÊM PHẦN BỘC LỘ KHÁC: NHẬU NHẸT SISHA, GAME CÁ ĐỘ, ĐÁNH BÀI
     //                                         CLB TIẾNG ANH, PHƯỢT, TỪ THIỆN, CẦU LÔNG, ... 
+    
+    //-----------------------------
+    
+    
+    //-----------------------------
+    //DEATHRACER INTERFACE
     @Override
     public double runToDead() {
         return run() * 5;  //hơn 5 lần so với bình thường
@@ -41,8 +49,10 @@ public class Dog extends Pet implements DeathRacer {
 
     @Override
     public void showHowToDead() {
-        System.out.printf("|%-20s|%-10s|%4d|%4.1f|%4.1f|\n",
+        System.out.printf("|%-20s|%-15s|%4d|%4.1f|%4.1f|\n",
                 "DOG-RACER", name, yob, weight, runToDead());
     }
+    
+    //-----------------------------
 
 }

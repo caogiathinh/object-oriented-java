@@ -4,6 +4,10 @@ import data.DeathRacer;
 import data.Dog;
 import data.Motor;
 import data.Pet;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Random;
 
 /**
@@ -18,6 +22,125 @@ public class AmazingRaceInterface {
     public static void main(String[] args) {
         runToDead();
     }
+    
+//    public static playAnonymous() {
+//        List list = new List() {
+//            @Override
+//            public int size() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean isEmpty() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean contains(Object o) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Iterator iterator() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Object[] toArray() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Object[] toArray(Object[] a) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean add(Object e) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean remove(Object o) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean containsAll(Collection c) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean addAll(Collection c) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean addAll(int index, Collection c) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean removeAll(Collection c) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public boolean retainAll(Collection c) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public void clear() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Object get(int index) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Object set(int index, Object element) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public void add(int index, Object element) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public Object remove(int index) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public int indexOf(Object o) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public int lastIndexOf(Object o) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public ListIterator listIterator() {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public ListIterator listIterator(int index) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//
+//            @Override
+//            public List subList(int fromIndex, int toIndex) {
+//                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//            }
+//        };
+//    }
 
     public static void runToDead() {
 
@@ -49,7 +172,7 @@ public class AmazingRaceInterface {
         //mượn gió bẻ măng, éo có khuôn sẵn thì mình phải tư viết @Override từ đầu. 
         //cho mỗi lần làm biếng tạo Khuôn
         //on the go @Override
-        DeathRacer mmnCTT = new DeathRacer() {
+        DeathRacer mnnCTT = new DeathRacer() {
             //vùng không gian của class rời MERMAID MÀ TA LÀM BIẾNG LÀM RIÊNG
             //VÙNG NÀY CHÍNH LÀ PHẦN MỞ RỘNG CỦA CHA/CLB
             //BA SẼ LÀ CÁNH CHIM (new/super() new Death Racer)
@@ -90,7 +213,9 @@ public class AmazingRaceInterface {
         Motor m1 = new Motor("EXCITER", "150.0cm3", "58F8-22204");
         DeathRacer m2 = new Motor("WINNER", "150.0cm3", "56F6-67889");
 
-        DeathRacer racer[] = {d1, (Dog) d2, d3, m1, m2, mmnCTT};
+        //mnn ctt vẫn là 1 Racer, có hành động tương ứng rồi, đua gấp 3 lần giới hạn
+        //Con tự lo, Con Motor chạy theo Motor, con Dog chạy theo Dog
+        DeathRacer racer[] = {mnnCTT, d1, (Dog) d2, d3, m1, m2};
         //toàn bộ là DeadRacer, đa hình là đa hình trên runToDead() showHowTo()
         //Con tự lo, con Motor chạy theo Motor, Con Dog chạy theo Dog
 

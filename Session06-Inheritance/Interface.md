@@ -69,8 +69,31 @@ tui, CÁC BẠN BÊN YOUTUBE TUI NGỒI CHUNG VỚI NHAU VÌ YÊU THÍCH CODE, K
 			
 		}
 	```
-	- Con đóng N vai: vai dòng họ, vai CLB
-
+	- Con đóng N vai: vai dòng họ, vai CLB, giống ngoài đời. Nếu xui Cha, CLB có cùng tên hàm f() ngoài những hàm khác, thì Con bị bối rối không? Con không bối rối, vì f() của Cha và các CLB toàn là abstract, Con phải cài code @Override duy nhất hàm f() éo sợ bối rối Ambiugous. ---> đường nào con cũng qua mặt xài Con, các Cha và CLB chỉ nói mà hông làm!!
 
 	- CLB ko có đặc điểm, không có phễu constructor - nhưng có hàm Abstract. Khi new Con thì CLB vẫn sẽ được new để "Ba" sẽ là cánh chim đưa Con extends @Override Member/Con vẫn có 1 vùn RAM của CLB - chứa hàm abstract, con trỏ vẫn trỏ lưng chừng CLB vẫn @Override vì Con có hàm trùng tên Cha và có code tự làm. Vẫn theo mô hình ra của abstract class/Cha truyền thống. Con to hơn Cha/CLB về vùng RAM. super() Cha CLB là super() ngầm. 
-
+- ANONYMOUS
+	- Object vãng lai tham gia câu lạc bộ, vậy thì mày cũng phải hành động tương ứng mới được tham gia, chỉ ngay lúc đó thôi, ON THE GO.
+	- GHÉ NGANG MÀ CHƠI THÌ PHẢI CHƠI/HÀNH XỬ NHƯ NGƯỜI TA ĐANG CHƠI.
+	- **Ví dụ:** Nhậu thủ và sinh viên ghé ngang. 
+	- Bản chất ta có 1 nhóm nào đó trước đó, nhưng ta cần hòa nhập lúc này, tham gia lúc này, ko cần bộc lộ trước đó là ai, nhóm nào, chỉ cần biết join nhóm mới lúc này. . Cắt 1 hình ngẫu nhiên mà không biết tên gọi riêng của nhóm Class là gì ? gọi theo tên phân loại chung, nhóm Cha chung -> Object thuộc class chưa xác định - ANOLYMOUS
+	- Cân theo tên gọi chung của Cha mà gọi. Hinh ngãu nhiên đó là hình học.. 
+```
+	Shape x = new Shape(.....){
+		@Override 
+		Hàm của phân loại Chung, class Cha absstract
+	};
+	~~~~~Shape r = new Rectangle(...); //khi đã biết object thuộc nhóm rõ ràng trước đó Rectangle
+	CLBCờ x = new Student(....); //một sinh vien tham gia CLB Cờ
+	DeathRacer m = new Motor(); //motor đi học còn tham gia đua, code sẵn runToDead
+	
+	//gã ghé ngang, không chuyên nghiệp nhung ham vui.
+	CLBCờ hangXom = new CLBCờ {
+		@Mày ham chơi ghé ngang tham gia, thì phải có hành động tương ứng.
+	}
+```
+- ABSTRACT CLASS VÀ INTERFACE ĐỀU LÀ 2 THỨ KHÔNG HOÀN HẢO, CHỈ NÓI MÀ KHÔNG TRIỂN KHAI LÀM. 
+- CON/MEMBER THÌ CẦN PHẢI HOÀN TẤT NỐT CÂU CHUYỆN KHÔNG HOÀN HẢO @Override DÙNG THÊM KĨ THUẬT ĐỂ MƯỢN GIÓ BẺ MĂNG, MƯỢN CHA, CLB ĐỂ NEW RA OBJECT THUỘC NHÓM CHA/CLB. @OVERRIDE ON THE GO, TAKE-AWAY. 
+- OBJECT VÃNG LAI, KHÔNG XÁC ĐỊNH NHÓM TRƯỚC MÀ MUỐN THAM GIA CUỘC CHƠI, DÒNG HỌC THÌ PHẢI HÀNH XỬ CƯ XỬ NHƯ DÒNG HỌ, MEMBER.
+- Không gọi chính xác **nhóm của bạn**, nhưng gọi bạn theo **nhóm bạn tham gia,** 
+- VÙNG RAM MỌI THỨ VẪN NHƯ BÌNH THƯỜNG VÀ MỌI HÀNH XỬ @OVERRIDE NHƯ BÌNH THƯỜNG, DO LÀM BIẾNG TẠO CLASS RỜI (CONCRETE CLASS).

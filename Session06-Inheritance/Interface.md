@@ -97,3 +97,19 @@ tui, CÁC BẠN BÊN YOUTUBE TUI NGỒI CHUNG VỚI NHAU VÌ YÊU THÍCH CODE, K
 - OBJECT VÃNG LAI, KHÔNG XÁC ĐỊNH NHÓM TRƯỚC MÀ MUỐN THAM GIA CUỘC CHƠI, DÒNG HỌC THÌ PHẢI HÀNH XỬ CƯ XỬ NHƯ DÒNG HỌ, MEMBER.
 - Không gọi chính xác **nhóm của bạn**, nhưng gọi bạn theo **nhóm bạn tham gia,** 
 - VÙNG RAM MỌI THỨ VẪN NHƯ BÌNH THƯỜNG VÀ MỌI HÀNH XỬ @OVERRIDE NHƯ BÌNH THƯỜNG, DO LÀM BIẾNG TẠO CLASS RỜI (CONCRETE CLASS).
+
+> [!NOTE] ỨNG DỤNG CỦA INTERFACE
+> - LOOSE COUPLING (GẮN KẾT LÕI LẼO) giúp cho **cách tổ chức các Class có ràng buộc** nhau để làm nên câu chuyện lớn nhưng dễ dàng mở rộng và thay đổi|
+> - Dùng Interface là cách viết code giúp linh hoạt, để dễ dàng thay đổi code mà không phá code cũ, **dễ dàng mở rộng code** thích ứng cho tương lai...
+> - INTERFACE là cách kết giao, mở rộng giao tiếp với mọi người xung quanh.
+> - COMPARABLE/COMPARATOR -> DÍNH ĐẾN LƯU COUPLING.
+****
+
+> [!NOTE] MỤC TIÊU CUỐI CÙNG CỦA INTERFACE
+> Chơi cùng với nhau dù bạn khác biệt trong hành xử. 
+> - Mỗi thằng đua khác nhau nhưng lại cùng đường đua,.
+> - Mỗi thằng hút khác nhau nhưng cùng clb phê cần. 
+> - Mỗi bạn đánh cờ khác nhau nhưng cùng ván cờ. 
+> - Mỗi card đồ họa khác nhau về năng lực xử lí nhưng chung KHE PCI-EX.
+> - Mỗi thiết bị điện khác nhau về công năng/tính năng sử dụng, nhưng chung ở cắm 220V.
+> - Mỗi con người khác nhau về tính cách, sở thích, nghề nghiệp nhưng cùng chung sống trong xã hội với những quy tắc ứng xử chung.	

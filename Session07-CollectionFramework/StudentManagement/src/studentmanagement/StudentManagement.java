@@ -1,4 +1,3 @@
-
 package studentmanagement;
 
 import data.Student;
@@ -16,19 +15,21 @@ public class StudentManagement {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
     }
-    
+
     public static void playWithArrayList() {
         //Student[]    arr  = new Student[500];
         //arr là 1 cái túi chứa sẵn 500 chỗ, 500 món đồ có thể bỏ vô
         //món đồ phải đi mua, new thảy vào
         //tên mảng chính là má mì quản lí nhiều đồ, tên túi luôn
-        
+
+        //túi đồng nhất con trỏ chỉ lưu con trỏ Student
         List<Student> arr = new ArrayList();
+        //List<Student> arr = new ArrayList<>();
+        //List<Student> arr = new ArrayList<Student>();
         //arr là cái túi chứa vô hạn chỗ, vô hạn con trỏ
         //
-                
     }
-    
+
 }

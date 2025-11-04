@@ -1,4 +1,5 @@
 [[OOP]]
+## CÂU CHUYỆN LƯU TRỮ
 Làm sao để lưu trữ, xử lý nhiều object cùng loại ? Làm sao để lưu trữ, xử lí nhiều sinh viên, nhân viên ? thì ta  cần mua túi, balo, thùng, tủ, phòng để đựng nhiều đồ. 
 Mua cái túi, mua cái tủ, xây cái phòng, chính là new cái TÚI(), new cái TỦ(), NEW CĂN-PHÒNG().  Phải có một thùng chứa thật được tạo ra để ta bỏ đồ vô. Do đó phải NEW THÙNG-CHỨA LÀ CHẮC CHẮN RỒI
 
@@ -25,8 +26,8 @@ TỦ LÀ OBJECT CHỨA NHIỀU ĐỒ ĐẠC KHÁC
 MUA CÁI TÚI, CÁI GIỎ, CÁI THÙNG, NEW CÁI TÚI(), NEW CÁI GIỎ(), NEW CÁI THÙNG(), CÓ khóa dây kéo bỏ món đồ mình muốn cất.
 tuCuaTui.addMonDo(mua món đồ bỏ vô túi - new MónĐồ())
 
-Có 2 loại tủ: 
-1. TỦ LOẠI 1: FIX CỨNG SỐ ĐỒ ĐỂ VÀO, CHỈ ĐÊ VÔ MỘT GIỚI HẠN MÓN ĐỒ. 
+**Có 2 loại tủ:** 
+1. **TỦ LOẠI 1:** FIX CỨNG SỐ ĐỒ ĐỂ VÀO, CHỈ ĐÊ VÔ MỘT GIỚI HẠN MÓN ĐỒ. 
 	CHÍNH LÀ MẢNG [SỐ ĐỒ ĐỂ VÔ], MẢNG LÀ KHAI BÁO NHIỀU BIẾN NHIỀU CHỖ CHỨA FIX CHỖ NGỒI Y CHANG Ô TÔ CHỞ KHÁCH 16 CHỖ, RẠP PHIM [100 GHẾ]
 		CHỨA TỌA ĐỘ VÙNG NEW MÓN ĐỒ() CỨ THOẢI MÁI NẰM ĐÂU ĐÓ, TA LƯU TẠO ĐỘ
 	Student arr[] = new Student[100]; 
@@ -42,7 +43,7 @@ Có 2 loại tủ:
 		//tủ chứa danh sách bệnh nhân, bệnh nhân vẫn trong phòng điều trị.
 		gv giữ danh sách sv, sv ở quê đâu có sao.
 DÙ TỦ LOẠI 1 HAY 2 THÌ ĐỀU CHỨA NHIỀU ĐỒ, ĐỒ ĐỂ THẬT SỰ VÀO TRONG TỦ HAY CHỈ GIỮ DANH SÁCH THAM CHIẾU, GG MEET GIỮ DANH SÁCH THAM CHIẾU, DANH SÁCH KÍ TÊN CHỨA THAM CHIẾU.
-2. TỦ LOẠI 2: CO GIÃN SỐ ĐỒ ĐỂ VÔ, THOẢI MÁI ĐỂ ĐỒ VÔ, CẦN THÊM CHỖ, CÓ THÊM CHỖ, KO CẦN XIN, CỨ ĐỂ ĐỒ VÔ LÀ THÊM CHỖ, GIỐNG NỒI CƠM THẠCH SANH, GIỐNG GIẾNG KHƠI, MÚC NƯỚC LẠI CÓ NƯỚC
+2. **TỦ LOẠI 2:** CO GIÃN SỐ ĐỒ ĐỂ VÔ, THOẢI MÁI ĐỂ ĐỒ VÔ, CẦN THÊM CHỖ, CÓ THÊM CHỖ, KO CẦN XIN, CỨ ĐỂ ĐỒ VÔ LÀ THÊM CHỖ, GIỐNG NỒI CƠM THẠCH SANH, GIỐNG GIẾNG KHƠI, MÚC NƯỚC LẠI CÓ NƯỚC
 - ArrayList, Vector
 - HashSet, TreeSet
 - HashMap, TreeMap
@@ -56,5 +57,23 @@ tuCuaTui.add(món đồ bỏ vô) bỏ đồ vô qua hành động của tủ, k
 VẪN CODE NHƯ XƯA NAY: NEW TỦ,   .GỌI HÀM HÀNH ĐỘNG CỦA TỦ NEW RIÊNG MÓN ĐỒ, MUA TỦ -> MUA ĐỒ -> CẤT ĐỒ
 
 NEW 3 LOẠI TỦ GIỐNG NHƯ CÁC THƯƠNG HIỂU TÚI XÁCH BẠN MUA
-ADDĐỒ(MÓN ĐỒ KHÁC ĐI MUA) VÀO TỦ Ở NGĂN THỨ [I] NÀO ĐÓ NHÌN THEO KIỂU MẢNG. ĐỀU CHỨA THAM CHIẾU. LINH HOẠT TRONG VIỆC ĐỂ CÁC MÓN ĐỒ.
+ADDĐỒ(MÓN ĐỒ KHÁC ĐI MUA) VÀO TỦ Ở NGĂN THỨ [I] NÀO ĐÓ NHÌN THEO KIỂU MẢNG. ĐỀU CHỨA THAM CHIẾU. LINH HOẠT TRONG VIỆC ĐỂ CÁC MÓN ĐỒ. BỆNH NHÂN ĐÂU CẦN DỒN VÀO PHÒNG BÁC SĨ, BS VẪN ĐIỀU TRỊ ĐƯỢC VÌ CÓ DS BỆNH NHÂN TRONG TỦ HỒ SƠ/EXCEL.
 
+
+Tủ thật túi thật mua về để xài, NEW DC, KHÔNG PHẢI LÀ ABSTRACT, HOÀN HẢO ĐỂ DÙNG FULL CODE HÀNH ĐỘNG
+
+## PHÂN LOẠI
+
+| List (Cha)                                                                                             | Set (Cha)                                                                                                   | Map (Cha)        |
+| :----------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- | :--------------- |
+| ArrayList, Vector                                                                                      | HashSet, TreeSet                                                                                            | HashMap, TreeMap |
+| Vào thứ tự nào ra thứ tự nấy, mảng nâng cao co giãn kích thước, vào trước ngồi 0 vào sau ngồi vị trí 1 | -Hashset: lộn xộn thứ tự<br>-TreeSet: sắp xếp tự động.<br>-Không lặp lại món đồ lần thứ 2.                  |                  |
+| thống kê số vé bán, số lượng người mua, số lượng người ghé thăm, một người có thể đếm nhiều lần        | số người thực sự xem phim, không đếm lượt. mỗi ngươi xuất hiện đúng một lần, không hơn dù bạn xem 2 3 n lần |                  |
+
+CÁC TỦ    LIST (ARRAYLIST, VECTOR, ....)
+		 SET (HASHSET, TREESET, ...... )               ĐỀU CHỨA CO GIÃN NGĂN TỦ, THÍCH THÌ THÊM 
+		 MAP(HASHMAP, TREEMAP,.....)
+		 CHỈ LƯU THAM CHIẾU, LƯU CON TRỎ, ADD CON TRỎ VÀO, VÙNG NEW ĐỒ THOẢI MÁI Ở HEAP, **ADD VÀ LẤY QUA HÀM** MỞ DÂY KÉO NGĂN
+MẢNG OBJECT Y CHANG VẬY LUÔN CHỨA THAM CHIẾU LƯU CON TRỎ, ÉP VÀ LẤY QUA [I]
+
+---> Y CHANG QUẢN LÍ DANH SÁCH, TỦ HỒ SƠ

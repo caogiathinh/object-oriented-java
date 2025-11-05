@@ -18,6 +18,9 @@ Each session is carefully crafted to build upon previous concepts while introduc
 2. **Session02-Languages**: Exploring Java's fundamental language features
 3. **Session03-Class**: Deep dive into object-oriented design
 4. **Session04-Essential**: Understanding and implementing try-catch for robust error handling
+5. **Session05-Array**: Working with arrays to manage collections of data
+6. **Session06-Inheritance**: Leveraging inheritance for code reuse and organization
+7. **Session07-Collections**: Utilizing Java's Collections Framework for efficient data management
 
 ## ⚡ Quick Start
 

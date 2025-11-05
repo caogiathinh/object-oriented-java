@@ -37,5 +37,5 @@ public interface DeathRacer {
     //phàm ai đã chọn nghề đua thủ, tham gia đua thủ, thì phải đua
     public double runToDead(); //không cần từ abstract
     public void showHowToDead();  //gáy bằng tổ quốc ghi công
-    
+
 }

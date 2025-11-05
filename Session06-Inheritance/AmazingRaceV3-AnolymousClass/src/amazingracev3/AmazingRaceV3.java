@@ -32,24 +32,24 @@ public class AmazingRaceV3 {
 
             @Override
             public double run() {
-                return new Random().nextDouble() * 30;
+                return new Random().nextDouble() * 30; 
             }
-
+            
             @Override
             public void showRecord() {
                 System.out.printf("|%-10s|%-10s|%4d|%4.1f|%4.1f|\n",
-                        "XXX", name, yob, weight, run());
+                                    "XXX", name, yob, weight, run());
             }
         };
 
         Pet y = new Hamster("MICKY", 1960, 0.6);
         Pet racer[] = new Pet[]{new Dog("CHIHUHU", 2021, 0.5),
-            new Dog("VANG OI", 1950, 10),
-            new Cat("TOM", 1960, 15.0),
-            new Cat("KITTY", 1990, 5.0),
-            new Hamster("JERRY", 1950, 0.5),
-            y, 
-            ufo //object tạo từ anonymous , vẫn là Pet
+                                new Dog("VANG OI", 1950, 10),
+                                new Cat("TOM", 1960, 15.0),
+                                new Cat("KITTY", 1990, 5.0),
+                                new Hamster("JERRY", 1950, 0.5),
+                                y, 
+                                ufo //object tạo từ anonymous , vẫn là Pet
         };
 
         System.out.println("The record table");
@@ -57,7 +57,7 @@ public class AmazingRaceV3 {
             x.showRecord();
         }
 
-        for (int i = 0; i < racer.length - 1; i++) {
+        for (int i = 0; i < racer.length -1; i++) {
             for (int j = i + 1; j < racer.length; j++) {
                 if (racer[i].run() > racer[j].run()) {
                     Pet tmp = racer[i];

@@ -41,3 +41,47 @@ java -cp src hellojava.HelloJava
 - 🛠️ Real-world applications
 
 ## Contents
+
+### Session 01 - Hello Java
+- Introduction to Java programming
+- Setting up development environment
+- Writing your first Java program
+- Basic syntax and structure
+
+### Session 02 - Languages
+- Data types and variables
+- Control structures
+- Arrays and collections
+- Basic input/output operations
+- Functions and methods
+
+### Session 03 - Object-Oriented Programming
+- Classes and objects
+- Constructors and methods
+- Access modifiers
+- Object lifecycle management
+
+### Session 04 - Exception Handling
+- Understanding exceptions
+- Try-catch blocks
+- Exception types
+- Best practices for error handling
+
+### Session 05 - Array 
+- Primitive vs. Object arrays
+- Hands-on examples of array usage
+- Student management system using arrays
+
+### Session 06 - Inheritance
+- Inheritance concepts
+- Superclasses and subclasses
+- Method overriding
+- Using `super` keyword
+
+### Session 07 - Collections Framework
+- Introduction to Java Collections
+- List, Set, Map interfaces
+- Common implementations (ArrayList, HashSet, HashMap)
+- Iterating through collections
+
+Each session contains practical examples and exercises to reinforce your learning. Follow the sessions in order for the best learning experience.

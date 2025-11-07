@@ -77,6 +77,8 @@ public class Motor implements DeathRacer {
                 "MOTOR", model, volume, vin, run());
     }
 
+    
+    //INTERFACE
     @Override
     public double runToDead() {
         //chạy tốc độ cao, đôn nòng, xoáy nòng, ép dên, đôn dên

@@ -39,3 +39,5 @@ public interface DeathRacer {
     public void showHowToDead();  //gáy bằng tổ quốc ghi công
 
 }
+
+

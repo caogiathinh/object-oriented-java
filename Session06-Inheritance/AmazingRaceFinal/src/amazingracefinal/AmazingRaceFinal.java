@@ -46,6 +46,7 @@ public class AmazingRaceFinal {
         for (DeathRacer x : racer) {
             x.showHowToDead();
         }
-
+        
+        
      }
 }

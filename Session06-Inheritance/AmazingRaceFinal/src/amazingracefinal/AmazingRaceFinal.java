@@ -10,17 +10,15 @@ import java.util.List;
 import java.util.ListIterator;
 import java.util.Random;
 import java.util.Vector;
-import javax.print.attribute.standard.MediaSize;
 
 /**
  *
  * @author gia.thinh
  */
+
 public class AmazingRaceFinal {
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String[] args) {
         // TODO code application logic here
         runToDead();

@@ -29,6 +29,7 @@ public class AmazingRaceFinal {
     public static void platWithAnonymous() {
         List list = new Vector();
         
+        //List là abstract, 20 hàm không có code
         List list2 = new List() {
             @Override
             public int size() {
@@ -144,7 +145,7 @@ public class AmazingRaceFinal {
             public List subList(int fromIndex, int toIndex) {
                 throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
             }
-        }
+        };
     }
 
     public static void runToDead() {

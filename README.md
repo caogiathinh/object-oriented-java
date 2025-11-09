@@ -50,8 +50,10 @@ java -cp src hellojava.HelloJava
 - 🛠️ Real-world applications
 
 ## Contents
-CodingConventions.md
-oop-concepts-
+### README.md
+### opp-summary.md
+### coding-convention.md
+### session-overview.md
 
 ### Session 01 - Hello Java
 - Introduction to Java programming

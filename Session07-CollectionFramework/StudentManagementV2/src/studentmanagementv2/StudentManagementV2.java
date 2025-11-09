@@ -59,6 +59,11 @@ public class StudentManagementV2 {
         arr.add(new Student("SE999999", "CHIN PHAM", 2003, 9.0));
         //new cứ lên HEAP mà nằm, Bệnh nhân cứ về phòng, tớ nắm thẻ bài
         //1 con trỏ nữa được add vào
+        
+        //hỏi xem túi có bao nhiêu đồ 
+        //arr.length, hỏi tú mà, hỏi biến má mì mà 
+        System.out.println("The bag has: " + arr.size() + " mon do");
+        //4 sinh viên in ra, nhưng thực ra chỉ có 3sv, do có người đếm trùng
         for (Student x : arr) {
             x.showProfile();
         }

@@ -30,6 +30,12 @@ git clone https://github.com/caogiathinh/object-oriented-java.git
 
 # Navigate to a specific session
 cd Session01-Hello/HelloJava
+cd Session02-Languages/LanguagesJava
+cd Session03-Class/ClassJava
+cd Session04-Essential/EssentialJava
+cd Session05-Array/ArrayJava
+cd Session06-Inheritance/InheritanceJava
+cd Session07-Collections/CollectionsJava
 
 # Compile and run using Java
 javac src/hellojava/HelloJava.java
@@ -44,6 +50,8 @@ java -cp src hellojava.HelloJava
 - 🛠️ Real-world applications
 
 ## Contents
+CodingConventions.md
+oop-concepts-
 
 ### Session 01 - Hello Java
 - Introduction to Java programming

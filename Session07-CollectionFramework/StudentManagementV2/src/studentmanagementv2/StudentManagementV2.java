@@ -83,5 +83,13 @@ public class StudentManagementV2 {
         xxx.showProfile();
         //bạn 1 thì get(1), có tọa độ chấm luôn cho rồi, thêm biến con trỏ trỏ cùng làm gì ??
         arr.get(1).showProfile(); //quy tắc bắt cầu. 
+        
+        //có hành động xóa 1 con trỏ, loại bỏ 1 thẻ bài, món đồ, gạch tên
+        //1 người khỏi danh sách, 
+        //vùng new Student() bị mất hay không tùy vào mấy con trỏ trỏ nó
+        //size() giảm liền, mảng éo có, fix cứng số con trỏ
+        //set() đảo con, trỏ sang vùng new khác hàm (get() hàm set() xưa nay của các object)
+        
+        
     }
 }

@@ -48,7 +48,14 @@ public class StudentManagementV2 {
         if (xxx == null) {
             System.out.println("NOT FOUND");
         } else {
-            xxx.showProfile();
+            //lỡ tìm thấy update lại điểm số
+            xxx.showProfile(); //xxx đang trỏ vùng new bạn TÁM 8.8
+            xxx.setGpa(6868);
+        }
+        //ra hẳn ngoài if kiểm tra điểm có 6868 hay chưa chơi lớn 
+        System.out.println("Checking Student list after updating info of SE8 student");
+        for (Student x : arr) {
+            x.showProfile();
         }
     }
 

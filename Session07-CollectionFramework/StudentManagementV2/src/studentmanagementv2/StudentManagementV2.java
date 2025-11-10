@@ -19,9 +19,11 @@ public class StudentManagementV2 {
         //playWithArrayList();
         //sortArrayListManually();
         //playWithSet();
-        Student xx = getAStudent("SE123456");
-        xx.showProfile();
-        
+        Student xx = getAStudent("SE12345");
+        if (xx != null) //không trỏ null là trỏ vùng tìm thấy
+            xx.showProfile();
+        else
+            System.out.println("NOT FOUND");
     }
     
     //Set: 1 loại giỏ, túi không cho phép đựng trùng món, không có món nào xuất hiện quá một lần

@@ -18,13 +18,37 @@ public class StudentManagementV2 {
     public static void main(String[] args) {
         //playWithArrayList();
         //sortArrayListManually();
-        playWithSet();
+        //playWithSet();
+        Student xx = getAStudent("SE123456");
+        xx.showProfile();
+        
     }
     
     //Set: 1 loại giỏ, túi không cho phép đựng trùng món, không có món nào xuất hiện quá một lần
     //không cho phép trỏ trùng 1 vùng new. 
     //List: cứ có vào là đếm - số lượt người ghé. 
-    //
+    
+    //thử nghiệm hàm trả về object, thực chất là trả về tọa độ vùng new
+    //đưa vào mã số sinh viên muốn tìm ta tìm trong giỏ túi thẻ bài coi có ai trùng mã số
+    //thì trả về thẻ bài, hồ sơ bạn sv đó, trả về tọa độ hồ sơ sv đó
+    public static Student getAStudent(String id) {
+        List<Student> arr = new ArrayList<Student>(); 
+        
+        Student binh = new Student("SE123457", "BINH LE", 2003, 4.9);
+        arr.add(new Student("SE123456", "AN NGUYEN", 2003, 9.0)); 
+        
+        Student tmpStudent = arr.get(0); //lây được tọa độ sv 0. thẻ bài 0 
+        //hỏi xme bạn í id là gì ? 
+        String tmpId = tmpStudent.getId(); //arr.get(0).getId(); 
+//        if (tmpId == id) return tmpStudent; //arr.get(0)
+//                                            //trả về tọa độ trong thẻ bài 0 
+        if (tmpId.equalsIgnoreCase(id))    
+            return tmpStudent; //arr.get(0); 
+        //hoàn toàn không có sinh viên mới xuất hiện chỉ tham chiếu tọa độ vùng new
+        //return get(0), thẻ bài 0 trỏ vùng new AN. 
+        return null; //không tìm thấy
+    }
+    
     public static void playWithSet() {
         Set<Student> arr = new HashSet(); //mua một cái túi doraemon
                                           //mở khóa để thao tác, .hàm()
@@ -33,6 +57,10 @@ public class StudentManagementV2 {
         arr.add(an); 
         arr.add(an);  //add trùng
         arr.add(new Student("SE123457", "BINH LE", 2003, 4.9));
+        arr.add(new Student("SE123457", "BINH LE", 2003, 4.9)); //éo trùng, có new có vùng ram mới 
+        //OBJECT MỚI, trùng info bên trong không thành vấn đề
+        //SET LÀ KHONG CHẤP NHẬN CON TRỎ TRÙNG VÙNG NEW 
+        //MỖI THẺ BÀI ĐƯỢC ADD VÀO GIỎ KHÔNG TRỎ LẠI VÙNG NEW
         
         //không có hàm get() vì giỏ đưa đồ vào
         //thẻ bài đưa vô không giữ nguyên thứ tự như đưa vô

@@ -15,24 +15,63 @@ public class StudentManagementV2 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        //playWithArrayList();
-        //sortArrayListManually();
-        //playWithSet();
-//        Student xx = getAStudent("SE12345");
-//        if (xx != null) //không trỏ null là trỏ vùng tìm thấy
-//        {
-//            xx.showProfile();
-//        } else {
-//            System.out.println("NOT FOUND");
+//    public static void main(String[] args) {
+//        //playWithArrayList();
+//        //sortArrayListManually();
+//        //playWithSet();
+    ////        Student xx = getAStudent("SE12345");
+////        if (xx != null) //không trỏ null là trỏ vùng tìm thấy
+////        {
+////            xx.showProfile();
+////        } else {
+////            System.out.println("NOT FOUND");
+////        }
+//
+//        //sortStudentList();
+//        List<Student> result = initData();
+//        System.out.println("The Student list");
+//        for (Student x : result) {
+//            x.showProfile();
 //        }
+//        
+////        for (Student x : initData()) {
+////            x.showProfile();
+////        }
+//        
+//    }
+        
+    public static void main(String[] args) {
+        List<Student> arr = initData();
+        //gọi hàm search với 4 bạn sv có trong arr, mà thực ra do hàm initData() tạo ra
 
-        sortStudentList();
+        Student xxx = searchAStudent(arr, "sE888888");
+        if (xxx == null) {
+            System.out.println("NOT FOUND");
+        } else {
+            xxx.showProfile();
+        }
     }
 
     //------------------------
     //TỬ TẾ HÀM SEARCH VÀ SORT, UPDATE LUÔN 
     //------------------------
+    public static List<Student> initData() {
+        //hàm trả về 1 cái túi có sẵn bên trong một nhóm sinh viên
+        //trả về tọa độ của 1 cái túi, vẫn new Túi mà, trong túi có thể bài sinh viên là khác nữa
+        List<Student> arr = new ArrayList<Student>();
+
+        Student chin = new Student("SE999999", "CHIN LE", 2009, 9.9);
+        arr.add(new Student("SE444444", "BON PHAM", 2004, 4.4));
+        arr.add(chin);
+        //arr.add(binh); //danh sách thống kê bị trùng, 2 thẻ bài, 2 con trỏ  
+        //
+        arr.add(new Student("SE555555", "NAM VO", 2005, 5.5));
+        arr.add(new Student("SE888888", "TAM LY", 2008, 8.8));
+
+        return arr; //initData() = arr; arrr ơi mày trỏ new Bự nào
+        //cho tên hàm t trỏ với
+    }
+
     //có thể đưa cái Giỏ vào đây cũng được
     public static void sortStudentList() {
         List<Student> arr = new ArrayList<Student>();
@@ -41,19 +80,19 @@ public class StudentManagementV2 {
         arr.add(new Student("SE444444", "BON PHAM", 2004, 4.4));
         arr.add(chin);
         //arr.add(binh); //danh sách thống kê bị trùng, 2 thẻ bài, 2 con trỏ  
-                       //
-        arr.add(new Student("SE555555", "NAM VO", 2005, 5.5));
+        //
+        arr.add(new Student("SE5L55555", "NAM VO", 2005, 5.5));
         arr.add(new Student("SE888888", "TAM LY", 2008, 8.8));
         System.out.println("The student list");
         for (Student x : arr) {
             x.showProfile();
         }
-        
+
         System.out.println("The student list after sorting ascending by gpa");
         for (int i = 0; i < arr.size() - 1; i++) {
             for (int j = i + 1; j < arr.size(); j++) {
                 if (arr.get(i).getGpa() > arr.get(j).getGpa()) {
-                    Student tmp = arr.get(i); 
+                    Student tmp = arr.get(i);
                     arr.set(i, arr.get(j));  // ~~arr[i] = arr[j];
                     arr.set(j, tmp);         // ~~arr[j] = tmp;
                     //set thay đổi giá trị info của con trỏ, trỏ chỗ khác.
@@ -69,6 +108,25 @@ public class StudentManagementV2 {
         for (int i = 0; i < arr.size(); i++) {
             arr.get(i).showProfile();
         }
+    }
+
+    //ta search tìm kiếm sinh viên dựa theo mã số. Nhận vào ds luôn cũng được
+    public static Student searchAStudent(List<Student> arr, String id) {
+        ///arr là cái túi đã new đâu đó rồi, tên biến là tên con trỏ mà
+        //túi này có 1 nhóm sv sẵn rồi, add sẵn rồi
+        if (arr.isEmpty()) {
+            return null; //túi không có thẻ bài, tức là size() trả về 0 
+        }                         //có sv nào được tìm thấy đâu, trả về tọa độ đáy ram
+        //cpu chạy đến đây, Túi có thẻ bài rồi, có người điền tên rồi. 
+        //for hỏi từng thẻ 1, ku[i] id mày là gì ? coi có bằng id cần tìm không
+        for (int i = 0; i < arr.size(); i++) {
+            Student tmp = arr.get(i);
+            if (tmp.getId().equalsIgnoreCase(id)) {
+                return tmp; //return thẻ bài thứ i có trỏ vùng id tìm thấy
+            }                            //thẻ bài con trỏ lưu tọa độ return tọa độ
+        }
+        //đi hết for mà không return được thì trả về null không tìm thấy
+        return null; //hàm yêu cầu trả tọa độ vùng new, éo thấy trả về null
     }
 
     //Set: 1 loại giỏ, túi không cho phép đựng trùng món, không có món nào xuất hiện quá một lần

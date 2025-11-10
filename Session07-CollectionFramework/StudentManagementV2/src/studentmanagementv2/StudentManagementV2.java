@@ -14,7 +14,8 @@ public class StudentManagementV2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        playWithArrayList();
+        //playWithArrayList();
+        sortArrayListManually();
     }
 
     //đây chỉ là tạm thời. 
@@ -89,7 +90,55 @@ public class StudentManagementV2 {
         //vùng new Student() bị mất hay không tùy vào mấy con trỏ trỏ nó
         //size() giảm liền, mảng éo có, fix cứng số con trỏ
         //set() đảo con, trỏ sang vùng new khác hàm (get() hàm set() xưa nay của các object)
+    }
+    
+    //tự sort danh sách sinh viên bằng tay
+    //còn 1 cơ chế ta không cần dùng vòng for tự viết
+    //hàm static: Collections.sort(); //dùng chơi với INTERFACE mới được
+    public static void sortArrayListManually() {
+        List<Student> arr = new ArrayList<Student>(); 
         
+        Student binh = new Student("SE123457", "BINH LE", 2003, 4.9);
+        arr.add(new Student("SE123456", "AN NGUYEN", 2003, 9.0)); 
+        arr.add(binh);  //đưa địa chỉ vùng new là được
+        //có 2 tọa độ thẻ bài trong túi
+        //get() từng thẻ bài thì được tọa độ vùng new
+        //[i] được tạo độ vùng new, y chang mảng, mỗi phàn tử mảng là tọa độ 
+        System.out.println("The student list");
+        //mảng đang giảm dần về điểm, túi đang giảm dần về điểm 
+        //thẻ bài 1 trỏ vùng điểm cao, thẻ bài hai trỏ vùng điểm thấp
+        for (Student x : arr) { //arr là 1 đống con trỏ, đóng tham chiếu
+            x.showProfile();
+        }
         
+        System.out.println("The student list (printed using for i)");
+        for (int i = 0; i < arr.size(); i++) {
+            Student x = arr.get(i); //lấy tọa độ con trỏ nằm vị trí thứ i
+            x.showProfile();
+            
+        } //CÓ TỌA ĐỘ CHẤM LUÔN
+        
+        //MẢNG CHƠI [I] SỜ NGAY CON TRỎ 
+        //túi phải mở ra, để lấy gọi hàm .hàm 
+        Student tmp =  arr.get(0);
+        arr.set(0, arr.get(1)); //con trỏ thứ 0 trong giỏ, thể bài thứ 0
+                        //phải trỏ thằng Bình 4.9
+        arr.set(1, tmp); 
+        //con trỏ 1 thay chỗ trỏ, trỏ vào vùng tmp đang trỏ  
+        //                                      tmp đang trỏ AN 9.0
+        //vùng new Student() nằm im, chỉ có thẻ bài trong giỏ trỏ lại
+        
+        System.out.println("The student list after sorting ascending by gpa");
+        for (Student x : arr) {
+            x.showProfile();
+        }
+        
+        arr.remove(1);  //AN
+        System.out.println("The student list after removing a student");
+        for (Student x : arr) {
+            x.showProfile();
+        }
+        //còn lại bình chứng tỏ đúng true
+        //đổi được 2 thằng đổi được cả mảng
     }
 }

@@ -60,9 +60,28 @@ public class StudentManagementV2 {
         //hỏi xem túi có bao nhiêu đồ 
         //arr.length, hỏi tú mà, hỏi biến má mì mà 
         System.out.println("The bag has: " + arr.size() + " mon do");
-        //5 sinh viên in ra, nhưng thực ra chỉ có 4sv, do có người đếm trùng
-        for (Student x : arr) {
+        for (Student x : arr) { //không sợ NULL POINTER vì add đến đâu thêm con trỏ tới đó
             x.showProfile();
+            //x = arr.get(i) = arr[i] 
         }
+        //5 sinh viên in ra, nhưng thực ra chỉ có 4 sv, do có người đếm trùng
+        
+        //in mọi người ra, tủ có gì, chứa bên trong một đống con trỏ
+        //mảng: [i].showProfile()
+        //Tủ ArrayList[con-trỏ-1, con-tror2- contro3, ...., nếu add thêm]
+        //add() đẩy vào 1 con trỏ, trả vè tọa độ con trỏ thứ i
+        //                          trả về địa chỉ vùng new đang trỏ
+        //[i] lấy được tham chiếu bạn thứ i
+        //get(i) lấy được chỗ ngồi tham chiếu con trỏ thể bài thứ i. 
+        //a, thẻ này trỏ bạn sinh viên kia kìa
+        
+        //in bạn đầu tiền
+        //arr[0].showProfile() phần tử đầu tiên của mảng
+        Student xxx = arr.get(0); //trả về tọa độ con trỏ thẻ bài của bạn thứ 0, 
+        //trả về tọa độ gán vào biến Student khác nằm cùng tọa độ okie
+        System.out.println("--------------------------");
+        xxx.showProfile();
+        //bạn 1 thì get(1), có tọa độ chấm luôn cho rồi, thêm biến con trỏ trỏ cùng làm gì ??
+        arr.get(1).showProfile(); //quy tắc bắt cầu. 
     }
 }

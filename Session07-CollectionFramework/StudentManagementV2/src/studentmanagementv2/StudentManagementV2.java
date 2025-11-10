@@ -2,7 +2,9 @@ package studentmanagementv2;
 
 import data.Student;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -15,7 +17,36 @@ public class StudentManagementV2 {
      */
     public static void main(String[] args) {
         //playWithArrayList();
-        sortArrayListManually();
+        //sortArrayListManually();
+        playWithSet();
+    }
+    
+    //Set: 1 loại giỏ, túi không cho phép đựng trùng món, không có món nào xuất hiện quá một lần
+    //không cho phép trỏ trùng 1 vùng new. 
+    //List: cứ có vào là đếm - số lượt người ghé. 
+    //
+    public static void playWithSet() {
+        Set<Student> arr = new HashSet(); //mua một cái túi doraemon
+                                          //mở khóa để thao tác, .hàm()
+        Student an = new Student("SE123456", "AN NGUYEN", 2003, 9.0);
+        
+        arr.add(an); 
+        arr.add(an);  //add trùng
+        arr.add(new Student("SE123457", "BINH LE", 2003, 4.9));
+        
+        //không có hàm get() vì giỏ đưa đồ vào
+        //thẻ bài đưa vô không giữ nguyên thứ tự như đưa vô
+        //lấy thì for each, quét hết giỏ
+        //thì có 2 tình huống xảy ra: HashSet, để "lộn xộn" thẻ bài
+        //                                     để thẻ bài "có thứ tự" theo cách riêng
+        //khác hoàn toàn thứ tự kiểu ArrayList
+        //ArrayList là vào trước, add trước ngồi trước, sau ngồi sau
+        //giỏ chứa bao nhiêu thẻ bài, add 3 lần, arrayList add bao nhiu có bấy nhiêu
+        System.out.println("The student list");
+        for (Student x : arr) { //duyệt qua từng con trỏ, lấy tọa độ 
+                                //từng thẻ bài gán vào con trỏ x
+            x.showProfile();
+        }
     }
 
     //đây chỉ là tạm thời. 
@@ -101,6 +132,7 @@ public class StudentManagementV2 {
         Student binh = new Student("SE123457", "BINH LE", 2003, 4.9);
         arr.add(new Student("SE123456", "AN NGUYEN", 2003, 9.0)); 
         arr.add(binh);  //đưa địa chỉ vùng new là được
+        arr.add(binh); //add trùng
         //có 2 tọa độ thẻ bài trong túi
         //get() từng thẻ bài thì được tọa độ vùng new
         //[i] được tạo độ vùng new, y chang mảng, mỗi phàn tử mảng là tọa độ 

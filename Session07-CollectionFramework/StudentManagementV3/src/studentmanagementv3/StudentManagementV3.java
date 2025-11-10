@@ -13,19 +13,35 @@ public class StudentManagementV3 {
      */
     public static void main(String[] args) {
         Cabinet se = new Cabinet();
-        Cabinet ia = new Cabinet();
 
-        System.out.println("INPUT SE STUDENT(S)");
         se.addAStudent();
-
-        System.out.println("INPUT IA STUDENT(S)");
-        ia.addAStudent();
-        ia.addAStudent();
-
-        System.out.println("SE MAJOR");
+        se.addAStudent();
         se.printStudentList();
 
-        System.out.println("IA MAJOR");
-        ia.printStudentList();
+        se.updateAStudent();
+        System.out.println("The student list after update");
+        se.printStudentList();
+        //Search k tháy
+        //.searchAStudent();
+        //Search thấy
+        //se.searchAStudent();
+
     }
+//    public static void main(String[] args) {
+//        Cabinet se = new Cabinet();
+//        Cabinet ia = new Cabinet();
+//
+//        System.out.println("INPUT SE STUDENT(S)");
+//        se.addAStudent();
+//
+//        System.out.println("INPUT IA STUDENT(S)");
+//        ia.addAStudent();
+//        ia.addAStudent();
+//
+//        System.out.println("SE MAJOR");
+//        se.printStudentList();
+//
+//        System.out.println("IA MAJOR");
+//        ia.printStudentList();
+//    }
 }

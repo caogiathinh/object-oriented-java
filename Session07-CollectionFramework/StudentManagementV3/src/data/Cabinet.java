@@ -141,6 +141,8 @@ public class Cabinet {
             
             System.out.println("FOUND. Here he/she is after updating new gpa");
             xxx.showProfile();
+            
+            System.out.println("Update sucessful");
         }
     }
 }

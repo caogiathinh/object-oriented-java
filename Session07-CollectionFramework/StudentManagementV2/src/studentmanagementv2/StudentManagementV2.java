@@ -16,7 +16,8 @@ public class StudentManagementV2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        sortArrayListManually();
+        //sortArrayListManually();
+        playWithSet();
     }
 
     //------------------------
@@ -120,33 +121,36 @@ public class StudentManagementV2 {
         return null; //không tìm thấy
     }
 
+    //Set: là 1 loại giỏ túi không cho phép đựng trùng món không có món nào xuất hiện quá 1 lần
+    //ko cho phép trỏ cùng 1 vùng NEW
+    //List cứ có là đếm
+    
     public static void playWithSet() {
-        Set<Student> arr = new HashSet(); //mua một cái túi doraemon
-        //mở khóa để thao tác, .hàm()
+
+        Set<Student> arr = new HashSet<Student>();  //mua cái túi doraemon
+                                                    //mở khóa để thao tác, .hàm()
         Student an = new Student("SE123456", "AN NGUYEN", 2003, 9.0);
-
         arr.add(an);
-        arr.add(an);  //add trùng
+        arr.add(an); //add trùng
+        
         arr.add(new Student("SE123457", "BINH LE", 2003, 4.9));
-        arr.add(new Student("SE123457", "BINH LE", 2003, 4.9)); //éo trùng, có new có vùng ram mới 
-        //OBJECT MỚI, trùng info bên trong không thành vấn đề
-        //SET LÀ KHONG CHẤP NHẬN CON TRỎ TRÙNG VÙNG NEW 
-        //MỖI THẺ BÀI ĐƯỢC ADD VÀO GIỎ KHÔNG TRỎ LẠI VÙNG NEW
-
-        //không có hàm get() vì giỏ đưa đồ vào
-        //thẻ bài đưa vô không giữ nguyên thứ tự như đưa vô
-        //lấy thì for each, quét hết giỏ
-        //thì có 2 tình huống xảy ra: HashSet, để "lộn xộn" thẻ bài
-        //                                     để thẻ bài "có thứ tự" theo cách riêng
-        //khác hoàn toàn thứ tự kiểu ArrayList
-        //ArrayList là vào trước, add trước ngồi trước, sau ngồi sau
-        //giỏ chứa bao nhiêu thẻ bài, add 3 lần, arrayList add bao nhiu có bấy nhiêu
+        
+         //không có hàm get() vì loại giỏ này đưa đồ vào. thẻ bài vào
+         //không giữ nguyên thứ tự như đưa vô
+         //lấy thì FOR EACH, QUÉT HẾT GIỎ
+         //có 2 tình huống xảy ra: HashSet: để "lộn xộn" thẻ bài
+         //                                 để thẻ bài "có thứ tự" theo cách riêng
+         //KHÁC HOÀN TOÀN THỨ TỰ KIỂU ARRAY LIST 
+         //ARRAY LIST LÀ VÀO TRƯỚC, ADD TRƯỚC NGỒI TRƯỚC, VÀO SAU NGỒI SAU
+         
+        //GIỎ CHỨA MẤY THẺ BÀI? ADD 3 LẦN, ARRAYLIST ADD BAO NHIÊU CHỨA BẤY NHIÊU
         System.out.println("The student list");
-        for (Student x : arr) { //duyệt qua từng con trỏ, lấy tọa độ 
-            //từng thẻ bài gán vào con trỏ x
+        for (Student x : arr) { //duyệt qua từng con trỏ lấy tọa độ 
+                                //từng thẻ bài gán vào con trỏ x
             x.showProfile();
         }
     }
+   
 
     //đây chỉ là tạm thời. 
     public static void playWithArrayList() {

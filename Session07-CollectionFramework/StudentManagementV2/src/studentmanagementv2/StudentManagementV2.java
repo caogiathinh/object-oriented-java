@@ -17,7 +17,13 @@ public class StudentManagementV2 {
      */
     public static void main(String[] args) {
         //sortArrayListManually();
-        playWithSet();
+        //playWithSet();
+        Student xxx = getAStudent("SE123456");
+        
+        if (xxx != null)
+            xxx.showProfile();
+        else
+            System.out.println("NOT FOUND");
     }
 
     //THỬ NGHIỆM HÀM TRẢ VỀ OBJECT 
@@ -37,9 +43,10 @@ public class StudentManagementV2 {
         
         if (tmpId.equalsIgnoreCase(id)) { //chuỗi không được so sánh = = 
             return tmpStudent; //arr.get(0); //trả về tọa độ trong thẻ bài 0, vị trí của thẻ bài 0 
-            
+            //hoàn toàn không có sinh viên mới xuất hiện, chỉ tham chiếu tọa độ vùng new 
+            //return get(0) thẻ bài 0, thẻ bài 0 trỏ vùng NEW AN NGUYỄN
         }   
-        return null;    
+        return null;     //không tìm thấy, trỏ tới đáy RAM
     }
     
     //Set: là 1 loại giỏ túi không cho phép đựng trùng món không có món nào xuất hiện quá 1 lần

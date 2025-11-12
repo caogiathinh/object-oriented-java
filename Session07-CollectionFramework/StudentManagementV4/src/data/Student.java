@@ -6,7 +6,7 @@ package data;
  * @author gia.thinh
  */
 public class Student {
-    private String id; 
+    private String id;
     private String name;
     private int yob;
     private double gpa;
@@ -15,7 +15,7 @@ public class Student {
         this.id = id;
         this.name = name;
         this.yob = yob;
-        this.gpa = gpa;
+        this.gpa = gpa;  
     }
 
     public String getId() {
@@ -59,4 +59,5 @@ public class Student {
         System.out.printf("|%-8s|%-25s|%4d|%4.1f|\n", 
                             id, name, yob, gpa);
     }
+    
 }

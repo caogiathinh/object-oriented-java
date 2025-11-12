@@ -15,48 +15,8 @@ public class StudentManagementV2 {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String[] args) {
-//        //playWithArrayList();
-//        //sortArrayListManually();
-//        //playWithSet();
-    ////        Student xx = getAStudent("SE12345");
-////        if (xx != null) //không trỏ null là trỏ vùng tìm thấy
-////        {
-////            xx.showProfile();
-////        } else {
-////            System.out.println("NOT FOUND");
-////        }
-//
-//        //sortStudentList();
-//        List<Student> result = initData();
-//        System.out.println("The Student list");
-//        for (Student x : result) {
-//            x.showProfile();
-//        }
-//        
-////        for (Student x : initData()) {
-////            x.showProfile();
-////        }
-//        
-//    }
-        
     public static void main(String[] args) {
-        List<Student> arr = initData();
-        //gọi hàm search với 4 bạn sv có trong arr, mà thực ra do hàm initData() tạo ra
-
-        Student xxx = searchAStudent(arr, "sE888888");
-        if (xxx == null) {
-            System.out.println("NOT FOUND");
-        } else {
-            //lỡ tìm thấy update lại điểm số
-            xxx.showProfile(); //xxx đang trỏ vùng new bạn TÁM 8.8
-            xxx.setGpa(6868);
-        }
-        //ra hẳn ngoài if kiểm tra điểm có 6868 hay chưa chơi lớn 
-        System.out.println("Checking Student list after updating info of SE8 student");
-        for (Student x : arr) {
-            x.showProfile();
-        }
+        sortArrayListManually();
     }
 
     //------------------------
@@ -265,50 +225,49 @@ public class StudentManagementV2 {
     //còn 1 cơ chế ta không cần dùng vòng for tự viết
     //hàm static: Collections.sort(); //dùng chơi với INTERFACE mới được
     public static void sortArrayListManually() {
-        List<Student> arr = new ArrayList<Student>();
+        List<Student> arr = new ArrayList<Student>(); //đi mua cái túi Doraemon
 
-        Student binh = new Student("SE123457", "BINH LE", 2003, 4.9);
         arr.add(new Student("SE123456", "AN NGUYEN", 2003, 9.0));
-        arr.add(binh);  //đưa địa chỉ vùng new là được
-        arr.add(binh); //add trùng
-        //có 2 tọa độ thẻ bài trong túi
-        //get() từng thẻ bài thì được tọa độ vùng new
-        //[i] được tạo độ vùng new, y chang mảng, mỗi phàn tử mảng là tọa độ 
+
+        Student binh = new Student("SE999999", "BINH LE", 2003, 4.9);
+        arr.add(binh); //đưa tọa độ vùng new 
+        //có 2 tọa độ trong túi, 2 thẻ bài trong túi 
+        //get() từng thẻ bài được tọa độ vùng new
+        //[i] để tọa độ vùng new,  y chang mảng, mỗi phần tử mảng là 1 tọa độ
         System.out.println("The student list");
-        //mảng đang giảm dần về điểm, túi đang giảm dần về điểm 
-        //thẻ bài 1 trỏ vùng điểm cao, thẻ bài hai trỏ vùng điểm thấp
-        for (Student x : arr) { //arr là 1 đống con trỏ, đóng tham chiếu
+        //mảng đang giảm dần về điểm, túi đang giảm dần về điểm
+        //thẻ bài 1 trỏ vùng điểm cao, thẻ bài 2 trỏ vùng điểm thấp
+        for (Student x : arr) { //trong arr là 1 đống con trỏ
             x.showProfile();
         }
-
         System.out.println("The student list (printed using for i)");
         for (int i = 0; i < arr.size(); i++) {
-            Student x = arr.get(i); //lấy tọa độ con trỏ nằm vị trí thứ i
-            x.showProfile();
+            //Student x = arr.get(i); //lấy tọa đang nằm trỏ thứ i
+            //x.showProfile();
+            arr.get(i).showProfile();
+        } //nhớ câu có tọa độ chấm luôn 
 
-        } //CÓ TỌA ĐỘ CHẤM LUÔN
-
-        //MẢNG CHƠI [I] SỜ NGAY CON TRỎ 
-        //túi phải mở ra, để lấy gọi hàm .hàm 
-        Student tmp = arr.get(0);
-        arr.set(0, arr.get(1)); //con trỏ thứ 0 trong giỏ, thể bài thứ 0
-        //phải trỏ thằng Bình 4.9
+        //MẢNG SỞ NGAY CON TRỎ THỨ I 
+        //túi phải mở ra, để lấy, gọi qua hàm
+        //đổi được 2 thằng thì đổi được cả mảng
+        Student tmp = arr.get(0); //tmp trỏ cùng AN 
+        arr.set(0, arr.get(1));  //con trỏ thứ 0 trong giỏ, thẻ bài thứ 0 
+        //phải trỏ thằng BÌNH 4.9
         arr.set(1, tmp);
-        //con trỏ 1 thay chỗ trỏ, trỏ vào vùng tmp đang trỏ  
-        //                                      tmp đang trỏ AN 9.0
-        //vùng new Student() nằm im, chỉ có thẻ bài trong giỏ trỏ lại
-
+        //con trỏ 1 thay cách trỏ, trỏ vào vùng tmp đang trỏ
+        //                         tmp đang trỏ AN 9.0 
+        //vùng new Student() vẫn nằm im chỉ có thẻ bài trong giỏ 
+        //trỏ lại vùng new
         System.out.println("The student list after sorting ascending by gpa");
         for (Student x : arr) {
             x.showProfile();
         }
+        arr.remove(1);
 
-        arr.remove(1);  //AN
         System.out.println("The student list after removing a student");
         for (Student x : arr) {
             x.showProfile();
         }
-        //còn lại bình chứng tỏ đúng true
-        //đổi được 2 thằng đổi được cả mảng
+        //bản chất là thay đổi vị trí trỏ vùng new vẫn giữ nguyên
     }
 }

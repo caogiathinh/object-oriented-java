@@ -20,111 +20,31 @@ public class StudentManagementV2 {
         playWithSet();
     }
 
-    //------------------------
-    //TỬ TẾ HÀM SEARCH VÀ SORT, UPDATE LUÔN 
-    //------------------------
-    public static List<Student> initData() {
-        //hàm trả về 1 cái túi có sẵn bên trong một nhóm sinh viên
-        //trả về tọa độ của 1 cái túi, vẫn new Túi mà, trong túi có thể bài sinh viên là khác nữa
-        List<Student> arr = new ArrayList<Student>();
-
-        Student chin = new Student("SE999999", "CHIN LE", 2009, 9.9);
-        arr.add(new Student("SE444444", "BON PHAM", 2004, 4.4));
-        arr.add(chin);
-        //arr.add(binh); //danh sách thống kê bị trùng, 2 thẻ bài, 2 con trỏ  
-        //
-        arr.add(new Student("SE555555", "NAM VO", 2005, 5.5));
-        arr.add(new Student("SE888888", "TAM LY", 2008, 8.8));
-
-        return arr; //initData() = arr; arrr ơi mày trỏ new Bự nào
-        //cho tên hàm t trỏ với
-    }
-
-    //có thể đưa cái Giỏ vào đây cũng được
-    public static void sortStudentList() {
-        List<Student> arr = new ArrayList<Student>();
-
-        Student chin = new Student("SE999999", "CHIN LE", 2009, 9.9);
-        arr.add(new Student("SE444444", "BON PHAM", 2004, 4.4));
-        arr.add(chin);
-        //arr.add(binh); //danh sách thống kê bị trùng, 2 thẻ bài, 2 con trỏ  
-        //
-        arr.add(new Student("SE5L55555", "NAM VO", 2005, 5.5));
-        arr.add(new Student("SE888888", "TAM LY", 2008, 8.8));
-        System.out.println("The student list");
-        for (Student x : arr) {
-            x.showProfile();
-        }
-
-        System.out.println("The student list after sorting ascending by gpa");
-        for (int i = 0; i < arr.size() - 1; i++) {
-            for (int j = i + 1; j < arr.size(); j++) {
-                if (arr.get(i).getGpa() > arr.get(j).getGpa()) {
-                    Student tmp = arr.get(i);
-                    arr.set(i, arr.get(j));  // ~~arr[i] = arr[j];
-                    arr.set(j, tmp);         // ~~arr[j] = tmp;
-                    //set thay đổi giá trị info của con trỏ, trỏ chỗ khác.
-                    //lấy thẻ bài ra khắc lại thông tin con trỏ.
-                }
-            }
-        }
-        System.out.println("With For-each");
-        for (Student x : arr) {
-            x.showProfile();
-        }
-        System.out.println("With for-i");
-        for (int i = 0; i < arr.size(); i++) {
-            arr.get(i).showProfile();
-        }
-    }
-
-    //ta search tìm kiếm sinh viên dựa theo mã số. Nhận vào ds luôn cũng được
-    public static Student searchAStudent(List<Student> arr, String id) {
-        ///arr là cái túi đã new đâu đó rồi, tên biến là tên con trỏ mà
-        //túi này có 1 nhóm sv sẵn rồi, add sẵn rồi
-        if (arr.isEmpty()) {
-            return null; //túi không có thẻ bài, tức là size() trả về 0 
-        }                         //có sv nào được tìm thấy đâu, trả về tọa độ đáy ram
-        //cpu chạy đến đây, Túi có thẻ bài rồi, có người điền tên rồi. 
-        //for hỏi từng thẻ 1, ku[i] id mày là gì ? coi có bằng id cần tìm không
-        for (int i = 0; i < arr.size(); i++) {
-            Student tmp = arr.get(i);
-            if (tmp.getId().equalsIgnoreCase(id)) {
-                return tmp; //return thẻ bài thứ i có trỏ vùng id tìm thấy
-            }                            //thẻ bài con trỏ lưu tọa độ return tọa độ
-        }
-        //đi hết for mà không return được thì trả về null không tìm thấy
-        return null; //hàm yêu cầu trả tọa độ vùng new, éo thấy trả về null
-    }
-
-    //Set: 1 loại giỏ, túi không cho phép đựng trùng món, không có món nào xuất hiện quá một lần
-    //không cho phép trỏ trùng 1 vùng new. 
-    //List: cứ có vào là đếm - số lượt người ghé. 
-    //thử nghiệm hàm trả về object, thực chất là trả về tọa độ vùng new
-    //đưa vào mã số sinh viên muốn tìm ta tìm trong giỏ túi thẻ bài coi có ai trùng mã số
-    //thì trả về thẻ bài, hồ sơ bạn sv đó, trả về tọa độ hồ sơ sv đó
+    //THỬ NGHIỆM HÀM TRẢ VỀ OBJECT 
+    //đưa vào mã số sv muốn tìm 
+    //ta sẽ tìm trong giỏ, túi thẻ bài coi có ai mà trùng mã số 
+    //thì trả về thẻ bài hồ sơ bạn sinh viên đó, trả về tạo độ hồ sơ sinh viên đó
     public static Student getAStudent(String id) {
-        List<Student> arr = new ArrayList<Student>();
-
-        Student binh = new Student("SE123457", "BINH LE", 2003, 4.9);
+        List<Student> arr = new ArrayList();
+        
+        Student binh = new Student("SE999999", "BINH LE", 2003, 9.0);
+        
         arr.add(new Student("SE123456", "AN NGUYEN", 2003, 9.0));
-
-        Student tmpStudent = arr.get(0); //lây được tọa độ sv 0. thẻ bài 0 
-        //hỏi xme bạn í id là gì ? 
-        String tmpId = tmpStudent.getId(); //arr.get(0).getId(); 
-//        if (tmpId == id) return tmpStudent; //arr.get(0)
-//                                            //trả về tọa độ trong thẻ bài 0 
-        if (tmpId.equalsIgnoreCase(id)) {
-            return tmpStudent; //arr.get(0); 
-        }        //hoàn toàn không có sinh viên mới xuất hiện chỉ tham chiếu tọa độ vùng new
-        //return get(0), thẻ bài 0 trỏ vùng new AN. 
-        return null; //không tìm thấy
+        arr.add(binh); 
+        
+        Student tmpStudent = arr.get(0); //lấy được tọa độ sv 0, thẻ bài 0
+        String tmpId = tmpStudent.getId(); //arr.get(0).getId()
+        
+        if (tmpId.equalsIgnoreCase(id)) { //chuỗi không được so sánh = = 
+            return tmpStudent; //arr.get(0); //trả về tọa độ trong thẻ bài 0, vị trí của thẻ bài 0 
+            
+        }   
+        return null;    
     }
-
+    
     //Set: là 1 loại giỏ túi không cho phép đựng trùng món không có món nào xuất hiện quá 1 lần
     //ko cho phép trỏ cùng 1 vùng NEW
-    //List cứ có là đếm
-    
+    //List cứ có là đếm 
     public static void playWithSet() {
 
         Set<Student> arr = new HashSet<Student>();  //mua cái túi doraemon
@@ -134,7 +54,10 @@ public class StudentManagementV2 {
         arr.add(an); //add trùng
         
         arr.add(new Student("SE123457", "BINH LE", 2003, 4.9));
-        
+        arr.add(new Student("SE123457", "BINH LE", 2003, 4.9)); //cái này không trùng có new có vùng nhớ mới
+        //OBJECT MỚI, TRÙNG INFO KỆ
+        //SET LÀ KHÔNG CHẤP NHẬN CON TRỎ TRÙNG VÙNG NEW
+        //MỖI THỂ BÀI ADD VÀO GIỎ, KHÔNG TRỎ LẠI VÙNG NEW NÀO ĐÓ
          //không có hàm get() vì loại giỏ này đưa đồ vào. thẻ bài vào
          //không giữ nguyên thứ tự như đưa vô
          //lấy thì FOR EACH, QUÉT HẾT GIỎ
@@ -151,7 +74,6 @@ public class StudentManagementV2 {
         }
     }
    
-
     //đây chỉ là tạm thời. 
     public static void playWithArrayList() {
 
@@ -224,7 +146,7 @@ public class StudentManagementV2 {
         //size() giảm liền, mảng éo có, fix cứng số con trỏ
         //set() đảo con, trỏ sang vùng new khác hàm (get() hàm set() xưa nay của các object)
     }
-
+    
     //tự sort danh sách sinh viên bằng tay
     //còn 1 cơ chế ta không cần dùng vòng for tự viết
     //hàm static: Collections.sort(); //dùng chơi với INTERFACE mới được

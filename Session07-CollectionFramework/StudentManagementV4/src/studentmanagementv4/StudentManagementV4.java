@@ -18,6 +18,7 @@ public class StudentManagementV4 {
         
         System.out.println("INPUT SE STUDENT(S)");
         se.addAStudent();
+        se.addAStudent();
         
         System.out.println("INPUT IA STUDENT(S)");
         ia.addAStudent();

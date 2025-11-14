@@ -6,6 +6,14 @@ public class WrapperClass {
         playWithIntegers();
     }
 
+    public static void playWithPointers() {
+        Integer num1 = new Integer("2003");
+        Integer num2 = new Integer(2003);
+        Integer num3 = 2003;
+        //3 lệnh này tương đương value lõi
+        //hỏi: num1 có = num2 hay không, hỏi num3 cũng okie
+    }
+
     public static void playWithIntegers() {
         int num0 = 2003; // tốn một vùng ram  4 byte, đặt tên là num0, ON OFF 2003
         Integer num1 = new Integer("2004"); //2 vùng ram, con trỏ, và new...
@@ -40,6 +48,16 @@ public class WrapperClass {
         //num5 là biến con trỏ trỏ vùng new Integer(2003);
         num5 = 20210711; //ram điều gì diễn ra
         //biến Integer mỗi lần = value mới primitive => new Integer mới
-    }
 
+        //VÙNG INTEGER ĐƯỢC NEW KO CÓ HÀM SET() CHỈ CÓ HÀM GET()
+        //muốn thay đổi nhân cãi lõi, gói bánh mới, new mới đi
+        //INTEGER là OBJECT READ-ONLY
+        //CLASS KO CÓ HÀM SỬA, CHỈ NEW XONG XÀI VALUE ĐÃ ĐỔ, ĐỔ 1 LẦN
+        //KHÔNG SỬA, READ-ONLY OBJECT, IMMUTABLE CLASS/OBJECT
+    }
+    //CÓ 8 CÁI CLASS TRAI BAO, WRAPPER CLASS (IMMUTABLE CLASS)
+    //Byte, Short, Integer, Long, Float, Double, Boolean, Character
+    //byte  sort    int     long   float double   boolean   char
+    //xài new cũng được, gán trực tiếp okie (new ngầm)
+    //
 }

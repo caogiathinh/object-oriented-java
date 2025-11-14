@@ -17,10 +17,11 @@ public class StudentManagementV4 {
         se.addAStudent();
         se.addAStudent();
 
+        se.printStudentList();
         //search kh thấy
-
+        se.searchAStudent();
         //search thấy
-
+        se.searchAStudent();
 
     }
 //    public static void main(String[] args) {

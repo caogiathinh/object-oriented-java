@@ -36,8 +36,19 @@ public class Cabinet {
 
         System.out.println("Input student profile #" + (arr.size() + 1) + ": ");
 
-        System.out.print("Input id: ");
-        id = sc.nextLine().trim().toUpperCase(); //cắt trăng dư. đổi qua HOA
+        //dùng lại hàm search ĐỂ KIỂM TRA COI ID HỒ SƠ SINH VIÊN LIỆU RẰNG CÓ CHƯA
+        //CẤM TRÙNG ID, database gọi là primary key - cấm trùng khóa chính
+        //tương đương đăng kí member, login name, account name chửi trùng éo cho đi tiếp
+
+        while (true) {
+            System.out.print("Input id: ");
+            id = sc.nextLine().trim().toUpperCase(); //cắt trăng dư. đổi qua HOA
+            Student xxx = searchAStudent(id); //id vừa gỗ kiểm tra liền
+            if (xxx == null) //id éo tồn tại trong giỏ, thoát, đi tiếp
+                break;
+            else
+                System.out.println("Duplicated id. Try with another one!!!");
+        }
 
         System.out.print("Input name: ");
         name = sc.nextLine().trim().toUpperCase();
@@ -83,7 +94,7 @@ public class Cabinet {
     //hàm bao hàm search ở trên
     public void searchAStudent() {
         String keyWord;
-        System.out.println("Input id to search: ");
+        System.out.print("Input id to search: ");
         keyWord = sc.nextLine().trim().toUpperCase();
         Student xxx = searchAStudent(keyWord);
         if (xxx == null)

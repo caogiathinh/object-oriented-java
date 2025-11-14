@@ -198,3 +198,5 @@ public class Cabinet {
 //        }
 //    }
 }
+
+//CRUD - CREATE - RETRIEVE/READ - UPDATE - DELETE

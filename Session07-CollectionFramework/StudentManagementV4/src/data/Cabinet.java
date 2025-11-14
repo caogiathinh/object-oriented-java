@@ -93,10 +93,10 @@ public class Cabinet {
 
     //hàm bao hàm search ở trên
     public void searchAStudent() {
-        String keyWord;
+        String keyword;
         System.out.print("Input id to search: ");
-        keyWord = sc.nextLine().trim().toUpperCase();
-        Student xxx = searchAStudent(keyWord);
+        keyword = sc.nextLine().trim().toUpperCase();
+        Student xxx = searchAStudent(keyword);
         if (xxx == null)
             System.out.println("NOT FOUND!!!");
         else {
@@ -104,4 +104,97 @@ public class Cabinet {
             xxx.showProfile();
         }
     }
+
+    public int searchAStudentById(String id) {
+        if (arr.isEmpty())
+            return -1;
+        for (int i = 0; i < arr.size(); i++)
+            if (arr.get(i).getId().equalsIgnoreCase(id))
+                return i;
+        return -1;
+    }
+
+    public void removeAStudent() {
+        String id;
+
+        if (arr.isEmpty()) {
+            System.out.println("The student list is empty. Nothing to remove");
+            return;
+        }
+
+        System.out.print("Input id student you want to remove: ");
+        id = sc.nextLine().trim().toUpperCase();
+
+        Student xxx =  searchAStudent(id);
+
+        if (xxx == null)
+            System.out.println("NOT FOUND!!!");
+        else {
+            System.out.println("FOUND. Here she/he is");
+            xxx.showProfile();
+
+            int xPosition = searchAStudentById(id);
+            arr.remove(xPosition);
+            System.out.println("The student has been removed");
+
+            System.out.println("The student list after removing");
+            printStudentList();
+        }
+    }
+
+    public void updateAStudent(Student x, double newGpa) {
+        x.setGpa(newGpa);
+    }
+
+    public void updateAStudent(String id, double newGpa) {
+        Student xxx = searchAStudent(id);
+        if (xxx == null) {
+            System.out.println("NOT FOUND!!! Nothing to update");
+            return;
+        }
+        //xxx.setGpa(newGpa);
+        updateAStudent(xxx, newGpa);
+    }
+
+    public void updateAStudent() {
+        String keyword;
+        double newGpa = 0;
+
+        System.out.print("Input id you want to update info: ");
+        keyword = sc.nextLine().trim().toUpperCase();
+        Student xxx = searchAStudent(keyword);
+
+        if (xxx == null)
+            System.out.println("NOT FOUND!! Nothing to update");
+        else {
+            System.out.print("Input a new gpa of student: ");
+            newGpa = Double.parseDouble(sc.nextLine());
+
+            updateAStudent(xxx, newGpa);
+
+            System.out.println("FOUND. Here she/he is after updating new gpa");
+            xxx.showProfile();
+        }
+    }
+
+//    public void updateAStudent() {
+//        String keyword;
+//        double newGpa = 0;
+//        System.out.print("Input id you want to update info: ");
+//        keyword = sc.nextLine().trim().toUpperCase();
+//        Student xxx = searchAStudent(keyword);
+//        if (xxx == null)
+//            System.out.println("NOT FOUND!! Nothing to update");
+//        else {
+//            System.out.println("FOUND. Here she/he is before updating");
+//            xxx.showProfile();
+//
+//            System.out.print("Input a new gpa of student: ");
+//            newGpa = Double.parseDouble(sc.nextLine());
+//            xxx.setGpa(newGpa); //set lại gpa
+//
+//            System.out.println("FOUND. Here she/he is after updating new gpa");
+//            xxx.showProfile();
+//        }
+//    }
 }

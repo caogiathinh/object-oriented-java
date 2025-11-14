@@ -19,10 +19,11 @@ public class StudentManagementV4 {
 
         se.printStudentList();
         //search kh thấy
-        se.searchAStudent();
+        //se.searchAStudent();
         //search thấy
-        se.searchAStudent();
-
+        //se.searchAStudent();
+        System.out.println("-----------------");
+        se.removeAStudent();
     }
 //    public static void main(String[] args) {
 //        Cabinet se = new Cabinet();

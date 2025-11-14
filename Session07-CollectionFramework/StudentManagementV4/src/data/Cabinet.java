@@ -23,7 +23,6 @@ public class Cabinet {
 
     private Scanner sc = new Scanner(System.in);
 
-
     //default constructor. ko làm gì cả
     public Cabinet() {
     }
@@ -125,7 +124,7 @@ public class Cabinet {
         System.out.print("Input id student you want to remove: ");
         id = sc.nextLine().trim().toUpperCase();
 
-        Student xxx =  searchAStudent(id);
+        Student xxx = searchAStudent(id);
 
         if (xxx == null)
             System.out.println("NOT FOUND!!!");

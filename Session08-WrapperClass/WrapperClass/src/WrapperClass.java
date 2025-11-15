@@ -3,7 +3,9 @@ import java.sql.SQLOutput;
 public class WrapperClass {
 
     public static void main(String[] args) {
-        playWithIntegers();
+        //playWithIntegers();
+        //playWithPointers();
+        playWithPool();
     }
 
     public static void playWithPointers() {
@@ -19,7 +21,7 @@ public class WrapperClass {
         else
             System.out.println("num2 != num3 vì đi so sánh 2 địa chỉ tọa độ vùng new");
 
-        Integer num4 = 2003;
+        Integer num4 = 2004;
         if (num3 == num4)
             System.out.println("num3 = num4 ");
         else
@@ -34,6 +36,48 @@ public class WrapperClass {
         //á đù vào vùng new Integer() làm gì đó, so sánh value hả
         //muốn so sánh 2 object/biến object ta sẽ chấm để...
         //                                               gọi hàm so sánh value bên trong
+
+        //Integer phải có hàm so sánh cái lõi với nhau
+        //hàm nằm trong Integer thì lấy value lõi
+        //GL rules: ai có nhiều info, gã đó có hàm xử lí
+        System.out.println("num3 vs. num4 (core value): " + num3.equals(num4));
+        System.out.println("num3 vs. num4 (core value): " + num3.compareTo(num4));
+        System.out.println("num4 vs. num3 (core value): " + num4.compareTo(num3));
+
+    }
+
+    //chốt hạ: không so sánh 2 biến Object dùng > < =
+    //chấm vào bên trong để so sánh các đặc điểm lõi
+    //phải viết hàm so sánh 2 Object() vì sau này chấm lấy value lõi mà so sánh
+
+    public static void playWithPool() {
+        Integer num1 = 2001;
+        Integer num2 = 2001;
+        //num1 có bằng num 2 ko ? không
+        System.out.println("num1 vs num2: " + (num1 == num2)); //false 2 tọa độ khác nhau
+        //lõi num1 có bằng lõi num2 hay không ? có
+        System.out.println("num1 vs num2 (core value): " + (num1.equals(num2)));
+        if (num1.equals(num2))
+            System.out.println("2 thằng bằng nhau trong lõi");
+        else
+            System.out.println("Đến cả lõi còn khác nhau");
+
+        //vi diệu
+        Integer num3 = -127; //trỏ lõi -129
+        Integer num4 = -127; //trỏ cùng, éo tạo vùng new mới
+        //Integer pool hồ bơi cho vùng new lõi có giá trị trong đoạn
+        //[-128 -> 127]
+        System.out.println("XEM VI DIỆU!!!!!");
+        System.out.println("num3 vs num4: " + (num3 == num4)); //true
+        //vẫn so con trỏ heng, éo so sánh lõi vì biết lõi = nhau òi
+
+        //riêng cho boxing từ -128 -> +127 thì
+        //gói những thằng primitive/boxing trong đoạn này thì chúng
+        //chỉ xài 1 vùng new Chung nếu chung lõi
+
+        Integer num5 = new Integer(-127); //éo tắm chung
+        //vì new rõ ràng tường minh
+        System.out.println("num3 vs num5: " + (num3 == num5)); //false
 
     }
 

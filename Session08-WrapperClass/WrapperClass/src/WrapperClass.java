@@ -78,7 +78,6 @@ public class WrapperClass {
         Integer num5 = new Integer(-127); //éo tắm chung
         //vì new rõ ràng tường minh
         System.out.println("num3 vs num5: " + (num3 == num5)); //false
-
     }
 
     public static void playWithIntegers() {

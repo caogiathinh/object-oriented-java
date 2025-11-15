@@ -12,6 +12,29 @@ public class WrapperClass {
         Integer num3 = 2003;
         //3 lệnh này tương đương value lõi
         //hỏi: num1 có = num2 hay không, hỏi num3 cũng okie
+        boolean result = num1 == num2;
+        System.out.println("num1 == num2?? " + result);
+        if (num2 == num3)
+            System.out.println("num2 = num3 ");
+        else
+            System.out.println("num2 != num3 vì đi so sánh 2 địa chỉ tọa độ vùng new");
+
+        Integer num4 = 2003;
+        if (num3 == num4)
+            System.out.println("num3 = num4 ");
+        else
+            System.out.println("num3 != num4 vì đi so sánh 2 địa chỉ tọa độ vùng new");
+
+        //kết luận không so sánh Obejct dùng các toán tử truyền thống > >= < <= == !=
+        //vì biến Object bản thân nó chỉ là tọa độ tham chiếu 1 vùng mew có nhiều info
+        //muốn so sánh 2 biến Object dùng toán tử trên tương đương đi so sánh 2 địa chỉ
+        //vớ vẫn, không ai so sánh số nhà
+        //vào nhà xem info mà so sánh
+        //vào vùng new Integer(....) lấy value lõi ra mà so
+        //á đù vào vùng new Integer() làm gì đó, so sánh value hả
+        //muốn so sánh 2 object/biến object ta sẽ chấm để...
+        //                                               gọi hàm so sánh value bên trong
+
     }
 
     public static void playWithIntegers() {

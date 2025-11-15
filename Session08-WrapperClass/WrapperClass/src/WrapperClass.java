@@ -44,12 +44,32 @@ public class WrapperClass {
         System.out.println("num3 vs. num4 (core value): " + num3.compareTo(num4));
         System.out.println("num4 vs. num3 (core value): " + num4.compareTo(num3));
 
+
+        //NẾU TA SO SÁNH 2 BIẾN WRAPPER, Integer a, Integer b
+        //a == b  hay không, lúc đúng lúc sai do có xài POOL hay không?
+        //SO SÁNH 2 BIÊN OBJECT LÀ ĐIỀU KO NÊN, KHÔNG ĐƯỢC LÀM,
+        //VÌ NÓ KHÔNG MANG Ý NGHĨA CHÍNH XÁC NÀO
+        //KHI SO SÁNH 2 BIẾN OBJECT/MÌNH PHẢI CHÁM ĐỂ LẤY DATA BÊN TRONG
+        //MÌNH SO SÁNH, GỌI HÀM TRONG OBJECT
+
+        //POOL CHỈ XẢY RA CHO WRAPPER, CHỈ XẢY RA HẠN CHẾ Ở MỘT SỐ TÌNH HUỐNG
+        //NEW NGẦM THÌ MỚI MAY RA XẢY RA POOL KHI CHƠI GÁN PRIMITIVE -> OBJECT
+        //                                        BOXING TRỰC TIẾP
+        //                                        VÀ MIỀN GIÁ TRỊ
+
+        //SO SÁNH 2 OBJECT CHÍNH LÀ SO SÁNH CÁC VALUE BÊN TRONG
+        //DATA Ở ĐÂU HÀM Ở ĐÓ, DO ĐÓ MỖI OBJECT SẼ NÊN CÓ HÀM SO SÁNH
+        //VỚI KẺ KHÁC TRÊN 2 CÂU HỎI: EQUALS(), COMPARETO()
+        //tớ.soVoi(cậu)    tớ.coBang(cậu không)
+        Double pi = 3.14; //boxing
+
     }
 
     //chốt hạ: không so sánh 2 biến Object dùng > < =
     //chấm vào bên trong để so sánh các đặc điểm lõi
     //phải viết hàm so sánh 2 Object() vì sau này chấm lấy value lõi mà so sánh
 
+    //boxing trong 1 khoảng nhất định [-128 -> 127] thì sẽ trỏ vào cùng 1 vùng RAM
     public static void playWithPool() {
         Integer num1 = 2001;
         Integer num2 = 2001;
